@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Typography - Inter primary (strategy v1.1 §4.2), Switzer fallback */
+  --font-sans: Inter, Switzer, system-ui, sans-serif;
+
+  /* Radiant base radius (mantenere per componenti esistenti) */
+  --radius-4xl: 2rem;
+
+  /* Brand Colors Daisy Solution (strategy v1.1 §8.4 - Marketing Approved) */
+  --color-brand-primary: #0f4c81;
+  /* Blu corporate */
+  --color-brand-secondary: #f59e0b;
+  /* Arancione CTA (amber-500) */
+
+  /* Background & Surface */
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  /* slate-50 */
+
+  /* Text Colors */
+  --color-text-primary: #0f172a;
+  /* slate-900 */
+  --color-text-secondary: #64748b;
+  /* slate-500 */
+  --color-text-muted: #94a3b8;
+  /* slate-400 */
+
+  /* Border & Divider */
+  --color-border: #e2e8f0;
+  /* slate-200 */
+  --color-border-strong: #cbd5e1;
+  /* slate-300 */
+
+  /* Semantic Colors */
+  --color-success: #10b981;
+  /* green-600 */
+  --color-warning: #f59e0b;
+  /* amber-600 */
+  --color-error: #dc2626;
+  /* red-600 */
+  --color-info: #3b82f6;
+  /* blue-600 */
+}
+
+/* Utility classes for brand colors */
+@layer utilities {
+  .bg-brand-primary {
+    background-color: var(--color-brand-primary);
+  }
+
+  .bg-brand-secondary {
+    background-color: var(--color-brand-secondary);
+  }
+
+  .text-brand-primary {
+    color: var(--color-brand-primary);
+  }
+
+  .text-brand-secondary {
+    color: var(--color-brand-secondary);
+  }
+
+  .border-brand-primary {
+    border-color: var(--color-brand-primary);
+  }
+
+  .border-brand-secondary {
+    border-color: var(--color-brand-secondary);
+  }
+
+  /* CTA button styles (strategy v1.1 §4.1) */
+  .btn-primary {
+    background-color: var(--color-brand-secondary);
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-primary:hover {
+    background-color: #d97706;
+    /* darker amber */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  }
+
+  .btn-secondary {
+    background-color: var(--color-brand-primary);
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-secondary:hover {
+    background-color: #0a3a5f;
+    /* darker blue */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 76, 129, 0.4);
+  }
+
+  .btn-outline {
+    border: 2px solid var(--color-brand-primary);
+    color: var(--color-brand-primary);
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-brand-primary);
+    color: #ffffff;
+  }
+}
+
+@keyframes move-x {
+  0% {
+    transform: translateX(var(--move-x-from));
+  }
+
+  100% {
+    transform: translateX(var(--move-x-to));
+  }
+}
