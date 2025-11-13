@@ -25,7 +25,7 @@ Daisy Solution si posiziona come **hub centrale** per la gestione integrata reta
 
 ### 2.1 Eldomcat - Banca Dati Prodotti Tecnologici
 
-**Descrizione:** Database italiano prodotti settore Eldom (elettrodomestici, elettronica consumo, condizionatori, telefonia, informatica) con caratteristiche tecniche, foto, schede prodotto.
+**Descrizione:** La prima banca dati italiana specializzata nel settore elettrodomestici (ELDOM), contiene **oltre 300.000 articoli** con caratteristiche tecniche strutturate e foto di prodotti ad alto contenuto tecnologico: grandi e piccoli elettrodomestici, televisori, audio, elettronica di consumo, macchine fotografiche, condizionatori, riscaldamento domestico, telefonia, informatica.
 
 **Localizzazione codice:**
 
@@ -41,23 +41,46 @@ Eldomcat DB → ERP (import caratteristiche/foto)
     Articoli arricchiti → E-commerce frontend
                          → Fastlabel cartelli
                          → Marketplace (eBay/Amazon)
+                         → Statistiche segmentate per caratteristiche
 ```
 
 **Protocollo:** API proprietaria + caching Memcache (chiave `eldomcat_count_<date>`, `eldomcat_log_<date>`).
 
+**Compilazioni Multiple Disponibili:**
+
+1. **Scheda articolo** - Caratteristiche strutturate in modo discorsivo per lettura facilitata
+2. **Specifiche tecniche** - Struttura tabellare per confronto articoli stessa categoria
+3. **Ricerca avanzata** - Estrazione prodotti tramite caratteristiche principali
+4. **Descrizioni gestionali** - Caratteristiche aggregate per documenti (ordini, fatture)
+5. **Descrizioni web (SEO)** - Strutturate per migliore indicizzazione motori ricerca
+6. **Cartelli prezzo** - Caratteristiche formattate per stampa in-store
+7. **Descrizioni volantini** - Aggregate per cataloghi prodotti
+8. **Descrizioni discorsive** - Presentazione testuale integrata
+
+**Personalizzazione Contenuti:**
+
+- **Integrazione catalogo cliente:** Abbinamento banca dati Eldomcat con codici prodotto cliente tramite file mapping
+- **Composizione custom:** Personalizzazione struttura e descrizione caratteristiche per esigenze comunicazione specifiche
+- **Contenuti SEO unici:** Formattazione originale per distinguere e-commerce da competitor
+- **Servizio on-demand:** Caricamento dati prodotti non presenti in banca dati (copertura 100% catalogo cliente)
+- **Caricamento autonomo:** Possibilità inserimento manuale caratteristiche/foto prodotti non in DB
+
 **Benefici per retailer:**
 
-- **Copertura 100%** catalogo prodotti tecnologici
+- **Copertura 100%** catalogo prodotti tecnologici (300k+ articoli)
 - **Automazione** schede prodotto per e-commerce
-- **Riduzione costi** inserimento dati manuale
-- **Time-to-market** rapido per nuovi articoli
-- **Servizio on-demand** caricamento dati prodotti non presenti
+- **Riduzione costi** inserimento dati manuale (~80% tempo risparmiato)
+- **Time-to-market** rapido per nuovi articoli (disponibili in 24-48h dall'annuncio produttore)
+- **Contenuti originali** per SEO e-commerce
+- **Statistiche avanzate** segmentate per caratteristiche tecniche (analisi vendite per fascia prezzo, efficienza energetica, etc.)
+- **Field marketing:** Pianificazione offerte ed estrazione articoli per caratteristiche
+- **Visual marketing:** Realizzazione cartelli prezzo e volantini con dati strutturati
 
 ---
 
 ### 2.2 Elecommerce - Piattaforma E-commerce B2B/B2C
 
-**Descrizione:** Soluzione SaaS cloud per creazione e gestione negozi online integrati con ERP. Supporta doppio canale B2B (portale grossisti) e B2C (consumatore finale).
+**Descrizione:** Soluzione cloud (SaaS) per creare e gestire **siti e-commerce B2B e B2C** con integrazione completa ERP. Offre tutti gli strumenti necessari per realizzare e gestire ogni aspetto del commercio elettronico. Perfettamente integrato con banca dati Eldomcat per settore retail tecnologico.
 
 **Localizzazione codice:**
 
@@ -69,7 +92,7 @@ Eldomcat DB → ERP (import caratteristiche/foto)
 
 **Flusso dati:**
 
-```
+```text
 ERP (Articoli, Stock, Listini) → API REST → Frontend B2B/B2C
                                              ↓
                     Ordini E-commerce ← SOAP/REST ← Cliente web
@@ -87,20 +110,48 @@ ERP (Articoli, Stock, Listini) → API REST → Frontend B2B/B2C
 
 **Protocollo:** REST JSON (elerama-api) + SOAP NuSOAP legacy (`get_orders_ecommerce`, `get_offline_orders_ecommerce`).
 
+**Funzionalità Principali:**
+
+1. **Catalogo prodotti:** Pubblicazione completa o filtrata per classificazione, marche, disponibilità, ricarichi. Foto e caratteristiche con impostazioni predefinite o personalizzate. Raggruppamento in categorie merceologiche.
+
+2. **Gestione listini:** Interfaccia per mantenere prezzi multipli per stesso articolo. Condizioni vendita differenti per cliente/gruppo clienti. Criteri ricarico differenziabili per marche/classificazioni. Gestione tassazioni (RAEE, SIAE, etc.).
+
+3. **Gestione promozioni:** Creazione landing page e banner promozionali. Politiche prezzo con prezzi barrati/percentuali sconto automatiche. Evidenziazione articoli: più visti, più venduti, consigliati, novità.
+
+4. **Gestione vendite:** Integrazione Daisy Solution per controllo ordini real-time. Emissione automatica/manuale documenti contabili. Notifiche intervento operatore. Interrogazione statistiche venduto/giacenze.
+
+5. **Metodi pagamento:** Integrazione sicura con: Banca Sella, Unicredit, BCC, PayPal. Metodi alternativi: contrassegno, bonifico bancario, pagamento in negozio.
+
+6. **Trasporto e costi:** Modalità trasporto multiple (Poste Italiane, corriere, ritiro negozio). Definizione costi per tipo prodotto e ammontare ordine.
+
+7. **Ricerche e confronti:** Ricerca per: parola chiave, classificazione merceologica, marca, caratteristiche avanzate. Confronto prodotti per trovare articolo più adatto.
+
+8. **Grafica personalizzabile:** Layout predefiniti o realizzazione su misura. Integrazione in layout realizzati da terzi (con indicazioni tecniche Elettrorama). Coerenza con politiche comunicazione cliente.
+
+9. **Marketplace e comparatori:** Pubblicazione/aggiornamento automatico Amazon e eBay. Invio data feed automatici a comparatori prezzi: Google Shopping, Kelkoo, Bestshopping, Ciao, Idealo, Trovaprezzi.
+
+10. **SEO e motori ricerca:** Ottimizzazione indicizzazione. Massima visibilità prodotti.
+
 **Benefici per retailer:**
 
+- **Completo e professionale:** Strumenti ad alto contenuto tecnologico per gestione efficace commercio online
+- **Personalizzabile su misura:** Adattamento esigenze specifiche cliente
+- **Economico:** Modalità SaaS abbassa costi implementazione e mantenimento
+- **Assistenza professionale:** Supporto tecnico Elettrorama per progettazione, creazione, assistenza
 - **Omnichannel** unificato (negozio fisico + online)
 - **Sincronizzazione real-time** stock multi-punto vendita
 - **Gestione listini dinamici** per cliente/gruppo/canale
 - **Ordini automatici** confluiscono in workflow ERP
-- **Integrazione Eldomcat** nativa per settore Eldom
+- **Integrazione Eldomcat** nativa per settore Eldom (foto, caratteristiche tecniche automatiche)
 - **Portale B2B** con fidi, listini personalizzati, multi-indirizzo
+- **Facile configurazione:** Interfaccia semplice e immediata, linguaggio del retailer/distributore
+- **Ciclo attivo completo:** Gestione da DDT a fattura, pagamento, promozioni, statistiche vendita, layout grafico
 
 ---
 
 ### 2.3 Fastlabel - Stampa Cartelli Prezzi
 
-**Descrizione:** Sistema generazione PDF cartelli prezzi/caratteristiche prodotti con layout grafici personalizzabili, integrazione promo/listini da ERP.
+**Descrizione:** Strumento professionale per stampa cartelli prezzo nel punto vendita. Permette di standardizzare i format di comunicazione in-store e lanciare in tempo reale campagne promozionali, anche differenziate per punto vendita. Si gestisce dalla centrale con pannello online (area Admin) unico per tutte le reti di punti vendita (insegne). **Utilizzato in oltre 2000 installazioni** in settori: elettrodomestici, informatica, telefonia, abbigliamento, ferramenta, farmacia.
 
 **Localizzazione codice:**
 
@@ -110,13 +161,21 @@ ERP (Articoli, Stock, Listini) → API REST → Frontend B2B/B2C
 
 **Flusso dati:**
 
-```
+```text
 ERP (Articolo + Listino vendita + Promo) → Fastlabel_lib
                                               ↓
                             Rendering PDF (prezzi, caratteristiche, loghi)
                                               ↓
                                     Download/Stampa cartello
 ```
+
+**Tre Opzioni di Utilizzo:**
+
+1. **Opzione base:** Inserimento manuale informazioni/caratteristiche tecniche articoli da stampare. Selezione formati cartello ed effettuazione stampa.
+
+2. **Opzione standard:** Selezione articoli nel gestionale. Fastlabel importa lista articoli selezionati e gestisce stampa cartelli (anche automatica).
+
+3. **Opzione premium:** Con banca dati caratteristiche, Fastlabel importa automaticamente caratteristiche articoli selezionati. Per settore eldom: integrazione con banca dati Eldomcat.
 
 **Funzionalità:**
 
@@ -126,6 +185,12 @@ ERP (Articolo + Listino vendita + Promo) → Fastlabel_lib
 - Caratteristiche tecniche prodotto
 - Logo/brand personalizzazione
 - Flag disponibilità negozio/magazzino centrale
+- **Campagne promozionali:** Personalizzazione e comunicazione semplice campagne, avvio real-time in tutti negozi
+- **Caratteristiche tecniche:** Stampa efficace schede prodotti con foto e caratteristiche dettagliate, chiare, complete
+- **Prezzi e sconti:** Comunicazione prezzi con evidenza prezzi barrati, sconti praticati, proposte finanziamento, differenziati per punto vendita
+- **Info istituzionali:** Inserimento nei cartelli informazioni personalizzate per punto vendita (loghi, slogan, avvisi, messaggi)
+- **Gestione visual centralizzata e real-time:** Area Admin per attivare loghi, layout stampa, slogan per tutti negozi rete. Negozi stampano solo quanto assegnato dalla centrale
+- **Codici a barre e QR code**
 
 **Benefici per retailer:**
 
@@ -134,6 +199,10 @@ ERP (Articolo + Listino vendita + Promo) → Fastlabel_lib
 - **Promo dinamiche** aggiornamento rapido campagne
 - **Integrazione ERP** dati sempre allineati
 - **Costi ridotti** vs stampa esterna
+- **Comunicazione in-store efficace:** Rende punto vendita più accattivante
+- **Field & Visual Marketing:** Pianificazione offerte/prezzi estraendo articoli per caratteristiche
+- **Gestione centralizzata reti:** Controllo completo visual marketing da centrale
+- **Standardizzazione format:** Identità visiva uniforme su tutta la rete punti vendita
 
 ---
 

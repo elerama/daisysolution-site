@@ -43,6 +43,47 @@
 | **Brochure PDF Elecommerce**     | elettrorama.com/brochure/Brochure-Elecommerce.pdf    | ✅    | Risorse → Integrazioni                        | Disponibile                                                                                                                       |
 | **Brochure PDF Fastlabel**       | elettrorama.com/brochure/Brochure-Fastlabel.pdf      | ✅    | Risorse → Integrazioni                        | Disponibile                                                                                                                       |
 | **Contatti Helpdesk**            | `src/views/servizi.php`                              | ✅    | Footer + Pagina Contatti                      | Tel, email, orari disponibili                                                                                                     |
+| **Video Elettrorama mission**    | <https://www.youtube.com/shorts/jTicRW7BbQg>         | ✅    | Chi Siamo                                     | Video breve mission aziendale                                                                                                     |
+| **Video banca dati Eldomcat**    | <https://www.youtube.com/watch?v=y7moC_gRYZk>        | ✅    | Integrazioni → Eldomcat                       | Disponibile                                                                                                                       |
+| **Video Fastlabel**              | <https://www.youtube.com/watch?v=1K1EFuQGhbU>        | ✅    | Integrazioni → Fastlabel                      | Disponibile                                                                                                                       |
+| **Sito Eldomcat**                | <http://www.eldomcat.com>                            | ✅    | Link esterno integrazioni                     | Sito banca dati consultabile                                                                                                      |
+| **Portale Elerama Cloud**        | <http://www.elerama.com>                             | ✅    | Link portale clienti                          | Portale accesso clienti SaaS                                                                                                      |
+
+---
+
+## Nuovi Contenuti Identificati (Analisi Approfondita)
+
+### Contenuti Marketing & Value Proposition
+
+| Contenuto                                        | Posizione nel Repo             | Stato | Riuso per Sito Daisy                    | Note Aggiuntive                                                                                                  |
+| ------------------------------------------------ | ------------------------------ | ----- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Descrizione "Web based"**                      | `src/views/daisy_solution.php` | ✅    | Pagina Tecnologie                       | "Sviluppato interamente con tecnologia web, accesso senza installazione client, solo browser necessario"         |
+| **Descrizione "Versatile, cloud"**               | `src/views/daisy_solution.php` | ✅    | SaaS vs On-Premise                      | "Si può installare su proprio server o utilizzarlo in modalità Cloud gestita da Elettrorama"                     |
+| **Descrizione "Multibrowser"**                   | `src/views/daisy_solution.php` | ✅    | Specifiche Tecniche                     | "Pensato, progettato, sviluppato e testato per funzionare con i principali browser, anche tablet e smartphone"   |
+| **Descrizione "Multidatabase"**                  | `src/views/daisy_solution.php` | ✅    | Specifiche Tecniche                     | "Offre possibilità appoggiarsi ai database più comuni: MySQL, Oracle, SQL Server"                                |
+| **Modulo Cassa off-line**                        | `src/views/daisy_solution.php` | ⚠️    | Pagina Moduli                           | Menzionato ma non descritto                                                                                      |
+| **Modulo Promozioni**                            | `src/views/daisy_solution.php` | ⚠️    | Pagina Moduli                           | Menzionato ma non descritto                                                                                      |
+| **Modulo Comunicazioni**                         | `src/views/daisy_solution.php` | ⚠️    | Pagina Moduli                           | Menzionato ma non descritto                                                                                      |
+| **Modulo Web service**                           | `src/views/daisy_solution.php` | ⚠️    | Pagina Tecnologie/API                   | Menzionato ma non descritto                                                                                      |
+| **Descrizione Liste regalo**                     | `src/views/daisy_solution.php` | ✅    | Pagina Moduli → Liste Regalo            | Con integrazione e-commerce, gestione invitati e festeggiati                                                     |
+| **Modulo Import/Export**                         | `src/views/daisy_solution.php` | ✅    | Pagina Moduli → Integrazioni            | Importazione/esportazione file pianificabili, collegamento anagrafiche esterne, transcodifiche                   |
+| **Eldomcat 300k+ articoli**                      | `src/views/eldomcat.php`       | ✅    | Landing Eldomcat                        | Numero preciso: "Oltre 300.000 articoli con caratteristiche e foto"                                              |
+| **Eldomcat compilazioni multiple**               | `src/views/eldomcat.php`       | ✅    | Pagina Eldomcat dettaglio               | 8 tipi compilazione: scheda articolo, specifiche tecniche, ricerca, descrizioni gestionali, web SEO, etc.        |
+| **Eldomcat personalizzazione**                   | `src/views/eldomcat.php`       | ✅    | Value proposition Eldomcat              | Composizione custom caratteristiche, contenuti SEO unici, servizio on-demand, caricamento autonomo               |
+| **Elecommerce integrazioni pagamento**           | `src/views/elecommerce.php`    | ✅    | Pagina Elecommerce → Pagamenti          | Banca Sella, Unicredit, BCC, PayPal + contrassegno, bonifico, pagamento negozio                                  |
+| **Elecommerce marketplace integration**          | `src/views/elecommerce.php`    | ✅    | Pagina Elecommerce → Marketplace        | Pubblicazione/aggiornamento automatico Amazon e eBay                                                             |
+| **Elecommerce comparatori prezzi**               | `src/views/elecommerce.php`    | ✅    | Pagina Elecommerce → Comparatori        | Invio data feed automatici: Google Shopping, Kelkoo, Bestshopping, Ciao, Idealo, Trovaprezzi                     |
+| **Fastlabel 2000+ utilizzatori**                 | `src/views/fastlabel.php`      | ✅    | Proof Fastlabel                         | "Più di 2000 utilizzatori in molteplici settori"                                                                 |
+| **Fastlabel settori utilizzo**                   | `src/views/fastlabel.php`      | ✅    | Target Fastlabel                        | Elettrodomestici, informatica, telefonia, abbigliamento, ferramenta, farmacia                                    |
+| **Elettrorama storia e mission**                 | `src/views/chi_siamo.php`      | ✅    | Chi Siamo / About                       | "Nata 2001, esperienza pluriennale informatica e commercio, giovane e dinamica, gamma completa strumenti retail  |
+| **Elettrorama differenziatori**                  | `src/views/chi_siamo.php`      | ✅    | Perché Elettrorama / Brand              | 1) Know-how approfondito 20 anni, 2) Attenzione cliente, 3) Innovazione progettuale                              |
+| **Help Desk Elettrorama**                        | `src/views/servizi.php`        | ✅    | Footer supporto                         | Tel +39 011 9203522 int.1, email helpdesk@elettrorama.com, Lun-Ven 9-13/14.30-19.30, Sab 9-13                    |
+| **Servizi Elettrorama 4 fasi**                   | `src/views/servizi.php`        | ✅    | Processo servizio                       | Analisi e consulenza → Progettazione → Realizzazione → Manutenzione e assistenza                                 |
+| **Case Study Aimar RAEE**                        | `src/views/portfolio.php`      | ✅    | Customer Story / Caso d'uso RAEE        | Gestione smaltimento apparecchiature RAEE, registri conformi legislazione                                        |
+| **Case Study Taxivision riparazioni**            | `src/views/portfolio.php`      | ✅    | Customer Story / Caso d'uso riparazioni | Negozio Torino audio alta qualità, gestione prodotti da riparare, tracking                                       |
+| **Totem interattivo Gaer**                       | `src/views/portfolio.php`      | ✅    | Innovazione / Case Study Gaer           | Catalogo elettronico, ricerca caratteristiche, supporto multimediale, touch screen, cross-canale fisico-virtuale |
+| **Progetto 1Company Unieuro dettagli**           | `src/views/portfolio.php`      | ✅    | Case Study flagship espanso             | 270 negozi affiliati, 900 postazioni, 400 casse, pacchetto verticale completo, interconnessione centrale         |
+| **Model Assistance 2000+ clienti Italia/estero** | `src/views/portfolio.php`      | ✅    | Proof internazionale                    | Distribuzione settore modellismo, gestione completa cloud, portale B2B, catalogo online                          |
 
 ---
 
@@ -128,11 +169,11 @@ Non esiste sezione che rassicuri IT manager/buyer enterprise su aspetti tecnici.
 **Cosa serve:**
 
 - **4 sottopagine:**
-    1. **Architettura Web-Based:** Browser supportati, responsive, vantaggi vs. desktop
-    2. **SaaS vs. On-Premise:** Tabella comparativa, pro/contro, modello ibrido
-    3. **Sicurezza & Permessi:** Permessi granulari, audit trail, backup, GDPR
-    4. **Compatibilità & Integrabilità:** Database supportati, API, integrazioni native, migrazione
-    5. **Scalabilità & Performance:** Multi-azienda, caso Unieuro (270 negozi), disaster recovery
+  1. **Architettura Web-Based:** Browser supportati, responsive, vantaggi vs. desktop
+  2. **SaaS vs. On-Premise:** Tabella comparativa, pro/contro, modello ibrido
+  3. **Sicurezza & Permessi:** Permessi granulari, audit trail, backup, GDPR
+  4. **Compatibilità & Integrabilità:** Database supportati, API, integrazioni native, migrazione
+  5. **Scalabilità & Performance:** Multi-azienda, caso Unieuro (270 negozi), disaster recovery
 - **Download:** PDF "Documento Sicurezza", "Specifiche Tecniche", "Guida API"
 
 **Priorità:** ⭐⭐⭐⭐ (rassicurazione enterprise)
@@ -506,7 +547,6 @@ Tool interattivo per stimare risparmio SaaS vs. on-premise assente.
 ### Budget Stimato (Solo contenuti, escluso sviluppo sito completo)
 
 - **Sprint 1-3 (Gap prioritari):** 30-40 giorni/persona totali
-
   - Copywriter: 15 gg
   - Designer: 10 gg
   - Developer: 8 gg

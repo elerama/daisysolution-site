@@ -15,6 +15,7 @@ import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
+import { Icon } from '@/components/icon'
 import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'
 import { Navbar } from '@/components/navbar'
@@ -200,66 +201,97 @@ function IntegrationsGrid() {
  * Strategy row 180: descrizione + screenshot interfaccia catalogo
  */
 function EldomcatSection() {
+  const compilations = [
+    { name: 'Scheda articolo', desc: 'Caratteristiche discorsive lettura facilitata' },
+    { name: 'Specifiche tecniche', desc: 'Tabelle confronto categorie' },
+    { name: 'Ricerca avanzata', desc: 'Filtri per caratteristiche' },
+    { name: 'Descrizioni gestionali', desc: 'Ordini e fatture aggregate' },
+    { name: 'Descrizioni SEO', desc: 'Ottimizzate per motori ricerca' },
+    { name: 'Cartelli prezzo', desc: 'Stampa in-store formattata' },
+    { name: 'Volantini', desc: 'Cataloghi prodotti marketing' },
+    { name: 'Descrizioni discorsive', desc: 'Presentazione testuale integrata' },
+  ]
+
   return (
     <Container className="py-24">
-      <div id="eldomcat" className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
-        {/* Left: Testo */}
-        <div className="flex flex-col justify-center">
-          <div className="inline-flex items-center gap-3 mb-4">
-            <span className="text-4xl">📚</span>
-            <Subheading>Eldomcat</Subheading>
-          </div>
-          <Heading as="h2">
-            300.000+ prodotti con foto e caratteristiche
-          </Heading>
-          <p className="mt-6 text-lg text-gray-700">
-            Banca dati completa elettronica, telefonia, informatica, casalinghi.
-            Integrazione catalogo eldom nativa. <strong>Zero digitazione manuale schede prodotto</strong>.
-          </p>
+      <div id="eldomcat" className="space-y-16">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
+          {/* Left: Testo */}
+          <div className="flex flex-col justify-center">
+            <div className="inline-flex items-center gap-3 mb-4">
+              <Icon name="book-open" className="size-10 text-[#0081BE]" />
+              <Subheading>Eldomcat</Subheading>
+            </div>
+            <Heading as="h2">
+              300.000+ prodotti con foto e caratteristiche
+            </Heading>
+            <p className="mt-6 text-lg text-gray-700">
+              Banca dati italiana più grande settore eldom. Integrazione catalogo nativa con Daisy Solution.
+              <strong> Zero digitazione manuale schede prodotto</strong>. 8 compilazioni personalizzabili.
+            </p>
 
-          <div className="mt-8 space-y-4">
-            <div className="flex gap-3">
-              <div className="text-brand-primary text-xl">✓</div>
-              <div>
-                <h4 className="font-semibold text-gray-950">Sempre aggiornato</h4>
-                <p className="text-sm text-gray-600">
-                  Novità marchi automatiche. Foto HD, descrizioni, caratteristiche tecniche.
-                </p>
+            <div className="mt-8 space-y-4">
+              <div className="flex gap-3">
+                <div className="text-[#0081BE]"><Icon name="sparkles" className="size-6" /></div>
+                <div>
+                  <h4 className="font-semibold text-gray-950">Sempre aggiornato</h4>
+                  <p className="text-sm text-gray-600">
+                    Novità marchi automatiche. Foto HD, descrizioni, caratteristiche tecniche.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="text-[#0081BE]"><Icon name="paintbrush" className="size-6" /></div>
+                <div>
+                  <h4 className="font-semibold text-gray-950">Personalizzazione totale</h4>
+                  <p className="text-sm text-gray-600">
+                    Modifica descrizioni, aggiungi campi custom, composizione contenuti SEO unici.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="text-[#0081BE]"><Icon name="cube" className="size-6" /></div>
+                <div>
+                  <h4 className="font-semibold text-gray-950">Prodotti su richiesta</h4>
+                  <p className="text-sm text-gray-600">
+                    Servizio on-demand: caricamento dati prodotti non presenti per copertura 100% catalogo.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="flex gap-3">
-              <div className="text-brand-primary text-xl">✓</div>
-              <div>
-                <h4 className="font-semibold text-gray-950">Personalizzazione</h4>
-                <p className="text-sm text-gray-600">
-                  Modifica descrizioni, aggiungi campi custom, gestisci listini multipli.
-                </p>
-              </div>
+          </div>
+
+          {/* Right: Screenshot */}
+          <div className="flex items-center">
+            <div className="rounded-2xl border-4 border-gray-200 shadow-2xl overflow-hidden">
+              <Screenshot
+                width={1216}
+                height={768}
+                src="/screenshots/eldomcat-catalogo.png"
+                className="w-full"
+                alt="Interfaccia Eldomcat con filtri e catalogo prodotti"
+              />
             </div>
-            <div className="flex gap-3">
-              <div className="text-brand-primary text-xl">✓</div>
-              <div>
-                <h4 className="font-semibold text-gray-950">Export multi-formato</h4>
-                <p className="text-sm text-gray-600">
-                  CSV, XML, JSON per e-commerce, marketplace, comparatori prezzi.
-                </p>
-              </div>
-            </div>
+            {/* TODO: Sostituire con screenshot reale interfaccia Eldomcat */}
           </div>
         </div>
 
-        {/* Right: Screenshot */}
-        <div className="flex items-center">
-          <div className="rounded-2xl border-4 border-gray-200 shadow-2xl overflow-hidden">
-            <Screenshot
-              width={1216}
-              height={768}
-              src="/screenshots/eldomcat-catalogo.png"
-              className="w-full"
-              alt="Interfaccia Eldomcat con filtri e catalogo prodotti"
-            />
+        {/* 8 Compilazioni Grid */}
+        <div>
+          <Heading as="h3" className="text-2xl mb-6 text-center">
+            8 Compilazioni Multiple per Ogni Esigenza
+          </Heading>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {compilations.map((comp, idx) => (
+              <div key={idx} className="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                <div className="text-sm font-semibold text-gray-900">{comp.name}</div>
+                <div className="mt-1 text-xs text-gray-600">{comp.desc}</div>
+              </div>
+            ))}
           </div>
-          {/* TODO: Sostituire con screenshot reale interfaccia Eldomcat */}
+          <p className="mt-6 text-center text-sm text-gray-600">
+            Risparmi <strong>75.000 ore</strong> vs inserimento manuale (300k articoli × 15min/articolo)
+          </p>
         </div>
       </div>
     </Container>

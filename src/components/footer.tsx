@@ -1,7 +1,6 @@
 import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/plus-grid'
 import { Button } from './button'
 import { Container } from './container'
-import { Gradient } from './gradient'
 import { Link } from './link'
 import { Logo } from './logo'
 import { Subheading } from './text'
@@ -10,24 +9,24 @@ function NewsletterSignup() {
   return (
     <div className="relative pt-16 pb-12 sm:py-20">
       <div className="max-w-2xl mx-auto text-center">
-        <Subheading>Rimani aggiornato</Subheading>
-        <p className="mt-4 text-2xl font-medium tracking-tight text-gray-950 sm:text-3xl">
+        <Subheading className="text-gray-100">Rimani aggiornato</Subheading>
+        <p className="mt-4 text-2xl font-medium tracking-tight text-white sm:text-3xl">
           Ricevi novità, guide e best practices per il tuo business retail
         </p>
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
           <input
             type="email"
             placeholder="La tua email aziendale"
-            className="w-full sm:w-80 px-4 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent"
+            className="w-full sm:w-80 px-4 py-3 text-base border border-slate-600 bg-slate-800 text-white placeholder:text-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0081BE] focus:border-transparent"
             aria-label="Email per newsletter"
           />
-          <Button className="btn-primary sm:w-auto">
+          <Button className="bg-[#0081BE] hover:bg-[#006E9F] text-white sm:w-auto">
             Iscriviti
           </Button>
         </div>
-        <p className="mt-4 text-sm text-gray-500">
+        <p className="mt-4 text-sm text-slate-400">
           Nessuno spam. Cancellati quando vuoi. Leggi la nostra{' '}
-          <Link href="/privacy" className="underline">Privacy Policy</Link>.
+          <Link href="/privacy" className="text-[#0081BE] hover:text-[#33A3D1] underline">Privacy Policy</Link>.
         </p>
       </div>
     </div>
@@ -35,7 +34,7 @@ function NewsletterSignup() {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm/6 font-medium text-gray-950/50">{children}</h3>
+  return <h3 className="text-sm/6 font-medium text-slate-400">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -47,7 +46,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="font-medium text-gray-950 data-hover:text-gray-950/75"
+        className="font-medium text-slate-300 hover:text-white transition-colors"
       />
     </li>
   )
@@ -72,10 +71,10 @@ function Sitemap() {
       <div>
         <SitemapHeading>Settori</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/settori/elettronica">Elettronica</SitemapLink>
-          <SitemapLink href="/settori/telefonia">Telefonia</SitemapLink>
-          <SitemapLink href="/settori/informatica">Informatica</SitemapLink>
-          <SitemapLink href="/settori/piccoli-elettrodomestici">Piccoli Elettrodomestici</SitemapLink>
+          <SitemapLink href="/settori/negozi-singoli">Negozi Singoli</SitemapLink>
+          <SitemapLink href="/settori/catene">Catene & Affiliazioni</SitemapLink>
+          <SitemapLink href="/settori/distribuzione">Distribuzione Organizzata</SitemapLink>
+          <SitemapLink href="/settori/altri-settori">Altri Settori</SitemapLink>
         </SitemapLinks>
       </div>
 
@@ -83,10 +82,9 @@ function Sitemap() {
       <div>
         <SitemapHeading>Azienda</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/azienda/chi-siamo">Chi Siamo</SitemapLink>
-          <SitemapLink href="/azienda/blog">Blog</SitemapLink>
-          <SitemapLink href="/azienda/careers">Careers</SitemapLink>
-          <SitemapLink href="/customer-stories">Customer Stories</SitemapLink>
+          <SitemapLink href="/chi-siamo">Chi Siamo</SitemapLink>
+          <SitemapLink href="/blog">Blog</SitemapLink>
+          <SitemapLink href="/settori/customer-stories">Customer Stories</SitemapLink>
           <SitemapLink href="/contatti">Contatti</SitemapLink>
         </SitemapLinks>
       </div>
@@ -139,7 +137,7 @@ function SocialLinks() {
         href="https://facebook.com"
         target="_blank"
         aria-label="Visit us on Facebook"
-        className="text-gray-950 data-hover:text-gray-950/75"
+        className="text-slate-400 hover:text-white transition-colors"
       >
         <SocialIconFacebook className="size-4" />
       </Link>
@@ -147,7 +145,7 @@ function SocialLinks() {
         href="https://x.com"
         target="_blank"
         aria-label="Visit us on X"
-        className="text-gray-950 data-hover:text-gray-950/75"
+        className="text-slate-400 hover:text-white transition-colors"
       >
         <SocialIconX className="size-4" />
       </Link>
@@ -155,7 +153,7 @@ function SocialLinks() {
         href="https://linkedin.com"
         target="_blank"
         aria-label="Visit us on LinkedIn"
-        className="text-gray-950 data-hover:text-gray-950/75"
+        className="text-slate-400 hover:text-white transition-colors"
       >
         <SocialIconLinkedIn className="size-4" />
       </Link>
@@ -165,9 +163,9 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-sm/6 text-gray-950 flex items-center gap-2">
+    <div className="text-sm/6 text-slate-300 flex items-center gap-2">
       <Logo variant="with-by" className="h-6" />
-      <span className="text-gray-500">|</span>
+      <span className="text-slate-600">|</span>
       <span>&copy; {new Date().getFullYear()} Elettrorama S.r.l. - P.IVA 01234567890</span>
     </div>
   )
@@ -175,39 +173,42 @@ function Copyright() {
 
 export function Footer() {
   return (
-    <footer>
-      <Gradient className="relative">
-        <div className="absolute inset-2 rounded-4xl bg-white/80" />
-        <Container>
-          <NewsletterSignup />
-          <PlusGrid className="pb-16">
-            <PlusGridRow>
-              <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
-                <div className="col-span-2 flex">
-                  <PlusGridItem className="pt-6 lg:pb-6">
-                    <Logo className="h-9" />
-                  </PlusGridItem>
-                </div>
-                <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
-                  <Sitemap />
-                </div>
-              </div>
-            </PlusGridRow>
-            <PlusGridRow className="flex justify-between">
-              <div>
-                <PlusGridItem className="py-3">
-                  <Copyright />
+    <footer className="relative bg-slate-900 text-white">
+      {/* Modern radial accent */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#0081BE]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0081BE]/5 rounded-full blur-3xl" />
+      </div>
+
+      <Container className="relative">
+        <NewsletterSignup />
+        <PlusGrid className="pb-16">
+          <PlusGridRow>
+            <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
+              <div className="col-span-2 flex">
+                <PlusGridItem className="pt-6 lg:pb-6">
+                  <Logo className="h-9" />
                 </PlusGridItem>
               </div>
-              <div className="flex">
-                <PlusGridItem className="flex items-center gap-8 py-3">
-                  <SocialLinks />
-                </PlusGridItem>
+              <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
+                <Sitemap />
               </div>
-            </PlusGridRow>
-          </PlusGrid>
-        </Container>
-      </Gradient>
+            </div>
+          </PlusGridRow>
+          <PlusGridRow className="flex justify-between">
+            <div>
+              <PlusGridItem className="py-3">
+                <Copyright />
+              </PlusGridItem>
+            </div>
+            <div className="flex">
+              <PlusGridItem className="flex items-center gap-8 py-3">
+                <SocialLinks />
+              </PlusGridItem>
+            </div>
+          </PlusGridRow>
+        </PlusGrid>
+      </Container>
     </footer>
   )
 }

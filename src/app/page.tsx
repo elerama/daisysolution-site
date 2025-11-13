@@ -17,10 +17,8 @@ import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Keyboard } from '@/components/keyboard'
 import { Link } from '@/components/link'
-import { LinkedAvatars } from '@/components/linked-avatars'
 import { LogoCloud } from '@/components/logo-cloud'
 import { LogoCluster } from '@/components/logo-cluster'
-import { LogoTimeline } from '@/components/logo-timeline'
 import { Map } from '@/components/map'
 import { Navbar } from '@/components/navbar'
 import { Screenshot } from '@/components/screenshot'
@@ -62,9 +60,9 @@ function Hero() {
                             Il gestionale web che cresce con te
                         </h1>
                         <p className="mt-6 max-w-xl text-xl/8 font-medium text-gray-950/75">
-                            Modulare, SaaS, integrazioni native. Dal negozio singolo alla rete
-                            di 270 punti vendita. Tutto quello che serve per gestire il tuo
-                            retail.
+                            Modulare, SaaS, integrazioni native. Già scelto da 270 affiliati
+                            Unieuro e 200+ negozi Expert. Gestisci vendite, magazzino,
+                            e-commerce da un'unica piattaforma.
                         </p>
                         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:gap-6">
                             <Button href="/contatti" className="btn-primary">
@@ -73,7 +71,7 @@ function Hero() {
                             <Button variant="secondary" href="#video-demo">
                                 Guarda Video
                             </Button>
-                            <Button variant="outline" href="/risorse/brochure">
+                            <Button variant="secondary" href="/risorse/brochure">
                                 Scarica Brochure
                             </Button>
                         </div>
@@ -178,18 +176,18 @@ function SocialProofSection() {
         <Container className="py-24">
             <Subheading className="text-center">Scelto dai leader retail italiani</Subheading>
             <Heading as="h2" className="mt-4 text-center max-w-3xl mx-auto">
-                La fiducia di oltre 270 punti vendita
+                La fiducia di oltre 470 punti vendita
             </Heading>
 
             <LogoCloud className="mt-16">
                 {/* TODO: Sostituire con loghi reali clienti Daisy */}
-                {/* Unieuro, Expert, Domex, Gaer, Trend, Model Assistance */}
+                {/* Unieuro, Expert, Domex, Gaer, Trend, Model Assistance, Eurocom, Carrubba */}
             </LogoCloud>
 
             <p className="mt-12 text-center text-base text-gray-600 max-w-2xl mx-auto">
-                Da negozi indipendenti a reti nazionali con 270 affiliati. Ogni giorno
-                migliaia di utenti lavorano con Daisy per gestire vendite, magazzino,
-                e-commerce e analytics.
+                270 affiliati Unieuro, 200+ insegne Expert/Domex/Gaer, 2000+ clienti B2B come
+                Model Assistance. Ogni giorno oltre 900 postazioni lavorano con Daisy per
+                gestire vendite, magazzino, e-commerce e analytics.
             </p>
         </Container>
     )
@@ -197,7 +195,11 @@ function SocialProofSection() {
 
 /**
  * Stats Grid - Numeri Impatto
- * 270 negozi | 200+ utenti | 20 anni | 85k SKU
+ * Dati reali estratti da analisi elerama-site:
+ * - 270 affiliati Unieuro gestiti
+ * - 900 postazioni attive
+ * - 20+ anni esperienza Elettrorama
+ * - 300k+ articoli banca dati Eldomcat
  */
 function StatsSection() {
     return (
@@ -205,27 +207,27 @@ function StatsSection() {
             <Container>
                 <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 text-center">
                     <div>
-                        <div className="text-5xl font-bold text-white">270+</div>
+                        <div className="text-5xl font-bold text-white">270</div>
                         <div className="mt-2 text-sm font-medium text-white/80">
-                            Punti vendita gestiti
+                            Affiliati Unieuro attivi
                         </div>
                     </div>
                     <div>
-                        <div className="text-5xl font-bold text-white">200+</div>
+                        <div className="text-5xl font-bold text-white">900+</div>
                         <div className="mt-2 text-sm font-medium text-white/80">
-                            Utenti concorrenti
+                            Postazioni gestite
                         </div>
                     </div>
                     <div>
-                        <div className="text-5xl font-bold text-white">20</div>
+                        <div className="text-5xl font-bold text-white">20+</div>
                         <div className="mt-2 text-sm font-medium text-white/80">
-                            Anni di esperienza
+                            Anni esperienza retail
                         </div>
                     </div>
                     <div>
-                        <div className="text-5xl font-bold text-white">85k</div>
+                        <div className="text-5xl font-bold text-white">300k+</div>
                         <div className="mt-2 text-sm font-medium text-white/80">
-                            SKU gestiti per cliente
+                            Articoli banca dati
                         </div>
                     </div>
                 </div>
@@ -417,61 +419,6 @@ function BentoSection() {
                 />
             </div>
         </Container>
-    )
-}
-
-function DarkBentoSection() {
-    return (
-        <div className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32">
-            <Container>
-                <Subheading dark>Outreach</Subheading>
-                <Heading as="h3" dark className="mt-2 max-w-3xl">
-                    Customer outreach has never been easier.
-                </Heading>
-
-                <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
-                    <BentoCard
-                        dark
-                        eyebrow="Networking"
-                        title="Sell at the speed of light"
-                        description="Our RadiantAI chat assistants analyze the sentiment of your conversations in real time, ensuring you're always one step ahead."
-                        graphic={
-                            <div className="h-80 bg-[url(/screenshots/networking.png)] bg-size-[851px_344px] bg-no-repeat" />
-                        }
-                        fade={['top']}
-                        className="max-lg:rounded-t-4xl lg:col-span-4 lg:rounded-tl-4xl"
-                    />
-                    <BentoCard
-                        dark
-                        eyebrow="Integrations"
-                        title="Meet leads where they are"
-                        description="With thousands of integrations, no one will be able to escape your cold outreach."
-                        graphic={<LogoTimeline />}
-                        // `overflow-visible!` is needed to work around a Chrome bug that disables the mask on the graphic.
-                        className="z-10 overflow-visible! lg:col-span-2 lg:rounded-tr-4xl"
-                    />
-                    <BentoCard
-                        dark
-                        eyebrow="Meetings"
-                        title="Smart call scheduling"
-                        description="Automatically insert intro calls into your leads' calendars without their consent."
-                        graphic={<LinkedAvatars />}
-                        className="lg:col-span-2 lg:rounded-bl-4xl"
-                    />
-                    <BentoCard
-                        dark
-                        eyebrow="Engagement"
-                        title="Become a thought leader"
-                        description="RadiantAI automatically writes LinkedIn posts that relate current events to B2B sales, helping you build a reputation as a thought leader."
-                        graphic={
-                            <div className="h-80 bg-[url(/screenshots/engagement.png)] bg-size-[851px_344px] bg-no-repeat" />
-                        }
-                        fade={['top']}
-                        className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl"
-                    />
-                </div>
-            </Container>
-        </div>
     )
 }
 

@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Fontshare */
+@import url('https://api.fontshare.com/css?f[]=switzer@400,500,600,700&display=swap');
+
 @theme {
   /* Typography - Inter primary (strategy v1.1 §4.2), Switzer fallback */
   --font-sans: Inter, Switzer, system-ui, sans-serif;
@@ -7,11 +13,19 @@
   /* Radiant base radius (mantenere per componenti esistenti) */
   --radius-4xl: 2rem;
 
-  /* Brand Colors Daisy Solution (strategy v1.1 §8.4 - Marketing Approved) */
-  --color-brand-primary: #0f4c81;
-  /* Blu corporate */
-  --color-brand-secondary: #f59e0b;
-  /* Arancione CTA (amber-500) */
+  /* Brand Colors Daisy Solution - Elettrorama Identity */
+  --color-brand-primary: #0081BE;
+  /* Blu Elettrorama primario */
+  --color-brand-primary-hover: #006E9F;
+  /* Blu Elettrorama hover */
+  --color-brand-primary-active: #00587F;
+  /* Blu Elettrorama active */
+  --color-brand-primary-light: #33A3D1;
+  /* Blu Elettrorama light (per gradienti leggibili) */
+  --color-brand-secondary: #2C3E50;
+  /* Grigio scuro professionale (sostituisce arancione) */
+  --color-brand-accent: #00A8E8;
+  /* Azzurro brillante (per CTA e accent) */
 
   /* Background & Surface */
   --color-background: #ffffff;
@@ -35,12 +49,12 @@
   /* Semantic Colors */
   --color-success: #10b981;
   /* green-600 */
-  --color-warning: #f59e0b;
-  /* amber-600 */
+  --color-warning: #eab308;
+  /* giallo warning professionale (yellow-500) */
   --color-error: #dc2626;
   /* red-600 */
-  --color-info: #3b82f6;
-  /* blue-600 */
+  --color-info: #0081BE;
+  /* blu Elettrorama per info */
 }
 
 /* Utility classes for brand colors */
@@ -69,18 +83,37 @@
     border-color: var(--color-brand-secondary);
   }
 
+  .hover\:bg-brand-primary-hover:hover {
+    background-color: var(--color-brand-primary-hover);
+  }
+
+  .hover\:text-brand-primary-hover:hover {
+    color: var(--color-brand-primary-hover);
+  }
+
+  .bg-brand-accent {
+    background-color: var(--color-brand-accent);
+  }
+
+  .text-brand-accent {
+    color: var(--color-brand-accent);
+  }
+
+  .border-brand-accent {
+    border-color: var(--color-brand-accent);
+  }
+
   /* CTA button styles (strategy v1.1 §4.1) */
   .btn-primary {
-    background-color: var(--color-brand-secondary);
+    background-color: var(--color-brand-accent);
     color: #ffffff;
     transition: all 0.2s ease-in-out;
   }
 
   .btn-primary:hover {
-    background-color: #d97706;
-    /* darker amber */
+    background-color: var(--color-brand-primary);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 129, 190, 0.5);
   }
 
   .btn-secondary {
@@ -90,10 +123,9 @@
   }
 
   .btn-secondary:hover {
-    background-color: #0a3a5f;
-    /* darker blue */
+    background-color: var(--color-brand-primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(15, 76, 129, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 129, 190, 0.4);
   }
 
   .btn-outline {

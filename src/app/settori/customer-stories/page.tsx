@@ -13,6 +13,7 @@ import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
+import { Icon } from '@/components/icon'
 import { Navbar } from '@/components/navbar'
 import { Heading, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
@@ -94,7 +95,7 @@ function UnieuroCaseStudy() {
         {/* Left: Content */}
         <div>
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold mb-6">
-            <span className="text-xl">🏆</span>
+            <Icon name="trophy" className="size-5" />
             Flagship Case Study
           </div>
 
@@ -272,42 +273,42 @@ function ModelAssistanceCaseStudy() {
 function OtherCaseStudies() {
   const cases = [
     {
-      icon: '🏢',
+      icon: 'building' as const,
       client: 'Domex',
       sector: 'Distribuzione Organizzata',
       description: '200+ negozi affiliati gestiti con FastLabel centralizzato per visual marketing omogeneo.',
       highlights: ['200+ affiliati', 'Stampa cartelli centralizzata', 'Rollout rapido promozioni'],
     },
     {
-      icon: '🛠️',
+      icon: 'wrench' as const,
       client: 'Gaer',
       sector: 'Centrale D\'Acquisto',
       description: 'Portale B2B prodotti, totem interattivi pick & pay, integrazione logistica.',
       highlights: ['Portale 24/7', 'Totem self-service', 'Controllo governance'],
     },
     {
-      icon: '🏪',
+      icon: 'shopping-bag' as const,
       client: 'Carrubba S.r.l.',
       sector: 'Affiliato Unieuro',
       description: '2 punti vendita con gestione completa retail + integrazione centrale automatica.',
       highlights: ['Vendite + Cassa', 'Carico bolle automatico', 'Zero errori inventario'],
     },
     {
-      icon: '🌐',
+      icon: 'globe' as const,
       client: 'Te.se.c.',
       sector: 'E-commerce B2C',
       description: 'Integrazione Elecommerce per vendita online con sincronizzazione giacenze real-time.',
       highlights: ['E-commerce integrato', 'Magazzino unico', 'Ordini web→cassa'],
     },
     {
-      icon: '💡',
+      icon: 'lightbulb' as const,
       client: 'Upset Design',
       sector: 'Illuminazione',
       description: 'Settore non-eldom con personalizzazioni verticali per catalogo illuminotecnica.',
       highlights: ['Settore custom', 'Catalogo personalizzato', 'Multi-magazzino'],
     },
     {
-      icon: '📈',
+      icon: 'chart-pie' as const,
       client: 'Elettrorama',
       sector: 'GDO Elettronica',
       description: 'Deployment multi-anno con uptime 99.9% garantito. Partner storico Elettrorama.',
@@ -328,7 +329,9 @@ function OtherCaseStudies() {
             key={caseStudy.client}
             className="flex flex-col p-6 bg-white rounded-2xl ring-1 ring-gray-950/5"
           >
-            <div className="text-4xl mb-4">{caseStudy.icon}</div>
+            <div className="text-[#0081BE] mb-4">
+              <Icon name={caseStudy.icon} className="size-10" />
+            </div>
             <h3 className="text-xl font-bold text-gray-950 mb-2">{caseStudy.client}</h3>
             <div className="text-xs text-brand-primary font-semibold mb-3">{caseStudy.sector}</div>
             <p className="text-sm text-gray-700 mb-6 flex-1">{caseStudy.description}</p>

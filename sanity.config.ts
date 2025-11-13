@@ -7,7 +7,8 @@ import { apiVersion, dataset, projectId } from './src/sanity/env'
 import { schema } from './src/sanity/schema'
 
 export default defineConfig({
-  name: 'Radiant',
+  name: 'Daisy Solution Blog',
+  title: 'Daisy Solution CMS',
   basePath: '/studio',
   projectId,
   dataset,

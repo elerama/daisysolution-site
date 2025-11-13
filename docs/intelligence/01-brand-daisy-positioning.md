@@ -1,7 +1,49 @@
 # Brand Daisy Positioning
 
 > **Documento generato il**: 2025-11-10
+> **Ultima revisione**: 2025-11-12 (analisi approfondita elerama-site)
 > **Fonte**: Analisi repository `elerama-site` > **Scopo**: Fondare il posizionamento strategico per il sito dedicato Daisy Solution
+
+---
+
+## Elettrorama - Casa Madre Daisy Solution
+
+### Storia e Identità Aziendale
+
+**Fondata nel 2001** dall'unione di persone con **esperienze pluriennali nell'ambito dell'informatica e del commercio**, Elettrorama è un'**azienda giovane e dinamica** in grado di offrire una **gamma completa di strumenti professionali** a supporto del Retail e della distribuzione organizzata.
+
+**Oltre 20 anni** di esperienza nello sviluppo di soluzioni software innovative per il settore retail, con particolare focus sul mercato elettrodomestici (eldom) e distribuzione organizzata in Italia.
+
+### Mission Aziendale
+
+> "La nostra mission è fornire un servizio che facilita l'attività del professionista ed aiuta il consumatore. Il nostro obiettivo è progettare soluzioni software innovative in grado di rispondere oggi alle richieste del mercato di domani."
+
+### Tre Pilastri Differenzianti
+
+1. **Know-how Approfondito** - L'esperienza ventennale e un know how approfondito permettono di sviluppare soluzioni apprezzate da clienti in tutta Italia. Con la **banca dati italiana più grande del settore Eldom** (Eldomcat, 300k+ prodotti), leader nello sviluppo di prodotti per la gestione informatica del settore elettrodomestici.
+
+2. **Attenzione al Cliente** - Consulenza professionale e assistenza sempre puntuale ed efficace. Seguiamo attentamente tutti i clienti prima, durante e dopo l'acquisto. Help desk gestito da team di esperti disponibile per qualsiasi necessità.
+
+3. **Innovazione Progettuale** - Progetti sempre nuovi e soluzioni inedite. Elettrorama studia oggi soluzioni in grado di rispondere efficacemente alle richieste di domani. Progettiamo e sviluppiamo di continuo, insieme ai nostri clienti, nuovi prodotti che soddisfano le loro richieste e le aspettative del consumatore.
+
+### Team e Cultura Aziendale
+
+Elettrorama è un **gruppo giovane e dinamico**, una realtà ricca e stimolante da un punto di vista sia culturale che tecnologico. Investimento continuo nella formazione dello staff di tecnici e sviluppatori. Il benessere nell'organizzazione è fondamentale per l'inventiva e lo sviluppo di prodotti nuovi. Collaborare con Elettrorama significa interagire con un vero **team di persone abituate a creare soluzioni informatiche in uno scenario di costanti cambiamenti**.
+
+### Servizi Dedicati
+
+**Processo di assistenza in 4 fasi:**
+
+1. **Analisi e Consulenza** - Analisi tecnica preliminare del contesto, esigenze da soddisfare, problemi da risolvere per suggerire la soluzione migliore.
+2. **Progettazione** - Sulla base dell'analisi, progettazione soluzione ideale: personalizzazione software esistenti o sviluppo soluzione del tutto nuova.
+3. **Realizzazione** - Implementazione, installazione prodotto software. Seguimento passo dopo passo durante installazione e testing. Attenzione particolare nel collaudo per analizzare, correggere in tempi rapidi eventuali errori o imprevisti.
+4. **Manutenzione e Assistenza** - Cura attenta ogni prodotto dopo rilascio. Aggiornamenti necessari e manutenzione richiesta. Tecnici a disposizione clienti per risolvere problemi riducendo al massimo tempi attesa.
+
+### Help Desk
+
+- **Telefono**: +39 011 9203522 int. 1
+- **Email**: helpdesk@elettrorama.com
+- **Orari**: Lun-Ven 9-13 / 14.30-19.30, Sabato 9-13
 
 ---
 
@@ -378,26 +420,23 @@
 ## Next Steps per Validazione
 
 1. **Interviste stakeholder interni Elettrorama:**
-
-    - Validare priorità target (confermare focus reti vs. singoli?)
-    - Confermare messaggi differenzianti vs. competitor conosciuti
-    - Allineare su claim e tono
+   - Validare priorità target (confermare focus reti vs. singoli?)
+   - Confermare messaggi differenzianti vs. competitor conosciuti
+   - Allineare su claim e tono
 
 2. **Test con clienti rappresentativi:**
-
-    - 2-3 affiliati Unieuro: risonanza messaggi "rete multi-sede"
-    - 1-2 negozi singoli: comprensione value proposition SaaS/modularità
-    - 1 centrale (es. Domex): validare posizionamento "piattaforma per centrali"
+   - 2-3 affiliati Unieuro: risonanza messaggi "rete multi-sede"
+   - 1-2 negozi singoli: comprensione value proposition SaaS/modularità
+   - 1 centrale (es. Domex): validare posizionamento "piattaforma per centrali"
 
 3. **Competitive Analysis approfondita:**
-
-    - Mappare 3-5 competitor diretti (TeamSystem, Zucchetti verticali, Vela Retail, ecc.)
-    - Analizzare messaging, pricing, differenziatori
-    - Affinare positioning statement
+   - Mappare 3-5 competitor diretti (TeamSystem, Zucchetti verticali, Vela Retail, ecc.)
+   - Analizzare messaging, pricing, differenziatori
+   - Affinare positioning statement
 
 4. **Content Audit sito Elettrorama attuale:**
-    - Verificare coerenza messaggi esistenti
-    - Identificare contenuti riutilizzabili vs. da riscrivere
+   - Verificare coerenza messaggi esistenti
+   - Identificare contenuti riutilizzabili vs. da riscrivere
 
 ---
 

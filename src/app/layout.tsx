@@ -57,20 +57,7 @@ export default function RootLayout({
         <html lang="it">
             <head>
                 {/* Google Fonts - Inter (primary) + Switzer (fallback) */}
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com"
-                    crossOrigin="anonymous"
-                />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-                    rel="stylesheet"
-                />
-                <link
-                    rel="stylesheet"
-                    href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&amp;display=swap"
-                />
+
                 {/* Google Analytics 4 */}
                 {process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID && (
                     <>

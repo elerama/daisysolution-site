@@ -4,8 +4,11 @@ import {
     Disclosure,
     DisclosureButton,
     DisclosurePanel,
+    Popover,
+    PopoverButton,
+    PopoverPanel,
 } from '@headlessui/react'
-import { Bars2Icon } from '@heroicons/react/24/solid'
+import { Bars2Icon, ChevronDownIcon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
 import { Link } from './link'
 import { Logo } from './logo'
@@ -14,9 +17,8 @@ import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 // Menu structure: Daisy Solution
 // Simple links (no dropdown)
 const simpleLinks = [
-    { href: '/customer-stories', label: 'Customer Stories' },
     { href: '/prezzi', label: 'Prezzi' },
-    { href: '/contatti', label: 'Contatti' },
+    { href: '/login', label: 'Area Riservata' },
 ]
 
 // Dropdown menu items
@@ -25,18 +27,17 @@ const dropdownMenus = {
         label: 'Prodotto',
         sections: [
             {
-                title: 'Gestione Negozio',
+                title: 'Panoramica',
                 links: [
-                    { href: '/prodotto/punto-vendita', label: 'Punto Vendita' },
-                    { href: '/prodotto/magazzino', label: 'Magazzino' },
-                    { href: '/prodotto/e-commerce', label: 'E-commerce' },
+                    { href: '/prodotto', label: 'Overview Prodotto' },
+                    { href: '/prodotto/moduli', label: 'Moduli & Funzionalità' },
+                    { href: '/prodotto/integrazioni', label: 'Integrazioni' },
                 ],
             },
             {
-                title: 'Business Intelligence',
+                title: 'Approfondimenti',
                 links: [
-                    { href: '/prodotto/analytics', label: 'Analytics & Report' },
-                    { href: '/prodotto/crm', label: 'CRM Clienti' },
+                    { href: '/prodotto/perche-daisy', label: 'Perché Daisy Solution' },
                 ],
             },
         ],
@@ -44,27 +45,26 @@ const dropdownMenus = {
     settori: {
         label: 'Settori',
         links: [
-            { href: '/settori/elettronica', label: 'Elettronica di Consumo' },
-            { href: '/settori/telefonia', label: 'Telefonia' },
-            { href: '/settori/informatica', label: 'Informatica' },
-            { href: '/settori/piccoli-elettrodomestici', label: 'Piccoli Elettrodomestici' },
+            { href: '/settori', label: 'Panoramica Settori' },
+            { href: '/settori/catene', label: 'Catene & GDO' },
+            { href: '/settori/distribuzione', label: 'Distribuzione Organizzata' },
+            { href: '/settori/negozi-singoli', label: 'Negozi Singoli' },
+            { href: '/settori/altri-settori', label: 'Altri Settori' },
         ],
     },
     tecnologie: {
         label: 'Tecnologie',
         links: [
-            { href: '/tecnologie/cloud', label: 'Cloud & Sicurezza' },
-            { href: '/tecnologie/integrazioni', label: 'Integrazioni' },
-            { href: '/tecnologie/api', label: 'API & Sviluppo' },
+            { href: '/tecnologie', label: 'Architettura & Stack' },
+            { href: '/prodotto/integrazioni', label: 'Integrazioni' },
         ],
     },
     risorse: {
         label: 'Risorse',
         links: [
-            { href: '/risorse/documentazione', label: 'Documentazione' },
-            { href: '/risorse/guide', label: 'Guide & Tutorial' },
-            { href: '/risorse/faq', label: 'FAQ' },
-            { href: '/risorse/supporto', label: 'Supporto Tecnico' },
+            { href: '/customer-stories', label: 'Customer Stories' },
+            { href: '/blog', label: 'Blog' },
+            { href: '/contatti', label: 'Contatti & Supporto' },
         ],
     },
 }
@@ -74,16 +74,58 @@ function DesktopNav() {
         <nav className="relative hidden lg:flex lg:items-center lg:gap-2">
             {/* Dropdown menus: Prodotto, Settori, Tecnologie, Risorse */}
             {Object.entries(dropdownMenus).map(([key, menu]) => (
-                <PlusGridItem key={key} className="relative flex">
-                    <Link
-                        href="#"
-                        className="flex items-center gap-1 px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-hover:bg-black/2.5"
-                    >
-                        {menu.label}
-                        <span className="text-gray-500 text-sm">▾</span>
-                    </Link>
-                    {/* TODO SITE-STEP 1: Add flyout dropdown component here */}
-                </PlusGridItem>
+                <Popover key={key} className="relative">
+                    {({ open }) => (
+                        <>
+                            <PopoverButton className="flex items-center gap-1 px-4 py-3 text-base font-medium text-gray-950 hover:bg-black/5 rounded-lg outline-none">
+                                {menu.label}
+                                <ChevronDownIcon className={`size-4 text-gray-500 transition-transform ${open ? 'rotate-180' : ''}`} />
+                            </PopoverButton>
+                            <PopoverPanel className="absolute left-0 z-10 mt-3 w-screen max-w-sm transform">
+                                <div className="overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5">
+                                    <div className="p-4">
+                                        {'sections' in menu ? (
+                                            // Menu con sezioni (es. Prodotto)
+                                            <div className="space-y-4">
+                                                {menu.sections.map((section, idx) => (
+                                                    <div key={idx}>
+                                                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                                                            {section.title}
+                                                        </div>
+                                                        <div className="space-y-1">
+                                                            {section.links.map((link) => (
+                                                                <Link
+                                                                    key={link.href}
+                                                                    href={link.href}
+                                                                    className="block px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded-lg"
+                                                                >
+                                                                    {link.label}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            // Menu semplice lista (es. Settori, Tecnologie, Risorse)
+                                            <div className="space-y-1">
+                                                {menu.links.map((link) => (
+                                                    <Link
+                                                        key={link.href}
+                                                        href={link.href}
+                                                        className="block px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded-lg"
+                                                    >
+                                                        {link.label}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            </PopoverPanel>
+                        </>
+                    )}
+                </Popover>
             ))}
 
             {/* Simple links: Customer Stories, Prezzi, Contatti */}
@@ -91,7 +133,7 @@ function DesktopNav() {
                 <PlusGridItem key={href} className="relative flex">
                     <Link
                         href={href}
-                        className="flex items-center px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-hover:bg-black/2.5"
+                        className="flex items-center px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-hover:bg-black/2.5 rounded-lg"
                     >
                         {label}
                     </Link>
@@ -99,10 +141,10 @@ function DesktopNav() {
             ))}
 
             {/* CTA Button: Richiedi Demo */}
-            <PlusGridItem className="relative flex">
+            <PlusGridItem className="ml-auto flex">
                 <Link
-                    href="/richiedi-demo"
-                    className="btn-primary px-6 py-3 text-base font-medium"
+                    href="/contatti"
+                    className="inline-flex items-center justify-center rounded-full bg-[#0081BE] px-6 py-3 text-base font-medium text-white hover:bg-[#006E9F] transition-colors"
                 >
                     Richiedi Demo
                 </Link>
@@ -138,8 +180,48 @@ function MobileNav() {
                         }}
                         key={key}
                     >
-                        <div className="text-base font-medium text-gray-950">{menu.label}</div>
-                        {/* TODO SITE-STEP 1: Add mobile expandable submenu */}
+                        <Disclosure>
+                            {({ open }) => (
+                                <>
+                                    <DisclosureButton className="flex w-full items-center justify-between text-base font-medium text-gray-950">
+                                        {menu.label}
+                                        <ChevronDownIcon className={`size-5 text-gray-500 transition-transform ${open ? 'rotate-180' : ''}`} />
+                                    </DisclosureButton>
+                                    <DisclosurePanel className="mt-3 ml-4 space-y-2">
+                                        {'sections' in menu ? (
+                                            // Menu con sezioni
+                                            menu.sections.map((section, sIdx) => (
+                                                <div key={sIdx} className="space-y-2">
+                                                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                                                        {section.title}
+                                                    </div>
+                                                    {section.links.map((link) => (
+                                                        <Link
+                                                            key={link.href}
+                                                            href={link.href}
+                                                            className="block text-sm text-gray-700 hover:text-[#0081BE]"
+                                                        >
+                                                            {link.label}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            ))
+                                        ) : (
+                                            // Menu semplice lista
+                                            menu.links.map((link) => (
+                                                <Link
+                                                    key={link.href}
+                                                    href={link.href}
+                                                    className="block text-sm text-gray-700 hover:text-[#0081BE]"
+                                                >
+                                                    {link.label}
+                                                </Link>
+                                            ))
+                                        )}
+                                    </DisclosurePanel>
+                                </>
+                            )}
+                        </Disclosure>
                     </motion.div>
                 ))}
 
@@ -171,7 +253,7 @@ function MobileNav() {
                         rotateX: { duration: 0.3, delay: (Object.keys(dropdownMenus).length + simpleLinks.length) * 0.1 },
                     }}
                 >
-                    <Link href="/richiedi-demo" className="btn-primary block text-center px-6 py-3 text-base font-medium">
+                    <Link href="/contatti" className="btn-primary block text-center px-6 py-3 text-base font-medium">
                         Richiedi Demo
                     </Link>
                 </motion.div>

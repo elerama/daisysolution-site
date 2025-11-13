@@ -26,9 +26,10 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Blog - Daisy Solution | News, Aggiornamenti e Guide',
   description:
-    'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
+    'Resta aggiornato su novità prodotto, guide pratiche per il retail, case study clienti e best practice per la gestione del punto vendita.',
+  keywords: ['blog Daisy', 'news retail', 'guide gestionale', 'aggiornamenti software', 'best practice negozi'],
 }
 
 const postsPerPage = 5
