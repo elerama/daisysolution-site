@@ -78,7 +78,9 @@ export default function RootLayout({
             </head>
             <body className="text-gray-950 antialiased">
                 {children}
-                <SanityLive revalidateSyncTags={revalidateSyncTags} />
+                {process.env.NEXT_PUBLIC_OUTPUT_MODE !== 'export' && (
+                    <SanityLive revalidateSyncTags={revalidateSyncTags} />
+                )}
             </body>
         </html>
     )
