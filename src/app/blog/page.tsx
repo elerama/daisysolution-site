@@ -162,20 +162,20 @@ async function Posts({ page, category }: { page: number; category?: string }) {
 
   return (
     <div className="mt-6">
-      {posts.map((post: { 
-        title: string | null; 
-        slug: string | null; 
-        publishedAt: string | null; 
-        excerpt: string | null; 
-        author: { 
-          name: string | null; 
-          image: { 
-            asset?: { _ref: string; _type: 'reference' }; 
-            hotspot?: unknown; 
-            crop?: unknown; 
-            _type: 'image' 
-          } | null 
-        } | null 
+      {posts.map((post: {
+        title: string | null;
+        slug: string | null;
+        publishedAt: string | null;
+        excerpt: string | null;
+        author: {
+          name: string | null;
+          image: {
+            asset?: { _ref: string; _type: 'reference' };
+            hotspot?: unknown;
+            crop?: unknown;
+            _type: 'image'
+          } | null
+        } | null
       }) => (
         <div
           key={post.slug}
