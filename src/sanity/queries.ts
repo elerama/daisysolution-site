@@ -1,24 +1,23 @@
-import { defineQuery } from 'next-sanity'
-import { sanityFetch } from './live'
+import { client } from './client'
 
-const TOTAL_POSTS_QUERY = defineQuery(/* groq */ `count(*[
+const TOTAL_POSTS_QUERY = /* groq */ `count(*[
   _type == "post"
   && defined(slug.current)
-  && (isFeatured != true || defined($category))
   && select(defined($category) => $category in categories[]->slug.current, true)
-])`)
+])`
 
 export async function getPostsCount(category?: string) {
-  return await sanityFetch({
-    query: TOTAL_POSTS_QUERY,
-    params: { category: category ?? null },
-  })
+  const data = await client.fetch(
+    TOTAL_POSTS_QUERY,
+    { category: category ?? null },
+    { next: { revalidate: 60 } }
+  )
+  return { data }
 }
 
-const POSTS_QUERY = defineQuery(/* groq */ `*[
+const POSTS_QUERY = /* groq */ `*[
   _type == "post"
   && defined(slug.current)
-  && (isFeatured != true || defined($category))
   && select(defined($category) => $category in categories[]->slug.current, true)
 ]|order(publishedAt desc)[$startIndex...$endIndex]{
   title,
@@ -29,24 +28,26 @@ const POSTS_QUERY = defineQuery(/* groq */ `*[
     name,
     image,
   },
-}`)
+}`
 
 export async function getPosts(
   startIndex: number,
   endIndex: number,
   category?: string,
 ) {
-  return await sanityFetch({
-    query: POSTS_QUERY,
-    params: {
+  const data = await client.fetch(
+    POSTS_QUERY,
+    {
       startIndex,
       endIndex,
       category: category ?? null,
     },
-  })
+    { next: { revalidate: 60 } }
+  )
+  return { data }
 }
 
-const FEATURED_POSTS_QUERY = defineQuery(/* groq */ `*[
+const FEATURED_POSTS_QUERY = /* groq */ `*[
   _type == "post"
   && isFeatured == true
   && defined(slug.current)
@@ -60,16 +61,18 @@ const FEATURED_POSTS_QUERY = defineQuery(/* groq */ `*[
     name,
     image,
   },
-}`)
+}`
 
 export async function getFeaturedPosts(quantity: number) {
-  return await sanityFetch({
-    query: FEATURED_POSTS_QUERY,
-    params: { quantity },
-  })
+  const data = await client.fetch(
+    FEATURED_POSTS_QUERY,
+    { quantity },
+    { next: { revalidate: 60 } }
+  )
+  return { data }
 }
 
-const FEED_POSTS_QUERY = defineQuery(/* groq */ `*[
+const FEED_POSTS_QUERY = /* groq */ `*[
   _type == "post"
   && defined(slug.current)
 ]|order(isFeatured, publishedAt desc){
@@ -81,15 +84,18 @@ const FEED_POSTS_QUERY = defineQuery(/* groq */ `*[
   author->{
     name,
   },
-}`)
+}`
 
 export async function getPostsForFeed() {
-  return await sanityFetch({
-    query: FEED_POSTS_QUERY,
-  })
+  const data = await client.fetch(
+    FEED_POSTS_QUERY,
+    undefined,
+    { next: { revalidate: 3600 } }
+  )
+  return { data }
 }
 
-const POST_QUERY = defineQuery(/* groq */ `*[
+const POST_QUERY = /* groq */ `*[
   _type == "post"
   && slug.current == $slug
 ][0]{
@@ -106,26 +112,32 @@ const POST_QUERY = defineQuery(/* groq */ `*[
     title,
     "slug": slug.current,
   }
-}
-`)
+}`
 
 export async function getPost(slug: string) {
-  return await sanityFetch({
-    query: POST_QUERY,
-    params: { slug },
-  })
+  console.log('[getPost] Fetching post with slug:', slug)
+  const data = await client.fetch(
+    POST_QUERY,
+    { slug },
+    { next: { revalidate: 60 } }
+  )
+  console.log('[getPost] Result:', data ? `Found: ${data.title}` : 'NULL')
+  return { data }
 }
 
-const CATEGORIES_QUERY = defineQuery(/* groq */ `*[
+const CATEGORIES_QUERY = /* groq */ `*[
   _type == "category"
   && count(*[_type == "post" && defined(slug.current) && ^._id in categories[]._ref]) > 0
 ]|order(title asc){
   title,
   "slug": slug.current,
-}`)
+}`
 
 export async function getCategories() {
-  return await sanityFetch({
-    query: CATEGORIES_QUERY,
-  })
+  const data = await client.fetch(
+    CATEGORIES_QUERY,
+    undefined,
+    { next: { revalidate: 60 } }
+  )
+  return { data }
 }

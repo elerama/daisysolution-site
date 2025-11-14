@@ -237,6 +237,116 @@ function StatsSection() {
 }
 
 /**
+ * Ecosistema Prodotti - 3 Pilastri
+ * Eldomcat, Elecommerce, Fastlabel con numeri reali
+ */
+function EcosystemSection() {
+    return (
+        <Container className="py-24">
+            <Subheading className="text-center">Ecosistema integrato</Subheading>
+            <Heading as="h2" className="mt-4 text-center max-w-3xl mx-auto">
+                Tre prodotti che potenziano Daisy Solution
+            </Heading>
+            <p className="mt-6 text-center text-lg text-gray-700 max-w-2xl mx-auto">
+                Banca dati articoli, e-commerce sincronizzato, cartelli intelligenti. Tutto integrato nativamente con l'ERP.
+            </p>
+
+            <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+                {/* Eldomcat */}
+                <div className="flex flex-col p-8 bg-white rounded-2xl ring-1 ring-gray-950/5">
+                    <div className="flex size-12 items-center justify-center rounded-lg bg-blue-500/10 text-3xl mb-4">
+                        📚
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-950">Eldomcat</h3>
+                    <p className="mt-2 text-sm text-gray-600">Banca dati italiana più grande</p>
+                    <div className="mt-6 space-y-3">
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-primary font-bold">300k+</span>
+                            <span className="text-sm text-gray-700">Articoli con foto e caratteristiche tecniche</span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-primary font-bold">8</span>
+                            <span className="text-sm text-gray-700">Compilazioni diverse: SEO, volantini, cartelli, schede</span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-primary font-bold">✓</span>
+                            <span className="text-sm text-gray-700">Risparmio 75.000 ore inserimento manuale</span>
+                        </div>
+                    </div>
+                    <div className="mt-8">
+                        <Link href="/prodotto/integrazioni#eldomcat" className="text-sm font-semibold text-brand-primary hover:underline">
+                            Scopri Eldomcat →
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Elecommerce */}
+                <div className="flex flex-col p-8 bg-white rounded-2xl ring-1 ring-gray-950/5">
+                    <div className="flex size-12 items-center justify-center rounded-lg bg-green-500/10 text-3xl mb-4">
+                        🛍️
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-950">Elecommerce</h3>
+                    <p className="mt-2 text-sm text-gray-600">E-commerce cloud integrato</p>
+                    <div className="mt-6 space-y-3">
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-primary font-bold">B2B+B2C</span>
+                            <span className="text-sm text-gray-700">Doppio canale con listini differenziati</span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-primary font-bold">Amazon+eBay</span>
+                            <span className="text-sm text-gray-700">Marketplace automatici con sync ordini</span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-primary font-bold">✓</span>
+                            <span className="text-sm text-gray-700">Comparatori prezzi: Google Shopping, Trovaprezzi</span>
+                        </div>
+                    </div>
+                    <div className="mt-8">
+                        <Link href="/prodotto/integrazioni#elecommerce" className="text-sm font-semibold text-brand-primary hover:underline">
+                            Scopri Elecommerce →
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Fastlabel */}
+                <div className="flex flex-col p-8 bg-white rounded-2xl ring-1 ring-gray-950/5">
+                    <div className="flex size-12 items-center justify-center rounded-lg bg-orange-500/10 text-3xl mb-4">
+                        🏷️
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-950">Fastlabel</h3>
+                    <p className="mt-2 text-sm text-gray-600">Stampa cartelli centralizzata</p>
+                    <div className="mt-6 space-y-3">
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-primary font-bold">2000+</span>
+                            <span className="text-sm text-gray-700">Clienti attivi in 6 settori diversi</span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-primary font-bold">Multi-sede</span>
+                            <span className="text-sm text-gray-700">Gestione centralizzata per reti e insegne</span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-primary font-bold">✓</span>
+                            <span className="text-sm text-gray-700">Campagne promozionali sincronizzate real-time</span>
+                        </div>
+                    </div>
+                    <div className="mt-8">
+                        <Link href="/prodotto/integrazioni#fastlabel" className="text-sm font-semibold text-brand-primary hover:underline">
+                            Scopri Fastlabel →
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+            <div className="mt-12 text-center">
+                <Button href="/prodotto/integrazioni" variant="outline">
+                    Vedi tutte le integrazioni
+                </Button>
+            </div>
+        </Container>
+    )
+}
+
+/**
  * USP Bento Grid - 6 Cards
  * Pricing modulare, Multi-tenant, Integrazioni, Deploy rapido, RBAC, Performance
  */
@@ -434,6 +544,7 @@ export default function Home() {
                 <BenefitPillarsSection />
                 <SocialProofSection />
                 <StatsSection />
+                <EcosystemSection />
                 <USPBentoSection />
                 <FinalCTASection />
             </main>
