@@ -162,7 +162,21 @@ async function Posts({ page, category }: { page: number; category?: string }) {
 
   return (
     <div className="mt-6">
-      {posts.map((post) => (
+      {posts.map((post: { 
+        title: string | null; 
+        slug: string | null; 
+        publishedAt: string | null; 
+        excerpt: string | null; 
+        author: { 
+          name: string | null; 
+          image: { 
+            asset?: { _ref: string; _type: 'reference' }; 
+            hotspot?: unknown; 
+            crop?: unknown; 
+            _type: 'image' 
+          } | null 
+        } | null 
+      }) => (
         <div
           key={post.slug}
           className="relative grid grid-cols-1 border-b border-b-gray-100 py-10 first:border-t first:border-t-gray-200 max-sm:gap-3 sm:grid-cols-3"
