@@ -34,6 +34,49 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 
 To manage your blog content, visit the embedded Sanity Studio at [http://localhost:3000/studio](http://localhost:3000/studio).
 
+## Environment Configuration
+
+This project supports multiple environments through `.env` files:
+
+- **`.env.local`** - Local development (ignored by git)
+  - Uses `production` dataset
+  - `NEXT_PUBLIC_SITE_URL=http://localhost:3000`
+
+- **`.env.staging`** - Staging environment
+  - Uses `staging` dataset on Sanity
+  - `NEXT_PUBLIC_SITE_URL=https://stage.daisysolution.it`
+  - Deploy with: `npm run build` (Next.js will use `.env.staging` if `NODE_ENV=production` and `.env.production` doesn't exist)
+
+- **`.env.production`** - Production environment
+  - Uses `production` dataset
+  - `NEXT_PUBLIC_SITE_URL=https://www.daisysolution.it`
+
+- **`.env.example`** - Template file with all available variables
+
+### Creating a staging dataset in Sanity
+
+To use a separate `staging` dataset:
+
+1. Go to [https://www.sanity.io/manage](https://www.sanity.io/manage)
+2. Select your project (awo9j8b4)
+3. Go to "Datasets" and create a new dataset called `staging`
+4. Optionally, duplicate content from `production` to `staging`
+
+### Building for different environments
+
+```bash
+# Development
+npm run dev  # Uses .env.local
+
+# Staging build
+NODE_ENV=production npm run build  # Uses .env.staging (if .env.production doesn't exist)
+# Or explicitly:
+cp .env.staging .env.production.local && npm run build
+
+# Production build
+npm run build  # Uses .env.production
+```
+
 ## Customizing
 
 You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
