@@ -8,12 +8,15 @@
 
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
+import { modules } from '@/data/moduleData'
+import { moduleSlugs } from '@/data/modulesIndex'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { Navbar } from '@/components/navbar'
 import { Heading, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
+import { ModuliGridWithFilters } from './moduli-grid-filters'
 
 export const metadata: Metadata = {
   title: 'Moduli & Funzionalità - Daisy Solution ERP Retail',
@@ -44,7 +47,7 @@ function Hero() {
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-36 md:pt-32">
           <Subheading className="text-brand-primary">Moduli & Funzionalità</Subheading>
           <Heading as="h1" className="mt-4 max-w-4xl">
-            19 moduli per gestire ogni aspetto del retail
+            {moduleSlugs.length} moduli per gestire ogni aspetto del retail
           </Heading>
           <p className="mt-6 max-w-3xl text-xl/8 font-medium text-gray-950/75">
             Da vendite e cassa a magazzino multi-sede, acquisti con centrali integrate, e-commerce con 300k+ articoli Eldomcat,
@@ -59,137 +62,59 @@ function Hero() {
 
 /**
  * 12 Moduli Principali - Grid 3x4
- * Dati da intelligence docs: numeri reali, integrazioni specifiche, claim supportati
+ * Con filtri interattivi per categoria
  */
 function ModuliGrid() {
-  const moduli = [
-    {
-      icon: '🛒',
-      title: 'Vendite & Cassa',
-      description:
-        'Preventivi, ordini, DDT, fatture, scontrini POS. Fidelity card, buoni spesa, acconti. Modalità offline: vendi anche senza connessione internet.',
-      href: '#vendite',
-    },
-    {
-      icon: '📦',
-      title: 'Magazzino Multi-Sede',
-      description:
-        'Giacenze real-time per negozio/magazzino. Inventari rapidi con barcode scanner. Trasferimenti inter-sede, ubicazioni, lotti, seriali. Rifornimenti automatici.',
-      href: '#magazzino',
-    },
-    {
-      icon: '🏭',
-      title: 'Acquisti & EDI',
-      description:
-        'Ordini fornitori con integrazione EDI centrali Unieuro, Expert, Domex, Gaer. Ricezione merce automatica, fatture passive, gestione resi.',
-      href: '#acquisti',
-    },
-    {
-      icon: '🗄️',
-      title: 'Banca Dati & Eldomcat',
-      description:
-        '300.000+ articoli con foto e caratteristiche tecniche. 8 compilazioni diverse: schede prodotto, SEO, volantini, cartelli. Aggiornamento automatico.',
-      href: '#banca-dati',
-    },
-    {
-      icon: '🛍️',
-      title: 'E-commerce B2B/B2C',
-      description:
-        'Elecommerce integrato con ERP. Marketplace Amazon/eBay automatici. Feed comparatori prezzi. Pagamenti Banca Sella, PayPal. Catalogo sincronizzato.',
-      href: '#ecommerce',
-    },
-    {
-      icon: '🏷️',
-      title: 'Cartelli Fastlabel',
-      description:
-        '2000+ clienti attivi. Stampa cartelli con caratteristiche Eldomcat, prezzi barrati, promozioni. Campagne sincronizzate multi-sede. Gestione centralizzata insegne.',
-      href: '#fastlabel',
-    },
-    {
-      icon: '🔧',
-      title: 'Riparazioni & Laboratorio',
-      description:
-        'Accettazione, tracking interventi, ricambi, preventivi. Integrazione Model Assistance (2000+ clienti help desk). Garanzie convenzionali/estese. SMS notifiche.',
-      href: '#riparazioni',
-    },
-    {
-      icon: '🎯',
-      title: 'Promozioni Multi-Canale',
-      description:
-        'Campagne promozionali sincronizzate: negozi, e-commerce, marketplace. Sconti, bundle 3x2, prezzi barrati automatici. Coupon e codici sconto.',
-      href: '#promozioni',
-    },
-    {
-      icon: '♻️',
-      title: 'RAEE & Compliance',
-      description:
-        'Gestione contributi ambientali automatica. Registro ritiro, smaltimento CDC. Reportistica obbligatoria. Alert scadenze. Multi-CDC (Ecodom, Remedia).',
-      href: '#raee',
-    },
-    {
-      icon: '🎁',
-      title: 'Liste Regalo',
-      description:
-        'Liste nozze, nascita, eventi con portale web. Tracking contributi, articoli acquistati/rimanenti. Notifiche sposi. Integrazione e-commerce.',
-      href: '#liste-regalo',
-    },
-    {
-      icon: '📊',
-      title: 'Statistiche & BI',
-      description:
-        'Dashboard real-time KPI. Report vendite, marginalità, rotazione. Analisi ABC, top/flop prodotti. Export Excel, PDF. Comparazioni periodo.',
-      href: '#statistiche',
-    },
-    {
-      icon: '🔄',
-      title: 'Import/Export & Webservice',
-      description:
-        'API REST per integrazioni B2B. Import listini fornitori automatici. Export fatture elettroniche XML. Webhook eventi. Documentazione Swagger.',
-      href: '#webservice',
-    },
-  ]
-
   return (
     <Container className="py-24">
-      <Subheading className="text-center">I 12 moduli principali</Subheading>
-      <Heading as="h2" className="mt-4 text-center max-w-3xl mx-auto">
-        Funzionalità complete per gestire il retail moderno
-      </Heading>
+      <ModuliGridWithFilters />
 
-      <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {moduli.map((modulo) => (
-          <div
-            key={modulo.title}
-            className="flex flex-col p-8 bg-white rounded-2xl ring-1 ring-gray-950/5 hover:ring-gray-950/10 transition-shadow"
-          >
-            <div className="text-5xl mb-6">{modulo.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-950">
-              {modulo.title}
-            </h3>
-            <p className="mt-4 text-base text-gray-700 flex-1">
-              {modulo.description}
-            </p>
-            <div className="mt-6">
-              <Link
-                href={modulo.href}
-                className="text-sm font-semibold text-brand-primary hover:underline"
-              >
-                Scopri di più →
-              </Link>
+      {/* Tier 2 - 7 Moduli Aggiuntivi */}
+      <div className="mt-24">
+        <Subheading className="text-center">Altri {moduleSlugs.filter(slug => modules[slug].tier === 2).length} moduli specializzati</Subheading>
+        <Heading as="h2" className="mt-4 text-center max-w-3xl mx-auto">
+          Funzionalità avanzate per ottimizzare ogni processo
+        </Heading>
+
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {moduleSlugs.filter(slug => modules[slug].tier === 2).map((slug) => {
+            const moduleData = modules[slug]
+            return {
+              icon: moduleData.icon,
+              title: moduleData.name,
+              description: moduleData.tagline,
+              href: `/prodotto/moduli/${slug}`,
+            }
+          }).map((modulo) => (
+            <div
+              key={modulo.title}
+              className="flex flex-col p-6 bg-white rounded-xl ring-1 ring-gray-950/5 hover:ring-gray-950/10 transition-shadow"
+            >
+              <div className="text-4xl mb-4" role="img" aria-label={modulo.title}>{modulo.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-950">
+                {modulo.title}
+              </h3>
+              <p className="mt-3 text-sm text-gray-700 flex-1">
+                {modulo.description}
+              </p>
+              <div className="mt-4">
+                <Link
+                  href={modulo.href}
+                  className="text-sm font-semibold text-brand-primary hover:underline"
+                  aria-label={`Scopri il modulo ${modulo.title}`}
+                >
+                  Scopri di più →
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="mt-16 text-center">
-        <p className="text-lg text-gray-700 mb-6">
-          Oltre ai 12 moduli principali, Daisy Solution include <strong>7 moduli aggiuntivi</strong>:
-          Contabilità (prima nota, IVA, scadenzari), Contratti (assistenza ricorrente), Comunicazioni (email/SMS automatici),
-          Garanzie (registro certificati), Navigator (dashboard personalizzabili), Ordini (B2B tracking), Planning (previsione fabbisogni ABC).
-        </p>
-        <Button href="/contatti" variant="outline">
-          Richiedi demo personalizzata
-        </Button>
+        <div className="mt-12 text-center">
+          <Button href="/contatti" variant="outline">
+            Richiedi demo personalizzata
+          </Button>
+        </div>
       </div>
     </Container>
   )
