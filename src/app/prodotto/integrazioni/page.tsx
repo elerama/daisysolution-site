@@ -21,12 +21,18 @@ import { LogoCloud } from '@/components/logo-cloud'
 import { Navbar } from '@/components/navbar'
 import { Screenshot } from '@/components/screenshot'
 import { Heading, Subheading } from '@/components/text'
+import {
+    CLIENTS,
+    PRODUCTS,
+    SLA,
+    formatNumber,
+} from '@/data/siteStats'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Integrazioni - Daisy Solution | Ecosistema Completo',
   description:
-    'Ecosistema integrato: Eldomcat (300k+ prodotti), Elecommerce (e-commerce sincronizzato), Fastlabel (stampa cartelli), eBay, Amazon, ESL, centrali Unieuro/Expert. Setup 2 giorni.',
+    `Ecosistema integrato: Eldomcat (300k+ prodotti), Elecommerce (e-commerce sincronizzato), Fastlabel (stampa cartelli), eBay, Amazon, ESL, centrali Unieuro/Expert. Setup ${SLA.integrationSetupDays} giorni.`,
   keywords: [
     'integrazioni gestionale',
     'Eldomcat',
@@ -55,7 +61,7 @@ function Hero() {
           <p className="mt-6 max-w-3xl text-xl/8 font-medium text-gray-950/75">
             Ecosistema completo: banca dati prodotti, e-commerce sincronizzato, stampa cartelli
             centralizzata, marketplace eBay/Amazon, app mobile, centrali Unieuro/Expert/Domex.
-            <strong className="font-semibold text-gray-950"> Setup in 2 giorni, non mesi</strong>.
+            <strong className="font-semibold text-gray-950"> Setup in {SLA.integrationSetupDays} giorni, non mesi</strong>.
           </p>
         </div>
       </Container>
@@ -112,7 +118,7 @@ function IntegrationsGrid() {
     {
       icon: '📚',
       nome: 'Eldomcat',
-      pitch: '300.000+ prodotti con foto e caratteristiche tecniche',
+      pitch: `${formatNumber(PRODUCTS.eldomcatArticles)} prodotti con foto e caratteristiche tecniche`,
       href: '#eldomcat',
     },
     {
@@ -124,13 +130,13 @@ function IntegrationsGrid() {
     {
       icon: '🏷️',
       nome: 'Fastlabel',
-      pitch: 'Stampa cartelli con controllo centralizzato su 100+ negozi',
+      pitch: `Stampa cartelli con controllo centralizzato su ${CLIENTS.totalStores}+ negozi`,
       href: '#fastlabel',
     },
     {
       icon: '🌐',
       nome: 'eBay',
-      pitch: 'Setup in 2 giorni: sincronizza catalogo, ordini, giacenze',
+      pitch: `Setup in ${SLA.integrationSetupDays} giorni: sincronizza catalogo, ordini, giacenze`,
       href: '#ebay',
     },
     {
@@ -142,7 +148,7 @@ function IntegrationsGrid() {
     {
       icon: '🔖',
       nome: 'ESL Etichette',
-      pitch: 'Etichette elettroniche: aggiorna prezzi 270 negozi in tempo reale',
+      pitch: `Etichette elettroniche: aggiorna prezzi ${CLIENTS.unieuroAffiliates}+ negozi in tempo reale`,
       href: '#esl',
     },
     {
@@ -223,11 +229,11 @@ function EldomcatSection() {
               <Subheading>Eldomcat</Subheading>
             </div>
             <Heading as="h2">
-              300.000+ prodotti con foto e caratteristiche
+              {formatNumber(PRODUCTS.eldomcatArticles)} prodotti con foto e caratteristiche
             </Heading>
             <p className="mt-6 text-lg text-gray-700">
               Banca dati italiana più grande settore eldom. Integrazione catalogo nativa con Daisy Solution.
-              <strong> Zero digitazione manuale schede prodotto</strong>. 8 compilazioni personalizzabili.
+              <strong> Zero digitazione manuale schede prodotto</strong>. {PRODUCTS.eldomcatCompilations} compilazioni personalizzabili.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -290,7 +296,7 @@ function EldomcatSection() {
             ))}
           </div>
           <p className="mt-6 text-center text-sm text-gray-600">
-            Risparmi <strong>75.000 ore</strong> vs inserimento manuale (300k articoli × 15min/articolo)
+            Risparmi <strong>{PRODUCTS.hoursSavedManualEntry.toLocaleString('it-IT')} ore</strong> vs inserimento manuale ({formatNumber(PRODUCTS.eldomcatArticles)} articoli × 15min/articolo)
           </p>
         </div>
       </div>
@@ -357,7 +363,7 @@ function CentraliSection() {
         </LogoCloud>
 
         <p className="mt-12 text-lg text-gray-700 max-w-2xl mx-auto">
-          <strong className="text-gray-950">270 affiliati Unieuro</strong> ricevono bolle carico
+          <strong className="text-gray-950">{CLIENTS.unieuroAffiliates}+ affiliati Unieuro</strong> ricevono bolle carico
           automatico ogni giorno. Ordini diretti, sell-out real-time, promozioni coordinate.
           Zero digitazione manuale, massima efficienza.
         </p>
@@ -386,7 +392,7 @@ function FinalCTA() {
             Setup in 2 giorni, supporto dedicato incluso
           </Heading>
           <p className="mt-6 text-lg text-gray-700">
-            Team tecnico esperto ti affianca dall&rsquo;analisi al go-live. eBay operativo in 48h,
+            Team tecnico esperto ti affianca dall&rsquo;analisi al go-live. eBay operativo in {SLA.integrationSetupDays * 24}h,
             Eldomcat in 24h. Formazione inclusa.
           </p>
 

@@ -1,3 +1,4 @@
+import { ADDRESS, COMPANY, CONTACTS } from '@/data/siteStats';
 import Script from 'next/script';
 
 /**
@@ -31,30 +32,30 @@ export function JsonLd({ type, data }: JsonLdProps) {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Daisy Solution',
-    alternateName: 'Daisy Solution by Elettrorama',
+    name: COMPANY.name,
+    alternateName: COMPANY.fullName,
     url: baseUrl,
     logo: `${baseUrl}/logo-daisy-solution.png`,
     description:
       'Gestionale ERP modulare per retail elettronica, elettrodomestici, catene GDO. Multi-tenant, SaaS o on-premise, integrazioni native eBay/Amazon/ESL.',
-    foundingDate: '2009',
+    foundingDate: String(COMPANY.foundedYear),
     founder: {
       '@type': 'Organization',
-      name: 'Elettrorama S.r.l.',
+      name: COMPANY.parentCompany,
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Via Marie Curie 3',
-      addressLocality: 'Ciriè',
-      addressRegion: 'TO',
-      postalCode: '10073',
-      addressCountry: 'IT',
+      streetAddress: ADDRESS.street,
+      addressLocality: ADDRESS.city,
+      addressRegion: ADDRESS.province,
+      postalCode: ADDRESS.postalCode,
+      addressCountry: ADDRESS.countryCode,
     },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Sales',
-      telephone: '+39-011-9203522',
-      email: 'amministrazione@elettrorama.com',
+      telephone: CONTACTS.phone,
+      email: CONTACTS.emailSales,
       availableLanguage: 'Italian',
     },
     sameAs: [

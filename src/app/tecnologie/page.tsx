@@ -16,12 +16,18 @@ import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Heading, Subheading } from '@/components/text'
+import {
+    CLIENTS,
+    COMPANY,
+    INFRASTRUCTURE,
+    SLA,
+} from '@/data/siteStats'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Tecnologie - Daisy Solution | Architettura Web, SaaS, Sicurezza Enterprise',
   description:
-    'Stack tecnologico Daisy: architettura web-based, SaaS o on-premise, multi-database (MySQL/Oracle/SQL Server), RBAC granulare, scalabilità multi-tenant provata su 270 negozi.',
+    'Stack tecnologico Daisy: architettura web-based, SaaS o on-premise, multi-database (MySQL/Oracle/SQL Server), RBAC granulare, scalabilità multi-tenant provata su 1000+ negozi.',
   keywords: [
     'architettura web',
     'SaaS gestionale',
@@ -49,7 +55,7 @@ function Hero() {
             Sicurezza e performance enterprise
           </Heading>
           <p className="mt-6 max-w-3xl mx-auto text-xl/8 font-medium text-gray-950/75">
-            Stack moderno, affidabilità garantita. <strong className="font-semibold text-gray-950">20 anni di evoluzione</strong> continua
+            Stack moderno, affidabilità garantita. <strong className="font-semibold text-gray-950">{COMPANY.yearsExperience} anni di evoluzione</strong> continua
             per un gestionale retail web-based scalabile, sicuro, compatibile con i principali database enterprise.
           </p>
         </div>
@@ -372,16 +378,16 @@ function ScalabilitySection() {
         <div>
           <Subheading>Scalabilità</Subheading>
           <Heading as="h2" className="mt-4 mb-6">
-            Multi-tenant: da 1 a 270 negozi su singola istanza
+            Multi-tenant: da 1 a {CLIENTS.totalStores}+ negozi su singola istanza
           </Heading>
           <div className="space-y-4 text-base text-gray-700 leading-relaxed">
             <p>
               Architettura <strong className="text-gray-950">multi-tenant nativa</strong>: gestisci 1
-              negozio o 1000 punti vendita sulla stessa piattaforma. Zero cambio tecnologico crescendo.
+              negozio o {CLIENTS.totalStores}+ punti vendita sulla stessa piattaforma. Zero cambio tecnologico crescendo.
             </p>
             <p>
-              <strong className="text-gray-950">Caso Unieuro</strong>: 270 affiliati, 900 postazioni
-              attive, 400 casse simultanee su singola installazione Daisy. Uptime 99.9% garantito.
+              <strong className="text-gray-950">Caso Unieuro</strong>: {CLIENTS.unieuroAffiliates}+ affiliati, {INFRASTRUCTURE.unieuroWorkstations} postazioni
+              attive, {INFRASTRUCTURE.unieroCashRegisters} casse simultanee su singola installazione Daisy. Uptime {SLA.uptimePercent}% garantito.
             </p>
             <p>
               Isolamento dati garantito tra società/negozi. Performance ottimizzate per operazioni ad alto
@@ -391,15 +397,15 @@ function ScalabilitySection() {
 
           <div className="mt-8 grid grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary">270</div>
+              <div className="text-3xl font-bold text-brand-primary">{CLIENTS.unieuroAffiliates}+</div>
               <div className="text-xs text-gray-600 mt-1">Negozi Unieuro</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary">900</div>
+              <div className="text-3xl font-bold text-brand-primary">{INFRASTRUCTURE.unieuroWorkstations}</div>
               <div className="text-xs text-gray-600 mt-1">Postazioni</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-primary">99.9%</div>
+              <div className="text-3xl font-bold text-brand-primary">{SLA.uptimePercent}%</div>
               <div className="text-xs text-gray-600 mt-1">Uptime</div>
             </div>
           </div>
@@ -429,7 +435,7 @@ function ScalabilitySection() {
               </div>
 
               <div className="text-center text-xs text-gray-600 italic">
-                ... fino a 270 punti vendita
+                ... fino a {CLIENTS.totalStores}+ punti vendita
               </div>
             </div>
           </div>

@@ -17,6 +17,13 @@ import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Heading, Subheading } from '@/components/text'
+import {
+    ADDRESS,
+    CLIENTS,
+    CONTACTS,
+    HOURS,
+    SLA,
+} from '@/data/siteStats'
 import { useState } from 'react'
 
 /**
@@ -38,11 +45,10 @@ function Hero() {
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-36 md:pt-32 text-center">
           <Subheading className="text-brand-primary">Contatti</Subheading>
           <Heading as="h1" className="mt-4 max-w-4xl mx-auto">
-            Richiedi demo gratuita 30 giorni
+            Richiedi un contatto
           </Heading>
           <p className="mt-6 max-w-3xl mx-auto text-xl/8 font-medium text-gray-950/75">
             Compila il form e sarai ricontattato <strong className="font-semibold text-gray-950">entro 24 ore</strong> dal nostro team commerciale.
-            Demo personalizzata sulle tue esigenze con setup guidato incluso.
           </p>
         </div>
       </Container>
@@ -418,11 +424,11 @@ function SplitFormSection() {
             {/* Social Proof */}
             <div className="pt-8 border-t border-gray-200">
               <p className="text-sm text-gray-600 mb-4">
-                <strong className="text-gray-950">Oltre 2000 clienti</strong> si affidano a Daisy Solution:
+                <strong className="text-gray-950">Oltre {CLIENTS.totalClients} clienti</strong> si affidano a Daisy Solution:
               </p>
               <div className="flex gap-2 flex-wrap">
                 <span className="px-3 py-1 text-xs font-semibold bg-white rounded-full border border-gray-200">
-                  270 Unieuro
+                  {CLIENTS.unieuroAffiliates}+ Unieuro
                 </span>
                 <span className="px-3 py-1 text-xs font-semibold bg-white rounded-full border border-gray-200">
                   Expert
@@ -454,26 +460,26 @@ function FourColumnContacts() {
     {
       icon: '📞',
       title: 'Telefono Commerciale',
-      info: '+39 02 1234 5678',
-      note: 'Lun-Ven 9:00-18:00',
+      info: CONTACTS.phone,
+      note: `${HOURS.weekdays} ${HOURS.weekdayMorning} / ${HOURS.weekdayAfternoon}`,
     },
     {
       icon: '✉️',
       title: 'Email Vendite',
-      info: 'info@daisysolution.it',
-      note: 'Risposta entro 24h',
+      info: CONTACTS.emailSales,
+      note: `Risposta entro ${SLA.responseHours}h`,
     },
     {
       icon: '🎧',
       title: 'Supporto Clienti',
-      info: 'support@daisysolution.it',
+      info: CONTACTS.emailSupport,
       note: 'Help desk esistenti',
     },
     {
       icon: '🏢',
       title: 'Sede Legale',
-      info: 'Milano, Italia',
-      note: 'Lun-Ven 9:00-13:00, 14:00-18:00',
+      info: `${ADDRESS.city} (${ADDRESS.province}), ${ADDRESS.country}`,
+      note: `${HOURS.weekdays} ${HOURS.weekdayMorning} / ${HOURS.weekdayAfternoon}`,
     },
   ]
 

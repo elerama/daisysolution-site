@@ -15,12 +15,17 @@ import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Heading, Subheading } from '@/components/text'
+import {
+    CONTACTS,
+    PRICING,
+    SLA,
+} from '@/data/siteStats'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Prezzi - Daisy Solution | Paga Solo Ciò Che Usi',
   description:
-    'Prezzi trasparenti e modulari: Starter da 990€/anno, Professional 2500€/anno, Enterprise custom. SaaS o on-premise. Nessun lock-in, massima flessibilità.',
+    `Prezzi trasparenti e modulari: Starter da €990/anno, Professional €2500/anno, Enterprise custom. SaaS o on-premise. Nessun lock-in, massima flessibilità.`,
   keywords: [
     'prezzi gestionale',
     'costi Daisy',
@@ -47,7 +52,7 @@ function Hero() {
           </Heading>
           <p className="mt-6 max-w-3xl mx-auto text-xl/8 font-medium text-gray-950/75">
             <strong className="font-semibold text-gray-950">Modularità e trasparenza</strong>.
-            Parti da 990€/anno, aggiungi moduli quando cresci. Zero lock-in, massima flessibilità.
+            Parti da €{PRICING.starterYearly}/anno, aggiungi moduli quando cresci. Zero lock-in, massima flessibilità.
             SaaS o on-premise: tu scegli.
           </p>
         </div>
@@ -65,15 +70,15 @@ function ThreeTiersPricing() {
     {
       name: 'Starter',
       tagline: 'Per negozi singoli',
-      price: '990€',
+      price: `€${PRICING.starterYearly}`,
       period: '/anno',
-      description: '3 moduli base per iniziare velocemente',
+      description: `${PRICING.starterModules} moduli base per iniziare velocemente`,
       features: [
         'Vendite & Cassa',
         'Magazzino & Inventari',
         'Acquisti & Fornitori',
         '1 punto vendita',
-        '3 postazioni incluse',
+        `${PRICING.starterWorkstations} postazioni incluse`,
         'Supporto email',
         'Aggiornamenti inclusi',
         'Backup automatici',
@@ -85,9 +90,9 @@ function ThreeTiersPricing() {
     {
       name: 'Professional',
       tagline: 'Più scelto',
-      price: '2.500€',
+      price: `€${PRICING.professionalYearly.toLocaleString('it-IT')}`,
       period: '/anno',
-      description: '10 moduli completi per negozi in crescita',
+      description: `${PRICING.professionalModules} moduli completi per negozi in crescita`,
       features: [
         'Tutti i moduli Starter',
         'Statistiche & Analytics',
@@ -95,8 +100,8 @@ function ThreeTiersPricing() {
         'E-commerce integrato',
         'Liste Regalo',
         'App Mobile (DaisyApp)',
-        'Fino a 3 punti vendita',
-        '10 postazioni incluse',
+        `Fino a ${PRICING.professionalStores} punti vendita`,
+        `${PRICING.professionalWorkstations} postazioni incluse`,
         'Supporto prioritario telefono',
         'Integrazioni eBay/Amazon',
         'Formazione avanzata',
@@ -231,7 +236,7 @@ function DeploymentOptions() {
         'Disaster recovery geografico',
         'Scalabilità immediata',
       ],
-      pricing: 'Da 990€/anno',
+      pricing: `Da €${PRICING.starterYearly}/anno`,
     },
     {
       name: 'On-Premise',
@@ -320,7 +325,7 @@ function FAQPrezzi() {
   const faqs = [
     {
       question: 'Qual è il costo minimo per iniziare?',
-      answer: 'Il piano Starter parte da 990€/anno e include 3 moduli base (Vendite, Magazzino, Acquisti) per 1 punto vendita e 3 postazioni. È perfetto per negozi singoli che vogliono iniziare con il gestionale web.',
+      answer: `Il piano Starter parte da €${PRICING.starterYearly}/anno e include ${PRICING.starterModules} moduli base (Vendite, Magazzino, Acquisti) per 1 punto vendita e ${PRICING.starterWorkstations} postazioni. È perfetto per negozi singoli che vogliono iniziare con il gestionale web.`,
     },
     {
       question: 'Posso aggiungere moduli successivamente?',
@@ -332,15 +337,15 @@ function FAQPrezzi() {
     },
     {
       question: 'C\'è una prova gratuita?',
-      answer: 'Sì, offriamo demo gratuita di 30 giorni con ambiente sandbox completo. Puoi testare tutti i moduli, importare dati di prova, e verificare integrazioni. Nessuna carta di credito richiesta.',
+      answer: `Sì, offriamo demo gratuita di ${SLA.trialDays} giorni con ambiente sandbox completo. Puoi testare tutti i moduli, importare dati di prova, e verificare integrazioni. Nessuna carta di credito richiesta.`,
     },
     {
       question: 'Qual è la politica di rimborso?',
-      answer: 'Offriamo garanzia soddisfatto o rimborsato entro 30 giorni dall\'attivazione. Se Daisy non soddisfa le tue aspettative, ti rimborsiamo l\'intero importo senza domande.',
+      answer: `Offriamo garanzia soddisfatto o rimborsato entro ${SLA.refundDays} giorni dall\'attivazione. Se Daisy non soddisfa le tue aspettative, ti rimborsiamo l\'intero importo senza domande.`,
     },
     {
       question: 'Ci sono sconti per volumi o reti?',
-      answer: 'Sì, per reti con 5+ punti vendita o 20+ postazioni applichiamo sconti progressivi fino al 30%. I piani Enterprise hanno sempre pricing personalizzato. Contattaci per una quotazione dedicata.',
+      answer: `Sì, per reti con 5+ punti vendita o 20+ postazioni applichiamo sconti progressivi fino al ${PRICING.networkDiscountPercent}%. I piani Enterprise hanno sempre pricing personalizzato. Contattaci per una quotazione dedicata.`,
     },
     {
       question: 'Qual è la durata minima del contratto?',
@@ -421,7 +426,7 @@ function FinalCTA() {
           </div>
 
           <p className="mt-8 text-sm text-white/80">
-            Oppure chiamaci: <a href="tel:+390123456789" className="underline font-semibold">+39 012 345 6789</a>
+            Oppure chiamaci: <a href={`tel:${CONTACTS.phone.replace(/\s/g, '')}`} className="underline font-semibold">{CONTACTS.phone}</a>
           </p>
         </div>
       </Container>

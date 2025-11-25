@@ -15,12 +15,20 @@ import { Footer } from '@/components/footer'
 import { Gradient, GradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
+import {
+    CLIENTS,
+    COMPANY,
+    CONTACTS,
+    HOURS,
+    PRODUCTS,
+    formatNumber,
+} from '@/data/siteStats'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Chi Siamo - Elettrorama e Daisy Solution',
   description:
-    'Elettrorama: fondata nel 2001, oltre 20 anni di esperienza nello sviluppo di soluzioni software per retail. Casa madre di Daisy Solution, la piattaforma scelta da 270 affiliati Unieuro.',
+    'Elettrorama: fondata nel 2001, oltre 25 anni di esperienza nello sviluppo di soluzioni software per retail. Casa madre di Daisy Solution, la piattaforma scelta da 250+ affiliati Unieuro.',
   keywords: ['elettrorama', 'daisy solution', 'storia', 'chi siamo', 'esperienza retail'],
 }
 
@@ -37,7 +45,7 @@ function Hero() {
                 La storia di Elettrorama
               </Subheading>
               <Heading as="h1" className="mt-4">
-                20 anni di innovazione per il retail italiano
+                {COMPANY.yearsExperience} anni di innovazione per il retail italiano
               </Heading>
               <Lead className="mt-6 max-w-3xl mx-auto">
                 Nata nel 2001 dall'unione di professionisti con esperienza
@@ -94,7 +102,7 @@ function ThreePillarsSection() {
             Know-how approfondito
           </h3>
           <p className="mt-4 text-base text-gray-700">
-            L'esperienza ventennale e un know-how approfondito ci permettono di sviluppare soluzioni apprezzate da clienti in tutta Italia. Con la <strong>banca dati italiana più grande del settore Eldom</strong> (Eldomcat, 300k+ prodotti), siamo oggi leader nello sviluppo di prodotti per la gestione informatica del settore elettrodomestici.
+            L'esperienza pluriennale e un know-how approfondito ci permettono di sviluppare soluzioni apprezzate da clienti in tutta Italia. Con la <strong>banca dati italiana più grande del settore Eldom</strong> (Eldomcat, {formatNumber(PRODUCTS.eldomcatArticles)} prodotti), siamo oggi leader nello sviluppo di prodotti per la gestione informatica del settore elettrodomestici.
           </p>
         </div>
 
@@ -239,20 +247,20 @@ function HelpDeskSection() {
             <div className="rounded-2xl bg-white/10 p-6 backdrop-blur-sm">
               <h3 className="text-lg font-semibold text-white">Help Desk</h3>
               <p className="mt-2 text-white/90">
-                Tel: <strong>+39 011 9203522 int. 1</strong>
+                Tel: <strong>{CONTACTS.phoneHelpdesk}</strong>
               </p>
               <p className="mt-1 text-white/90">
-                Email: <strong>helpdesk@elettrorama.com</strong>
+                Email: <strong>{CONTACTS.emailHelpdesk}</strong>
               </p>
             </div>
 
             <div className="rounded-2xl bg-white/10 p-6 backdrop-blur-sm">
               <h3 className="text-lg font-semibold text-white">Disponibilità</h3>
               <p className="mt-2 text-white/90">
-                <strong>Lun - Ven:</strong> 9:00 - 13:00 / 14:30 - 19:30
+                <strong>{HOURS.weekdays}:</strong> {HOURS.weekdayMorning} / {HOURS.weekdayAfternoon}
               </p>
               <p className="mt-1 text-white/90">
-                <strong>Sabato:</strong> 9:00 - 13:00
+                <strong>Sabato:</strong> {HOURS.saturday}
               </p>
             </div>
           </div>
@@ -280,25 +288,25 @@ function StatsSection() {
 
       <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
         <div>
-          <div className="text-5xl font-bold text-brand-primary">20+</div>
+          <div className="text-5xl font-bold text-brand-primary">{COMPANY.yearsExperience}</div>
           <div className="mt-2 text-sm font-medium text-gray-600">
             Anni di esperienza
           </div>
         </div>
         <div>
-          <div className="text-5xl font-bold text-brand-primary">270</div>
+          <div className="text-5xl font-bold text-brand-primary">{CLIENTS.unieuroAffiliates}+</div>
           <div className="mt-2 text-sm font-medium text-gray-600">
             Affiliati Unieuro gestiti
           </div>
         </div>
         <div>
-          <div className="text-5xl font-bold text-brand-primary">2000+</div>
+          <div className="text-5xl font-bold text-brand-primary">{CLIENTS.totalClients}+</div>
           <div className="mt-2 text-sm font-medium text-gray-600">
             Clienti serviti
           </div>
         </div>
         <div>
-          <div className="text-5xl font-bold text-brand-primary">300k+</div>
+          <div className="text-5xl font-bold text-brand-primary">{formatNumber(PRODUCTS.eldomcatArticles)}</div>
           <div className="mt-2 text-sm font-medium text-gray-600">
             Articoli banca dati Eldomcat
           </div>

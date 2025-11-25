@@ -1,6 +1,7 @@
 'use client'
 
 import { clsx } from 'clsx'
+import Image from 'next/image'
 
 /**
  * Logo Daisy Solution
@@ -10,8 +11,8 @@ import { clsx } from 'clsx'
  * - variant: 'full' (with text) | 'icon' (solo simbolo) | 'with-by' (+ by Elettrorama)
  * - color: 'brand' (blu) | 'white' | 'inherit'
  *
- * TODO: Sostituire con SVG logo reale Daisy Solution quando disponibile
- * Placeholder: Testo "Daisy Solution" stilizzato
+ * TODO: Sostituire /placeholders/logo-daisysolution.svg con logo DaisySolution.png reale
+ * Asset richiesto: logo DaisySolution.png
  */
 
 // Mark is a simple icon version for compatibility with template components
@@ -26,30 +27,19 @@ export function Mark({ className }: { className?: string }) {
 export function Logo({
     className,
     variant = 'full',
-    color = 'brand',
 }: {
     className?: string
     variant?: 'full' | 'icon' | 'with-by'
+    // color prop mantenuto per retrocompatibilità, verrà usato quando il logo reale sarà disponibile
     color?: 'brand' | 'white' | 'inherit'
 }) {
-    // Color mappings
-    const colorClass = {
-        brand: 'text-brand-primary',
-        white: 'text-white',
-        inherit: '',
-    }[color]
+    // TODO: Quando il logo reale sarà disponibile, sostituire il placeholder
+    // con: src="/logo-daisysolution.png"
 
-    // Temporary text-based logo until real SVG is available
     if (variant === 'icon') {
         return (
-            <div
-                className={clsx(
-                    className,
-                    colorClass,
-                    'font-bold flex items-center justify-center',
-                )}
-            >
-                <span className="text-2xl">D</span>
+            <div className={clsx(className, 'flex items-center justify-center')}>
+                <span className="text-2xl font-bold text-brand-primary">D</span>
             </div>
         )
     }
@@ -57,14 +47,14 @@ export function Logo({
     if (variant === 'with-by') {
         return (
             <div className={clsx(className, 'flex flex-col')}>
-                <span
-                    className={clsx(
-                        colorClass,
-                        'font-bold text-2xl tracking-tight leading-none',
-                    )}
-                >
-                    Daisy Solution
-                </span>
+                <Image
+                    src="/placeholders/logo-daisysolution.svg"
+                    alt="Daisy Solution"
+                    width={200}
+                    height={60}
+                    className="h-9 w-auto"
+                    priority
+                />
                 <span className="text-xs text-gray-500 mt-0.5">by Elettrorama</span>
             </div>
         )
@@ -72,15 +62,14 @@ export function Logo({
 
     // Default 'full' variant
     return (
-        <span
-            className={clsx(
-                className,
-                colorClass,
-                'font-bold text-2xl tracking-tight',
-            )}
-        >
-            Daisy Solution
-        </span>
+        <Image
+            src="/placeholders/logo-daisysolution.svg"
+            alt="Daisy Solution"
+            width={200}
+            height={60}
+            className={clsx(className, 'w-auto')}
+            priority
+        />
     )
 }
 

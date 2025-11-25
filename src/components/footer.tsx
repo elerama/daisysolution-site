@@ -1,4 +1,5 @@
 import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/plus-grid'
+import { COMPANY, CONTACTS } from '@/data/siteStats'
 import { Button } from './button'
 import { Container } from './container'
 import { Link } from './link'
@@ -166,7 +167,7 @@ function Copyright() {
     <div className="text-sm/6 text-slate-300 flex items-center gap-2">
       <Logo variant="with-by" className="h-6" />
       <span className="text-slate-600">|</span>
-      <span>&copy; {new Date().getFullYear()} Elettrorama S.r.l. - P.IVA 01234567890</span>
+      <span>&copy; {new Date().getFullYear()} {COMPANY.parentCompany} - P.IVA {CONTACTS.vatNumber}</span>
     </div>
   )
 }

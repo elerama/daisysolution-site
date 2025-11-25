@@ -23,12 +23,22 @@ import { Map } from '@/components/map'
 import { Navbar } from '@/components/navbar'
 import { Screenshot } from '@/components/screenshot'
 import { Heading, Subheading } from '@/components/text'
+import {
+    CLIENTS,
+    COMPANY,
+    INFRASTRUCTURE,
+    METRICS,
+    PRICING,
+    PRODUCTS,
+    SLA,
+    formatNumber,
+} from '@/data/siteStats'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'Daisy Solution - Gestionale Web per Retail',
     description:
-        'Il gestionale web modulare per negozi di elettronica, telefonia, informatica. SaaS, integrazioni native, scalabile da 1 a 270+ punti vendita. Scelto da Unieuro, Expert, Domex.',
+        'Il gestionale web modulare per negozi di elettronica, telefonia, informatica. SaaS, integrazioni native, scalabile da 1 a 1000+ punti vendita. Scelto da Unieuro, Expert, Domex.',
     keywords: [
         'gestionale retail',
         'ERP negozi',
@@ -57,36 +67,32 @@ function Hero() {
                             Software gestionale per retail
                         </Subheading>
                         <h1 className="mt-4 font-display text-5xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-6xl/[0.9] md:text-7xl/[0.9]">
-                            Il gestionale web che cresce con te
+                            Il gestionale cloud che cresce con te
                         </h1>
                         <p className="mt-6 max-w-xl text-xl/8 font-medium text-gray-950/75">
-                            Modulare, SaaS, integrazioni native. Già scelto da 270 affiliati
-                            Unieuro e 200+ negozi Expert. Gestisci vendite, magazzino,
-                            e-commerce da un'unica piattaforma.
+                            Modulare, SaaS, integrazioni native e scalabile su più negozi.
                         </p>
                         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:gap-6">
                             <Button href="/contatti" className="btn-primary">
-                                Richiedi Demo
+                                Richiedi Info
                             </Button>
-                            <Button variant="secondary" href="#video-demo">
-                                Guarda Video
-                            </Button>
-                            <Button variant="secondary" href="/risorse/brochure">
+                            {/* TODO: Inserire brochure.pdf in /public/brochure.pdf */}
+                            <Button variant="secondary" href="/brochure.pdf" target="_blank">
                                 Scarica Brochure
                             </Button>
                         </div>
                     </div>
 
                     {/* Right: Screenshot Dashboard */}
+                    {/* TODO: Sostituire /placeholders/dashboard-homepage.svg con foto homepage.png */}
                     <div className="flex items-center">
                         <Screenshot
                             width={1216}
                             height={768}
-                            src="/screenshots/daisy-dashboard.png"
+                            src="/placeholders/dashboard-homepage.svg"
                             className="w-full rounded-2xl shadow-2xl ring-1 ring-gray-950/10"
                             alt="Dashboard Daisy Solution ERP"
                         />
-                        {/* TODO: Sostituire con screenshot reale dashboard Daisy */}
                     </div>
                 </div>
             </Container>
@@ -108,16 +114,16 @@ function BenefitPillarsSection() {
 
             <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12">
                 {/* Pillar 1: Modulare */}
+                {/* TODO: Sostituire icona con ingranaggio margherita (ingranaggio margherita.png) */}
                 <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white ring-1 ring-gray-950/5">
                     <div className="flex size-16 items-center justify-center rounded-full bg-brand-primary text-white text-2xl font-bold mb-6">
-                        M
+                        ⚙️
                     </div>
                     <h3 className="text-xl font-semibold text-gray-950">
                         Modulare
                     </h3>
                     <p className="mt-4 text-base text-gray-700 max-w-sm">
-                        Attiva solo i moduli che ti servono. Da 990€/anno per il punto vendita
-                        base fino alla suite completa con e-commerce e analytics.
+                        Attiva solo i moduli che ti servono, a partire da €{PRICING.monthlyBase},00 al mese.
                     </p>
                 </div>
 
@@ -131,7 +137,7 @@ function BenefitPillarsSection() {
                     </h3>
                     <p className="mt-4 text-base text-gray-700 max-w-sm">
                         Niente installazioni, niente aggiornamenti manuali. Accedi da
-                        qualsiasi dispositivo, ovunque sei. 99.7% uptime garantito.
+                        qualsiasi dispositivo, ovunque sei. {SLA.uptimePercent}% uptime garantito.
                     </p>
                 </div>
 
@@ -144,22 +150,22 @@ function BenefitPillarsSection() {
                         Integrazioni native
                     </h3>
                     <p className="mt-4 text-base text-gray-700 max-w-sm">
-                        eBay, Amazon, etichette elettroniche, FastLabel, comparatori prezzi.
-                        Setup in 2 giorni, non mesi.
+                        eBay, Amazon, Aruba, etichette elettroniche, Eldomcat, FastLabel, comparatori prezzi.
+                        Setup in {SLA.integrationSetupDays} giorni, non mesi.
                     </p>
                 </div>
 
                 {/* Pillar 4: Multi-PV */}
+                {/* TODO: Sostituire icona con logo infinito bianco (logo infinito bianco.png) */}
                 <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white ring-1 ring-gray-950/5">
                     <div className="flex size-16 items-center justify-center rounded-full bg-brand-primary text-white text-2xl font-bold mb-6">
-                        📍
+                        ∞
                     </div>
                     <h3 className="text-xl font-semibold text-gray-950">
-                        Scala da 1 a 270+ negozi
+                        Scala da 1 a ∞ negozi
                     </h3>
                     <p className="mt-4 text-base text-gray-700 max-w-sm">
-                        Architettura multi-tenant nativa. Gestisci filiali, franchising,
-                        affiliati. 270 Unieuro, 200+ Expert, 85.000 SKU senza problemi.
+                        Architettura multi-tenant. Gestisci filiali, franchising e affiliati.
                     </p>
                 </div>
             </div>
@@ -176,18 +182,16 @@ function SocialProofSection() {
         <Container className="py-24">
             <Subheading className="text-center">Scelto dai leader retail italiani</Subheading>
             <Heading as="h2" className="mt-4 text-center max-w-3xl mx-auto">
-                La fiducia di oltre 470 punti vendita
+                Scelto da più di {CLIENTS.totalStores} punti vendita
             </Heading>
 
             <LogoCloud className="mt-16">
-                {/* TODO: Sostituire con loghi reali clienti Daisy */}
-                {/* Unieuro, Expert, Domex, Gaer, Trend, Model Assistance, Eurocom, Carrubba */}
+                {/* Carousel animato con loghi clienti */}
             </LogoCloud>
 
             <p className="mt-12 text-center text-base text-gray-600 max-w-2xl mx-auto">
-                270 affiliati Unieuro, 200+ insegne Expert/Domex/Gaer, 2000+ clienti B2B come
-                Model Assistance. Ogni giorno oltre 900 postazioni lavorano con Daisy per
-                gestire vendite, magazzino, e-commerce e analytics.
+                {CLIENTS.unieuroAffiliates}+ affiliati Unieuro, {CLIENTS.expertAffiliates}+ affiliati Expert, {CLIENTS.greAffiliates}+ affiliati gruppo GRE.
+                Ogni giorno oltre {INFRASTRUCTURE.dailyWorkstations}+ postazioni lavorano utilizzando DaisySolution.
             </p>
         </Container>
     )
@@ -207,27 +211,27 @@ function StatsSection() {
             <Container>
                 <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 text-center">
                     <div>
-                        <div className="text-5xl font-bold text-white">270</div>
+                        <div className="text-5xl font-bold text-white">{CLIENTS.unieuroAffiliates}+</div>
                         <div className="mt-2 text-sm font-medium text-white/80">
                             Affiliati Unieuro attivi
                         </div>
                     </div>
                     <div>
-                        <div className="text-5xl font-bold text-white">900+</div>
+                        <div className="text-5xl font-bold text-white">{INFRASTRUCTURE.dailyWorkstations}+</div>
                         <div className="mt-2 text-sm font-medium text-white/80">
                             Postazioni gestite
                         </div>
                     </div>
                     <div>
-                        <div className="text-5xl font-bold text-white">20+</div>
+                        <div className="text-5xl font-bold text-white">{COMPANY.yearsExperience}</div>
                         <div className="mt-2 text-sm font-medium text-white/80">
                             Anni esperienza retail
                         </div>
                     </div>
                     <div>
-                        <div className="text-5xl font-bold text-white">300k+</div>
+                        <div className="text-5xl font-bold text-white">{formatNumber(METRICS.yearlySalesManaged)}</div>
                         <div className="mt-2 text-sm font-medium text-white/80">
-                            Articoli banca dati
+                            Vendite gestite ogni anno
                         </div>
                     </div>
                 </div>
@@ -261,16 +265,16 @@ function EcosystemSection() {
                     <p className="mt-2 text-sm text-gray-600">Banca dati italiana più grande</p>
                     <div className="mt-6 space-y-3">
                         <div className="flex items-start gap-3">
-                            <span className="text-brand-primary font-bold">300k+</span>
+                            <span className="text-brand-primary font-bold">{formatNumber(PRODUCTS.eldomcatArticles)}</span>
                             <span className="text-sm text-gray-700">Articoli con foto e caratteristiche tecniche</span>
                         </div>
                         <div className="flex items-start gap-3">
-                            <span className="text-brand-primary font-bold">8</span>
+                            <span className="text-brand-primary font-bold">{PRODUCTS.eldomcatCompilations}</span>
                             <span className="text-sm text-gray-700">Compilazioni diverse: SEO, volantini, cartelli, schede</span>
                         </div>
                         <div className="flex items-start gap-3">
                             <span className="text-brand-primary font-bold">✓</span>
-                            <span className="text-sm text-gray-700">Risparmio 75.000 ore inserimento manuale</span>
+                            <span className="text-sm text-gray-700">Risparmio {PRODUCTS.hoursSavedManualEntry.toLocaleString('it-IT')} ore inserimento manuale</span>
                         </div>
                     </div>
                     <div className="mt-8">
@@ -317,7 +321,7 @@ function EcosystemSection() {
                     <p className="mt-2 text-sm text-gray-600">Stampa cartelli centralizzata</p>
                     <div className="mt-6 space-y-3">
                         <div className="flex items-start gap-3">
-                            <span className="text-brand-primary font-bold">2000+</span>
+                            <span className="text-brand-primary font-bold">{CLIENTS.fastlabelClients}+</span>
                             <span className="text-sm text-gray-700">Clienti attivi in 6 settori diversi</span>
                         </div>
                         <div className="flex items-start gap-3">
@@ -353,77 +357,55 @@ function EcosystemSection() {
 function USPBentoSection() {
     return (
         <Container className="py-24">
-            <Subheading>Perché scegliere Daisy</Subheading>
-            <Heading as="h3" className="mt-2 max-w-3xl">
+            <Subheading className="text-center">Perché scegliere Daisy</Subheading>
+            <Heading as="h3" className="mt-2 max-w-3xl mx-auto text-center">
                 Valore concreto, non promesse
             </Heading>
 
-            <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
+            <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-3">
                 {/* USP 1: Modulare - pricing flessibile */}
                 <BentoCard
                     eyebrow="Pricing"
-                    title="Modulare e accessibile"
-                    description="Da 990€/anno per modulo base punto vendita. Nessun lock-in, nessun costo nascosto. Paghi solo quello che usi."
+                    title="Modulare ed economico"
+                    description={`A partire da €${PRICING.monthlyBase}/mese, nessun costo nascosto. Paghi solo quello che usi.`}
                     graphic={
-                        <div className="flex items-center justify-center h-80 text-6xl font-bold text-brand-primary">
-                            990€
+                        <div className="flex flex-col items-center justify-center h-80">
+                            <div className="text-sm text-gray-500">da</div>
+                            <div className="text-6xl font-bold text-brand-primary">{PRICING.monthlyBase}€</div>
+                            <div className="text-lg text-gray-600">/ mese</div>
                         </div>
                     }
                     fade={['bottom']}
-                    className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
+                    className="max-lg:rounded-t-4xl lg:rounded-tl-4xl lg:rounded-bl-4xl"
                 />
 
-                {/* USP 2: Multi-Tenant TCO -60% */}
+                {/* USP 2: Saving -60% */}
                 <BentoCard
-                    eyebrow="Architettura"
-                    title="Multi-tenant nativo"
-                    description="TCO ridotto del 60% vs soluzioni tradizionali on-premise. Nessun server da gestire, nessun backup manuale."
+                    eyebrow="Saving"
+                    title={`Riduci i costi del ${PRICING.tcoSavingsPercent}%`}
+                    description="Elimina i server, non le performance."
                     graphic={
                         <div className="flex items-center justify-center h-80 text-5xl font-bold text-green-600">
-                            -60% TCO
+                            -{PRICING.tcoSavingsPercent}%
                         </div>
                     }
                     fade={['bottom']}
-                    className="lg:col-span-3 lg:rounded-tr-4xl"
+                    className=""
                 />
 
-                {/* USP 3: Integrazioni setup veloce */}
+                {/* USP 3: Customer Service GRATIS */}
                 <BentoCard
-                    eyebrow="Integrazioni"
-                    title="Setup eBay in 2 giorni"
-                    description="Integrazioni native senza middleware custom. eBay, Amazon, etichette elettroniche pronti in giorni, non mesi."
+                    eyebrow="Customer Service"
+                    title={`Assistenza clienti ${SLA.supportDaysPerWeek}/${SLA.supportDaysPerWeek}`}
+                    description="Inclusa nel canone mensile, nessun costo aggiuntivo."
                     graphic={
-                        <div className="flex items-center justify-center h-full text-4xl">
-                            🔗 eBay + Amazon
+                        <div className="flex flex-col items-center justify-center h-80">
+                            <div className="text-5xl font-bold text-brand-primary">GRATIS</div>
+                            <div className="text-lg text-gray-600 mt-2">{SLA.supportDaysPerWeek} giorni su {SLA.supportDaysPerWeek}</div>
                         </div>
                     }
-                    className="lg:col-span-2 lg:rounded-bl-4xl"
-                />
-
-                {/* USP 4: Deploy rapido 10min onboard */}
-                <BentoCard
-                    eyebrow="Onboarding"
-                    title="Operativo in 10 minuti"
-                    description="Configurazione guidata, import dati automatico, training incluso. Non settimane di consulenze."
-                    graphic={
-                        <div className="flex items-center justify-center h-full text-4xl">
-                            ⚡ 10 min
-                        </div>
-                    }
-                    className="lg:col-span-2"
-                />
-
-                {/* USP 5: RBAC 4 dimensioni */}
-                <BentoCard
-                    eyebrow="Sicurezza"
-                    title="Permessi granulari"
-                    description="RBAC su 4 dimensioni: ruolo, società, punto vendita, modulo. Controllo totale su chi vede cosa."
-                    graphic={
-                        <div className="flex items-center justify-center h-full text-4xl">
-                            🔐 4D RBAC
-                        </div>
-                    }
-                    className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
+                    fade={['bottom']}
+                    className="max-lg:rounded-b-4xl lg:rounded-tr-4xl lg:rounded-br-4xl"
                 />
             </div>
         </Container>
@@ -442,11 +424,10 @@ function FinalCTASection() {
                 <div className="max-w-2xl mx-auto text-center">
                     <Subheading>Pronto per iniziare?</Subheading>
                     <Heading as="h2" className="mt-4">
-                        Richiedi una demo gratuita di 30 giorni
+                        Richiedi un contatto
                     </Heading>
                     <p className="mt-6 text-lg text-gray-700">
-                        Nessuna carta di credito richiesta. Setup guidato incluso. Supporto
-                        dedicato in italiano.
+                        Supporto dedicato in italiano.
                     </p>
 
                     <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -454,10 +435,10 @@ function FinalCTASection() {
                             type="email"
                             placeholder="La tua email aziendale"
                             className="w-full sm:w-96 px-6 py-4 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent"
-                            aria-label="Email per demo"
+                            aria-label="Email per contatto"
                         />
                         <Button href="/contatti" className="btn-primary px-8 py-4 text-lg">
-                            Richiedi Demo
+                            Richiedi Info
                         </Button>
                     </div>
 

@@ -16,12 +16,18 @@ import { Gradient } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Screenshot } from '@/components/screenshot'
 import { Heading, Subheading } from '@/components/text'
+import {
+    CLIENTS,
+    PRICING,
+    PRODUCTS,
+    SLA,
+} from '@/data/siteStats'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'Prodotto - Daisy Solution | Gestionale Web Modulare',
     description:
-        'Gestionale modulare web-based per retail e distribuzione organizzata. Completo, economico, scalabile. Da 1 negozio a rete nazionale con 270 punti vendita.',
+        'Gestionale modulare web-based per retail e distribuzione organizzata. Completo, economico, scalabile. Da 1 negozio a rete nazionale con 1000+ punti vendita.',
     keywords: [
         'gestionale modulare',
         'software retail',
@@ -47,7 +53,7 @@ function Hero() {
                         Il gestionale web che cresce con te
                     </Heading>
                     <p className="mt-6 max-w-3xl text-xl/8 font-medium text-gray-950/75">
-                        <strong className="font-semibold text-gray-950">41 moduli componibili</strong>.
+                        <strong className="font-semibold text-gray-950">{PRODUCTS.daisyModules} moduli componibili</strong>.
                         Dal punto vendita singolo alla rete nazionale.
                         Modulare, SaaS, integrazioni native. Tutto quello che serve per gestire
                         vendite, magazzino, acquisti, e-commerce, analytics.
@@ -84,7 +90,7 @@ function ModularitySection() {
                         Attiva solo i moduli che ti servono
                     </Heading>
                     <p className="mt-6 text-lg text-gray-700">
-                        Daisy Solution è composto da <strong>41 moduli funzionali indipendenti</strong>.
+                        Daisy Solution è composto da <strong>{PRODUCTS.daisyModules} moduli funzionali indipendenti</strong>.
                         Non paghi per funzionalità che non utilizzi.
                     </p>
 
@@ -96,7 +102,7 @@ function ModularitySection() {
                             <div>
                                 <h3 className="font-semibold text-gray-950">Parti dal base</h3>
                                 <p className="mt-1 text-sm text-gray-600">
-                                    Punto vendita + magazzino da 990€/anno. Aggiungi moduli quando cresci.
+                                    Punto vendita + magazzino da €{PRICING.starterYearly}/anno. Aggiungi moduli quando cresci.
                                 </p>
                             </div>
                         </div>
@@ -120,7 +126,7 @@ function ModularitySection() {
                             <div>
                                 <h3 className="font-semibold text-gray-950">Scala senza limiti</h3>
                                 <p className="mt-1 text-sm text-gray-600">
-                                    Da 1 negozio a 270 punti vendita. Stessa piattaforma, zero riscritture.
+                                    Da 1 negozio a {CLIENTS.totalStores}+ punti vendita. Stessa piattaforma, zero riscritture.
                                 </p>
                             </div>
                         </div>
@@ -128,7 +134,7 @@ function ModularitySection() {
 
                     <div className="mt-10">
                         <Button href="/prodotto/moduli" variant="outline">
-                            Vedi tutti i 41 moduli →
+                            Vedi tutti i {PRODUCTS.daisyModules} moduli →
                         </Button>
                     </div>
                 </div>
@@ -186,7 +192,7 @@ function ThreePillarSection() {
                             Economico
                         </h3>
                         <p className="mt-4 text-base text-gray-700">
-                            SaaS: zero investimento infrastruttura. Canone mensile prevedibile da 990€/anno.
+                            SaaS: zero investimento infrastruttura. Canone mensile prevedibile da €{PRICING.starterYearly}/anno.
                             Backup automatici, aggiornamenti continui inclusi.
                         </p>
                     </div>
@@ -201,7 +207,7 @@ function ThreePillarSection() {
                         </h3>
                         <p className="mt-4 text-base text-gray-700">
                             Multi-azienda nativo: da 1 negozio a rete nazionale. Gestisci filiali,
-                            franchising, affiliati. 270 Unieuro, 200+ Expert senza problemi.
+                            franchising, affiliati. {CLIENTS.unieuroAffiliates}+ Unieuro, {CLIENTS.expertAffiliates}+ Expert senza problemi.
                         </p>
                     </div>
                 </div>
@@ -246,7 +252,7 @@ function ComparisonTable() {
                         <tr className="bg-gray-50">
                             <td className="py-4 px-6 text-sm font-medium text-gray-900">Costi iniziali</td>
                             <td className="py-4 px-6 text-sm text-gray-600">€€€ server + licenze</td>
-                            <td className="py-4 px-6 text-sm font-semibold text-gray-900">Canone mensile da 990€/anno</td>
+                            <td className="py-4 px-6 text-sm font-semibold text-gray-900">Canone mensile da €{PRICING.starterYearly}/anno</td>
                         </tr>
                         <tr>
                             <td className="py-4 px-6 text-sm font-medium text-gray-900">Aggiornamenti</td>
@@ -261,12 +267,12 @@ function ComparisonTable() {
                         <tr>
                             <td className="py-4 px-6 text-sm font-medium text-gray-900">Multi-sede</td>
                             <td className="py-4 px-6 text-sm text-gray-600">Complesso, addon costosi</td>
-                            <td className="py-4 px-6 text-sm font-semibold text-gray-900">Nativo, gestisci 270+ negozi</td>
+                            <td className="py-4 px-6 text-sm font-semibold text-gray-900">Nativo, gestisci {CLIENTS.totalStores}+ negozi</td>
                         </tr>
                         <tr className="bg-gray-50">
                             <td className="py-4 px-6 text-sm font-medium text-gray-900">Integrazioni</td>
                             <td className="py-4 px-6 text-sm text-gray-600">Custom, settimane/mesi</td>
-                            <td className="py-4 px-6 text-sm font-semibold text-gray-900">Native: eBay, Amazon, ESL (2 giorni)</td>
+                            <td className="py-4 px-6 text-sm font-semibold text-gray-900">Native: eBay, Amazon, ESL ({SLA.integrationSetupDays} giorni)</td>
                         </tr>
                     </tbody>
                 </table>

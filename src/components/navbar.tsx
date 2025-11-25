@@ -140,13 +140,13 @@ function DesktopNav() {
                 </PlusGridItem>
             ))}
 
-            {/* CTA Button: Richiedi Demo */}
+            {/* CTA Button: Richiedi Info */}
             <PlusGridItem className="ml-auto flex">
                 <Link
                     href="/contatti"
                     className="inline-flex items-center justify-center rounded-full bg-[#0081BE] px-6 py-3 text-base font-medium text-white hover:bg-[#006E9F] transition-colors"
                 >
-                    Richiedi Demo
+                    Richiedi Info
                 </Link>
             </PlusGridItem>
         </nav>
@@ -254,7 +254,7 @@ function MobileNav() {
                     }}
                 >
                     <Link href="/contatti" className="btn-primary block text-center px-6 py-3 text-base font-medium">
-                        Richiedi Demo
+                        Richiedi Info
                     </Link>
                 </motion.div>
             </div>
