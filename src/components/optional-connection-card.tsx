@@ -7,7 +7,7 @@
 
 import { motion } from 'framer-motion'
 import { Link } from './link'
-import type { OptionalConnection } from '@/data/moduleData'
+import type { OptionalConnection } from '@/data/modules'
 import { HeroIcon } from './hero-icon'
 
 interface OptionalConnectionCardProps {

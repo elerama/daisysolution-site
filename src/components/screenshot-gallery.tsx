@@ -17,7 +17,7 @@ import * as Headless from '@headlessui/react'
 import { clsx } from 'clsx'
 import Image from 'next/image'
 import useMeasure, { type RectReadOnly } from 'react-use-measure'
-import type { ScreenshotItem } from '@/data/moduleData'
+import type { ScreenshotItem } from '@/data/modules'
 
 interface ScreenshotGalleryProps {
   screenshots: ScreenshotItem[]

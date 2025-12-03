@@ -7,8 +7,7 @@
 
 import { Link } from '@/components/link'
 import { Heading, Subheading } from '@/components/text'
-import { modules, type ModuleCategory } from '@/data/moduleData'
-import { moduleSlugs } from '@/data/modulesIndex'
+import { modules, moduleSlugs, type ModuleCategory } from '@/data/modules'
 import { useState } from 'react'
 
 export function ModuliGridWithFilters() {

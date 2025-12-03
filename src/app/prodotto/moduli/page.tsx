@@ -8,8 +8,7 @@
 
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
-import { modules } from '@/data/moduleData'
-import { moduleSlugs } from '@/data/modulesIndex'
+import { modules, moduleSlugs } from '@/data/modules'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'

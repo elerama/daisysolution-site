@@ -17,8 +17,13 @@ import { OptionalConnectionsGrid } from '@/components/optional-connection-card'
 import { ScreenshotGallery } from '@/components/screenshot-gallery'
 import { StickyCTAMobile } from '@/components/sticky-cta-mobile'
 import { Heading, Subheading } from '@/components/text'
-import { getModuleBySlug, type CategoryColor } from '@/data/moduleData'
-import { moduleNames, moduleSlugs, type ModuleSlug } from '@/data/modulesIndex'
+import {
+  getModuleBySlug,
+  moduleNames,
+  moduleSlugs,
+  type CategoryColor,
+  type ModuleSlug,
+} from '@/data/modules'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import * as HeroIcons from '@heroicons/react/24/outline'
 import type { Metadata } from 'next'

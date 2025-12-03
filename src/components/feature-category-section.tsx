@@ -10,7 +10,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import { clsx } from 'clsx'
-import type { FeatureCategory } from '@/data/moduleData'
+import type { FeatureCategory } from '@/data/modules'
 import { FeatureGrid } from './feature-grid'
 import { HeroIcon } from './hero-icon'
 
