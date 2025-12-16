@@ -5,8 +5,8 @@ export const bancaDatiEldomcatModule: ModuleData = {
   slug: 'banca-dati-eldomcat',
   name: 'Banca Dati Eldomcat',
   tagline: 'Catalogo 300k+ prodotti con schede tecniche, immagini e energy label',
-  category: 'Dati e Integrazioni',
-  categoryColor: 'cyan',
+  category: 'Integrazione e Automazione',
+  categoryColor: 'blue',
   icon: '📚',
   tier: 1,
 
