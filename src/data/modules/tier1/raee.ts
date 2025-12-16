@@ -197,6 +197,12 @@ export const raeeModule: ModuleData = {
             'Workflow completo: prenotato, confermato, scaricato, trasferito',
           iconName: 'ArrowPathIcon',
         },
+        {
+          title: 'Ricevute di ritiro',
+          description:
+            'Generazione automatica ricevuta di presa in carico RAEE da consegnare al cliente',
+          iconName: 'ReceiptRefundIcon',
+        },
       ],
     },
     {
@@ -234,6 +240,18 @@ export const raeeModule: ModuleData = {
           description:
             'Registrazione peso effettivo e conferma consegna a centro raccolta',
           iconName: 'CheckBadgeIcon',
+        },
+        {
+          title: 'DDT con modulo firme',
+          description:
+            'Documento di trasporto con campi firma per vettore, destinatario, utente e distributore/installatore',
+          iconName: 'PencilSquareIcon',
+        },
+        {
+          title: 'Estremi Albo ambientale',
+          description:
+            'Riferimenti comunicazione Albo e autorizzazioni trasportatore su DDT',
+          iconName: 'DocumentCheckIcon',
         },
       ],
     },
