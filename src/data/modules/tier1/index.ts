@@ -1,7 +1,7 @@
 // Tier 1 - Core Modules (12 moduli principali)
 export { venditeCassaModule } from './vendite-cassa'
 export { magazzinoModule } from './magazzino'
-export { acquistiEdiModule } from './acquisti-edi'
+export { acquistiModule } from './acquisti'
 export { bancaDatiEldomcatModule } from './banca-dati-eldomcat'
 export { ecommerceModule } from './ecommerce'
 export { fastlabelModule } from './fastlabel'
@@ -15,7 +15,7 @@ export { webserviceModule } from './webservice'
 import type { ModuleData } from '../types'
 import { venditeCassaModule } from './vendite-cassa'
 import { magazzinoModule } from './magazzino'
-import { acquistiEdiModule } from './acquisti-edi'
+import { acquistiModule } from './acquisti'
 import { bancaDatiEldomcatModule } from './banca-dati-eldomcat'
 import { ecommerceModule } from './ecommerce'
 import { fastlabelModule } from './fastlabel'
@@ -30,7 +30,7 @@ import { webserviceModule } from './webservice'
 export const tier1Modules: ModuleData[] = [
   venditeCassaModule,
   magazzinoModule,
-  acquistiEdiModule,
+  acquistiModule,
   bancaDatiEldomcatModule,
   ecommerceModule,
   fastlabelModule,

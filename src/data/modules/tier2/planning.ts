@@ -104,7 +104,7 @@ export const planningModule: ModuleData = {
   },
   integrations: [
     { name: 'Magazzino', slug: 'magazzino' },
-    { name: 'Acquisti & EDI', slug: 'acquisti-edi' },
+    { name: 'Acquisti', slug: 'acquisti' },
     { name: 'Vendite & Cassa', slug: 'vendite-cassa' },
     { name: 'Statistiche & BI', slug: 'statistiche-bi' },
   ],

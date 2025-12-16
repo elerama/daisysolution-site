@@ -116,7 +116,7 @@ export const bancaDatiEldomcatModule: ModuleData = {
     { name: 'E-commerce', slug: 'ecommerce' },
     { name: 'Fastlabel', slug: 'fastlabel' },
     { name: 'Vendite', slug: 'vendite-cassa' },
-    { name: 'Acquisti EDI', slug: 'acquisti-edi' },
+    { name: 'Acquisti', slug: 'acquisti' },
   ],
   faq: [
     {

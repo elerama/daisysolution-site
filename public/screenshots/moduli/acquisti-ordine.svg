@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1216" height="768" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad-acquisti-edi-hero" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#0081BE;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0066A1;stop-opacity:1" />
+    <linearGradient id="grad-acquisti-ordine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
     </linearGradient>
   </defs>
 
   <!-- Background gradient -->
-  <rect width="1216" height="768" fill="url(#grad-acquisti-edi-hero)" rx="16"/>
+  <rect width="1216" height="768" fill="url(#grad-acquisti-ordine)" rx="16"/>
 
-  <!-- Icon container with geometric shape instead of emoji -->
+  <!-- Icon container with geometric shape -->
   <circle cx="608" cy="320" r="120" fill="white" opacity="0.15"/>
   <circle cx="608" cy="320" r="90" fill="white" opacity="0.25"/>
   <circle cx="608" cy="320" r="60" fill="white" opacity="0.35"/>
@@ -22,11 +22,11 @@
 
   <!-- Type indicator -->
   <text x="608" y="530" font-size="32" text-anchor="middle" fill="white" opacity="0.8" font-family="Arial, sans-serif">
-    Acquisti & EDI
+    Acquisti &amp; EDI
   </text>
 
   <text x="608" y="565" font-size="24" text-anchor="middle" fill="white" opacity="0.7" font-family="Arial, sans-serif">
-    INTERFACCIA PRINCIPALE
+    CREAZIONE ORDINE FORNITORE
   </text>
 
   <!-- Footer note -->

@@ -97,7 +97,7 @@ export const contabilitaModule: ModuleData = {
   },
   integrations: [
     { name: 'Vendite & Cassa', slug: 'vendite-cassa' },
-    { name: 'Acquisti & EDI', slug: 'acquisti-edi' },
+    { name: 'Acquisti', slug: 'acquisti' },
     { name: 'RAEE', slug: 'raee' },
   ],
   faq: [

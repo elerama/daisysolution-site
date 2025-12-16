@@ -34,7 +34,7 @@ export {
   tier1ModulesBySlug,
   venditeCassaModule,
   magazzinoModule,
-  acquistiEdiModule,
+  acquistiModule,
   bancaDatiEldomcatModule,
   ecommerceModule,
   fastlabelModule,

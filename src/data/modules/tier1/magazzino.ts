@@ -112,7 +112,7 @@ export const magazzinoModule: ModuleData = {
   },
   integrations: [
     { name: 'Vendite', slug: 'vendite-cassa' },
-    { name: 'Acquisti EDI', slug: 'acquisti-edi' },
+    { name: 'Acquisti', slug: 'acquisti' },
     { name: 'E-commerce', slug: 'ecommerce' },
     { name: 'Statistiche BI', slug: 'statistiche-bi' },
   ],

@@ -117,7 +117,7 @@ export const statisticheBiModule: ModuleData = {
   integrations: [
     { name: 'Vendite & Cassa', slug: 'vendite-cassa' },
     { name: 'Magazzino', slug: 'magazzino' },
-    { name: 'Acquisti & EDI', slug: 'acquisti-edi' },
+    { name: 'Acquisti', slug: 'acquisti' },
     { name: 'Promozioni', slug: 'promozioni' },
   ],
   faq: [

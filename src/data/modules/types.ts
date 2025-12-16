@@ -23,7 +23,7 @@ export type CategoryColor =
 export type ModuleSlug =
   | 'vendite-cassa'
   | 'magazzino'
-  | 'acquisti-edi'
+  | 'acquisti'
   | 'banca-dati-eldomcat'
   | 'ecommerce'
   | 'fastlabel'
