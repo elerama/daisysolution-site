@@ -10,6 +10,15 @@
  * 6. CTA finale Demo Request
  */
 
+import {
+    BookOpenIcon,
+    CloudIcon,
+    CogIcon,
+    LinkIcon,
+    ShoppingBagIcon,
+    TagIcon,
+} from '@heroicons/react/24/outline'
+import { BuildingStorefrontIcon } from '@heroicons/react/24/solid'
 import { BentoCard } from '@/components/bento-card'
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
@@ -114,10 +123,9 @@ function BenefitPillarsSection() {
 
             <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12">
                 {/* Pillar 1: Modulare */}
-                {/* TODO: Sostituire icona con ingranaggio margherita (ingranaggio margherita.png) */}
                 <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white ring-1 ring-gray-950/5">
-                    <div className="flex size-16 items-center justify-center rounded-full bg-brand-primary text-white text-2xl font-bold mb-6">
-                        ⚙️
+                    <div className="flex size-16 items-center justify-center rounded-full bg-brand-primary text-white mb-6">
+                        <CogIcon className="size-8" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-950">
                         Modulare
@@ -129,8 +137,8 @@ function BenefitPillarsSection() {
 
                 {/* Pillar 2: SaaS/Cloud */}
                 <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white ring-1 ring-gray-950/5">
-                    <div className="flex size-16 items-center justify-center rounded-full bg-brand-primary text-white text-2xl font-bold mb-6">
-                        ☁
+                    <div className="flex size-16 items-center justify-center rounded-full bg-brand-primary text-white mb-6">
+                        <CloudIcon className="size-8" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-950">
                         SaaS e sempre aggiornato
@@ -143,8 +151,8 @@ function BenefitPillarsSection() {
 
                 {/* Pillar 3: Integrazioni */}
                 <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white ring-1 ring-gray-950/5">
-                    <div className="flex size-16 items-center justify-center rounded-full bg-brand-primary text-white text-2xl font-bold mb-6">
-                        🔗
+                    <div className="flex size-16 items-center justify-center rounded-full bg-brand-primary text-white mb-6">
+                        <LinkIcon className="size-8" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-950">
                         Integrazioni native
@@ -156,10 +164,9 @@ function BenefitPillarsSection() {
                 </div>
 
                 {/* Pillar 4: Multi-PV */}
-                {/* TODO: Sostituire icona con logo infinito bianco (logo infinito bianco.png) */}
                 <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white ring-1 ring-gray-950/5">
-                    <div className="flex size-16 items-center justify-center rounded-full bg-brand-primary text-white text-2xl font-bold mb-6">
-                        ∞
+                    <div className="flex size-16 items-center justify-center rounded-full bg-brand-primary text-white mb-6">
+                        <BuildingStorefrontIcon className="size-8" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-950">
                         Scala da 1 a ∞ negozi
@@ -258,8 +265,8 @@ function EcosystemSection() {
             <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
                 {/* Eldomcat */}
                 <div className="flex flex-col p-8 bg-white rounded-2xl ring-1 ring-gray-950/5">
-                    <div className="flex size-12 items-center justify-center rounded-lg bg-blue-500/10 text-3xl mb-4">
-                        📚
+                    <div className="flex size-12 items-center justify-center rounded-lg bg-blue-500/10 mb-4">
+                        <BookOpenIcon className="size-7 text-blue-600" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-950">Eldomcat</h3>
                     <p className="mt-2 text-sm text-gray-600">Banca dati italiana più grande</p>
@@ -286,8 +293,8 @@ function EcosystemSection() {
 
                 {/* Elecommerce */}
                 <div className="flex flex-col p-8 bg-white rounded-2xl ring-1 ring-gray-950/5">
-                    <div className="flex size-12 items-center justify-center rounded-lg bg-green-500/10 text-3xl mb-4">
-                        🛍️
+                    <div className="flex size-12 items-center justify-center rounded-lg bg-green-500/10 mb-4">
+                        <ShoppingBagIcon className="size-7 text-green-600" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-950">Elecommerce</h3>
                     <p className="mt-2 text-sm text-gray-600">E-commerce cloud integrato</p>
@@ -314,8 +321,8 @@ function EcosystemSection() {
 
                 {/* Fastlabel */}
                 <div className="flex flex-col p-8 bg-white rounded-2xl ring-1 ring-gray-950/5">
-                    <div className="flex size-12 items-center justify-center rounded-lg bg-orange-500/10 text-3xl mb-4">
-                        🏷️
+                    <div className="flex size-12 items-center justify-center rounded-lg bg-orange-500/10 mb-4">
+                        <TagIcon className="size-7 text-orange-600" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-950">Fastlabel</h3>
                     <p className="mt-2 text-sm text-gray-600">Stampa cartelli centralizzata</p>
