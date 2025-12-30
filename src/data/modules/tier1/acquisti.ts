@@ -5,9 +5,9 @@ export const acquistiModule: ModuleData = {
   slug: 'acquisti',
   name: 'Acquisti',
   tagline: "Gestione completa ordini a fornitori e centrali d'acquisto",
-  category: 'Operazioni Base',
+  category: 'Gestione Negozio',
   categoryColor: 'emerald',
-  icon: '🛒',
+  icon: '📥',
   tier: 1,
 
   // Hero migliorata v2.1
@@ -355,8 +355,8 @@ export const acquistiModule: ModuleData = {
       relatedModuleSlug: 'contabilita',
     },
     {
-      id: 'webservice',
-      name: 'Modulo Import/Export',
+      id: 'connessione-omnicanale',
+      name: 'Connessione Omnicanale',
       description: 'Importazione listini e scambio dati con sistemi esterni',
       benefits: [
         'Import listini Excel, CSV, XML',
@@ -365,7 +365,7 @@ export const acquistiModule: ModuleData = {
       ],
       icon: '🔄',
       iconName: 'ArrowsRightLeftIcon',
-      relatedModuleSlug: 'webservice',
+      relatedModuleSlug: 'connessione-omnicanale',
     },
     {
       id: 'centrale-unieuro',
@@ -461,7 +461,7 @@ export const acquistiModule: ModuleData = {
     { name: 'Magazzino', slug: 'magazzino' },
     { name: 'Contabilita', slug: 'contabilita' },
     { name: 'Banca Dati', slug: 'banca-dati-eldomcat' },
-    { name: 'Import/Export', slug: 'webservice' },
+    { name: 'Connessione Omnicanale', slug: 'connessione-omnicanale' },
   ],
 
   faq: [

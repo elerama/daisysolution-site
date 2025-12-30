@@ -5,7 +5,7 @@ export const ecommerceModule: ModuleData = {
   slug: 'ecommerce',
   name: 'E-commerce B2B/B2C',
   tagline: 'Negozio online integrato con Elecommerce, marketplace e CMS esterni',
-  category: 'Crescita e Sviluppo',
+  category: 'Crescita & Marketing',
   categoryColor: 'violet',
   icon: '🛍️',
   tier: 1,
@@ -433,8 +433,8 @@ export const ecommerceModule: ModuleData = {
       relatedModuleSlug: 'import-export',
     },
     {
-      id: 'webservice',
-      name: 'Webservice API',
+      id: 'connessione-omnicanale',
+      name: 'Connessione Omnicanale',
       description:
         'API REST per integrazioni custom con piattaforme terze',
       benefits: [
@@ -444,7 +444,7 @@ export const ecommerceModule: ModuleData = {
       ],
       icon: '🔌',
       iconName: 'CodeBracketIcon',
-      relatedModuleSlug: 'webservice',
+      relatedModuleSlug: 'connessione-omnicanale',
     },
     {
       id: 'liste-regalo',

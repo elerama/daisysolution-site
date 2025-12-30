@@ -9,8 +9,8 @@ export { riparazioniModule } from './riparazioni'
 export { promozioniModule } from './promozioni'
 export { raeeModule } from './raee'
 export { listeRegaloModule } from './liste-regalo'
-export { statisticheBiModule } from './statistiche-bi'
-export { webserviceModule } from './webservice'
+export { statisticheModule } from './statistiche'
+export { connessioneOmnicanaleModule } from './connessione-omnicanale'
 
 import type { ModuleData } from '../types'
 import { venditeCassaModule } from './vendite-cassa'
@@ -23,8 +23,8 @@ import { riparazioniModule } from './riparazioni'
 import { promozioniModule } from './promozioni'
 import { raeeModule } from './raee'
 import { listeRegaloModule } from './liste-regalo'
-import { statisticheBiModule } from './statistiche-bi'
-import { webserviceModule } from './webservice'
+import { statisticheModule } from './statistiche'
+import { connessioneOmnicanaleModule } from './connessione-omnicanale'
 
 /** All Tier 1 modules as an array */
 export const tier1Modules: ModuleData[] = [
@@ -38,8 +38,8 @@ export const tier1Modules: ModuleData[] = [
   promozioniModule,
   raeeModule,
   listeRegaloModule,
-  statisticheBiModule,
-  webserviceModule,
+  statisticheModule,
+  connessioneOmnicanaleModule,
 ]
 
 /** All Tier 1 modules as a Record indexed by slug */

@@ -4,20 +4,16 @@
  */
 
 export type ModuleCategory =
-  | 'Operazioni Base'
-  | 'Crescita e Sviluppo'
-  | 'Eccellenza Operativa'
-  | 'Intelligence e Ottimizzazione'
-  | 'Integrazione e Automazione'
-  | 'Compliance e Amministrazione'
+  | 'Gestione Negozio'
+  | 'Crescita & Marketing'
+  | 'Integrazioni & Dati'
+  | 'Amministrazione'
 
 export type CategoryColor =
   | 'emerald'
-  | 'pink'
   | 'violet'
-  | 'indigo'
   | 'blue'
-  | 'amber'
+  | 'indigo'
 
 // Literal union type per type-safe slug validation
 export type ModuleSlug =
@@ -31,8 +27,8 @@ export type ModuleSlug =
   | 'promozioni'
   | 'raee'
   | 'liste-regalo'
-  | 'statistiche-bi'
-  | 'webservice'
+  | 'statistiche'
+  | 'connessione-omnicanale'
   | 'contabilita'
   | 'contratti'
   | 'comunicazioni'

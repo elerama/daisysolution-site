@@ -5,7 +5,7 @@ export const bancaDatiEldomcatModule: ModuleData = {
   slug: 'banca-dati-eldomcat',
   name: 'Banca Dati Eldomcat',
   tagline: 'Catalogo 300k+ prodotti con schede tecniche, immagini e energy label',
-  category: 'Integrazione e Automazione',
+  category: 'Integrazioni & Dati',
   categoryColor: 'blue',
   icon: '📚',
   tier: 1,
@@ -13,11 +13,11 @@ export const bancaDatiEldomcatModule: ModuleData = {
   // Hero migliorata v2.1
   heroIcon: 'CircleStackIcon',
   heroIntro:
-    'Accedi a oltre 300.000 articoli con schede tecniche complete, immagini HD, energy label e 8 formati di compilazione per gestionale, web, cartelli prezzo e volantini.',
+    'Eldomcat è il database proprietario Elettrorama con oltre 300.000 articoli, schede tecniche complete, immagini HD, energy label e 8 formati di compilazione per gestionale, web, cartelli prezzo e volantini.',
 
   overview: {
     intro:
-      'Anagrafica articoli completa integrata con Eldomcat: 300.000+ prodotti elettronica ed elettrodomestici con foto professionali, schede tecniche strutturate, energy label EU, 8 formati di compilazione. Gestione brand, categorie, varianti, ricerca avanzata per caratteristiche. Sincronizzazione automatica dati.',
+      'Eldomcat è il database proprietario sviluppato da Elettrorama, con oltre 300.000 prodotti di elettronica ed elettrodomestici. Include foto professionali, schede tecniche strutturate, energy label EU e 8 formati di compilazione. Gestione brand, categorie, varianti e ricerca avanzata per caratteristiche. Sincronizzazione automatica con fonti certificate.',
     mainBenefits: [
       '300.000+ articoli pronti con Eldomcat',
       '8 formati compilazione: gestionale, SEO, cartelli, volantini',
@@ -461,8 +461,8 @@ export const bancaDatiEldomcatModule: ModuleData = {
       relatedModuleSlug: 'import-export',
     },
     {
-      id: 'webservice',
-      name: 'Webservice API',
+      id: 'connessione-omnicanale',
+      name: 'Connessione Omnicanale',
       description:
         'API REST per accesso programmatico al catalogo articoli',
       benefits: [
@@ -472,7 +472,7 @@ export const bancaDatiEldomcatModule: ModuleData = {
       ],
       icon: '🔌',
       iconName: 'CodeBracketIcon',
-      relatedModuleSlug: 'webservice',
+      relatedModuleSlug: 'connessione-omnicanale',
     },
   ],
 
@@ -547,7 +547,7 @@ export const bancaDatiEldomcatModule: ModuleData = {
     {
       question: 'Quanti articoli sono disponibili nel catalogo?',
       answer:
-        'Eldomcat contiene oltre 300.000 articoli di elettronica, elettrodomestici e casalinghi. Il catalogo include tutti i principali marchi con foto professionali, schede tecniche complete e energy label EU aggiornate.',
+        'Eldomcat, il database proprietario sviluppato da Elettrorama, contiene oltre 300.000 articoli di elettronica, elettrodomestici e casalinghi. Il catalogo include tutti i principali marchi con foto professionali, schede tecniche complete e energy label EU aggiornate.',
     },
     {
       question: 'Come funziona aggiornamento automatico dei dati?',

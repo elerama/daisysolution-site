@@ -5,7 +5,7 @@ export const listeRegaloModule: ModuleData = {
   slug: 'liste-regalo',
   name: 'Liste Regalo',
   tagline: 'Gestione completa liste regalo per matrimoni, nascite e ogni evento speciale',
-  category: 'Crescita e Sviluppo',
+  category: 'Crescita & Marketing',
   categoryColor: 'violet',
   icon: '🎁',
   tier: 1,
@@ -456,7 +456,7 @@ export const listeRegaloModule: ModuleData = {
     },
     {
       id: 'statistiche',
-      name: 'Statistiche & BI',
+      name: 'Statistiche',
       description:
         'Dashboard analytics dedicate alle performance liste regalo',
       benefits: [
@@ -466,7 +466,7 @@ export const listeRegaloModule: ModuleData = {
       ],
       icon: '📈',
       iconName: 'PresentationChartLineIcon',
-      relatedModuleSlug: 'statistiche-bi',
+      relatedModuleSlug: 'statistiche',
     },
   ],
 

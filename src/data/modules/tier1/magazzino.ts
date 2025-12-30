@@ -5,7 +5,7 @@ export const magazzinoModule: ModuleData = {
   slug: 'magazzino',
   name: 'Magazzino Multi-Sede',
   tagline: 'Gestisci giacenze, movimenti e inventari su più sedi in tempo reale',
-  category: 'Operazioni Base',
+  category: 'Gestione Negozio',
   categoryColor: 'emerald',
   icon: '📦',
   tier: 1,
@@ -392,7 +392,7 @@ export const magazzinoModule: ModuleData = {
       ],
       icon: '📊',
       iconName: 'ChartBarIcon',
-      relatedModuleSlug: 'statistiche-bi',
+      relatedModuleSlug: 'statistiche',
     },
     {
       id: 'riparazioni',
@@ -501,7 +501,7 @@ export const magazzinoModule: ModuleData = {
     { name: 'Vendite', slug: 'vendite-cassa' },
     { name: 'Acquisti', slug: 'acquisti' },
     { name: 'E-commerce', slug: 'ecommerce' },
-    { name: 'Statistiche BI', slug: 'statistiche-bi' },
+    { name: 'Statistiche', slug: 'statistiche' },
   ],
 
   faq: [

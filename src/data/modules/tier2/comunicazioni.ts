@@ -5,8 +5,8 @@ export const comunicazioniModule: ModuleData = {
   slug: 'comunicazioni',
   name: 'Comunicazioni',
   tagline: 'Messaggistica interna, news e notifiche per team multi-sede',
-  category: 'Integrazione e Automazione',
-  categoryColor: 'pink',
+  category: 'Integrazioni & Dati',
+  categoryColor: 'blue',
   icon: '📧',
   tier: 2,
 

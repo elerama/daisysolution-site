@@ -4,8 +4,8 @@ import type { ModuleData } from '../types'
 export const riparazioniModule: ModuleData = {
   slug: 'riparazioni',
   name: 'Riparazioni',
-  tagline: 'Gestisci il laboratorio con tracking interventi, ricambi e Model Assistance',
-  category: 'Operazioni Base',
+  tagline: 'Gestisci il laboratorio con tracking interventi, ricambi e garanzie',
+  category: 'Gestione Negozio',
   categoryColor: 'emerald',
   icon: '🔧',
   tier: 1,
@@ -17,7 +17,7 @@ export const riparazioniModule: ModuleData = {
 
   overview: {
     intro:
-      'Il modulo Riparazioni trasforma il tuo laboratorio in un centro assistenza professionale. Gestisci accettazioni, diagnosi, riparazioni, ricambi e manodopera. Integrazione diretta con Model Assistance (2000+ clienti help desk) per ticket assistenza e gestione garanzie convenzionali ed estese. Notifiche SMS automatiche ai clienti.',
+      'Il modulo Riparazioni trasforma il tuo laboratorio in un centro assistenza professionale. Gestisci accettazioni, diagnosi, riparazioni, ricambi e manodopera. Verifica automatica garanzie convenzionali ed estese, collegamento con centri assistenza esterni e notifiche SMS automatiche ai clienti.',
     mainBenefits: [
       'Tracking completo stato riparazioni real-time',
       'Clienti sempre informati con notifiche automatiche',
@@ -76,13 +76,6 @@ export const riparazioniModule: ModuleData = {
         'Genera preventivi riparazione con manodopera e ricambi',
       icon: '💰',
       iconName: 'CurrencyEuroIcon',
-    },
-    {
-      title: 'Model Assistance',
-      description:
-        'Integrazione con piattaforma help desk per 2000+ clienti',
-      icon: '🎧',
-      iconName: 'LifebuoyIcon',
     },
     {
       title: 'Garanzie integrate',
@@ -430,20 +423,6 @@ export const riparazioniModule: ModuleData = {
       iconName: 'ChatBubbleLeftRightIcon',
       relatedModuleSlug: 'comunicazioni',
     },
-    {
-      id: 'model-assistance',
-      name: 'Model Assistance',
-      description:
-        'Piattaforma help desk per gestione ticket assistenza',
-      benefits: [
-        'Apertura ticket da Daisy',
-        'Sincronizzazione stati',
-        '2000+ clienti connessi',
-      ],
-      icon: '🎧',
-      iconName: 'LifebuoyIcon',
-      externalLink: 'https://modelassistance.it',
-    },
   ],
 
   screenshots: [
@@ -496,7 +475,7 @@ export const riparazioniModule: ModuleData = {
     challenge:
       'Il centro assistenza gestiva riparazioni su fogli Excel. Clienti chiamavano continuamente per sapere lo stato, tecnici perdevano tempo in attivita amministrative invece che riparare. I DDT venivano compilati a mano con frequenti errori.',
     solution:
-      'Implementato modulo Riparazioni con integrazione Model Assistance, SMS automatici e generazione DDT. Ogni riparazione ha tracking completo con stati, ricambi usati e tempi intervento. I clienti ricevono SMS quando la riparazione e pronta. Navigator centralizzato per controllo rete multi-punto vendita.',
+      'Implementato modulo Riparazioni con SMS automatici e generazione DDT. Ogni riparazione ha tracking completo con stati, ricambi usati e tempi intervento. I clienti ricevono SMS quando la riparazione e pronta. Navigator centralizzato per controllo rete multi-punto vendita.',
     results: [
       'Chiamate clienti ridotte del 70% grazie alle notifiche automatiche',
       'Tempi riparazione ridotti del 40% con processi ottimizzati',
@@ -514,11 +493,6 @@ export const riparazioniModule: ModuleData = {
   ],
 
   faq: [
-    {
-      question: "Come funziona l'integrazione con Model Assistance?",
-      answer:
-        "Model Assistance e una piattaforma help desk usata da 2000+ clienti. L'integrazione consente di creare ticket riparazione direttamente da Daisy, sincronizzare stati e gestire comunicazioni centralizzate.",
-    },
     {
       question: 'I clienti ricevono notifiche automatiche?',
       answer:

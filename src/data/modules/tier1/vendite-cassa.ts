@@ -5,7 +5,7 @@ export const venditeCassaModule: ModuleData = {
   slug: 'vendite-cassa',
   name: 'Vendite & Cassa',
   tagline: "Gestisci l'intero ciclo di vendita, da preventivo a scontrino fiscale",
-  category: 'Operazioni Base',
+  category: 'Gestione Negozio',
   categoryColor: 'emerald',
   icon: '🛒',
   tier: 1,
@@ -139,7 +139,7 @@ export const venditeCassaModule: ModuleData = {
     { name: 'Magazzino', slug: 'magazzino' },
     { name: 'Contabilità', slug: 'contabilita' },
     { name: 'E-commerce', slug: 'ecommerce' },
-    { name: 'Statistiche BI', slug: 'statistiche-bi' },
+    { name: 'Statistiche', slug: 'statistiche' },
   ],
   faq: [
     {

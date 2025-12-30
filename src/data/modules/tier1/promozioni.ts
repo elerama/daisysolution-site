@@ -5,7 +5,7 @@ export const promozioniModule: ModuleData = {
   slug: 'promozioni',
   name: 'Promozioni',
   tagline: 'Campagne promozionali multi-canale con sconti, bundle e prezzi barrati',
-  category: 'Crescita e Sviluppo',
+  category: 'Crescita & Marketing',
   categoryColor: 'violet',
   icon: '🎯',
   tier: 1,
@@ -376,11 +376,11 @@ export const promozioniModule: ModuleData = {
       ],
       icon: '📊',
       iconName: 'ChartBarIcon',
-      relatedModuleSlug: 'statistiche-bi',
+      relatedModuleSlug: 'statistiche',
     },
     {
-      id: 'webservice',
-      name: 'Modulo Import/Export',
+      id: 'connessione-omnicanale',
+      name: 'Connessione Omnicanale',
       description:
         'Import promozioni da file Excel, CSV e sistemi esterni',
       benefits: [
@@ -390,7 +390,7 @@ export const promozioniModule: ModuleData = {
       ],
       icon: '🔄',
       iconName: 'ArrowsRightLeftIcon',
-      relatedModuleSlug: 'webservice',
+      relatedModuleSlug: 'connessione-omnicanale',
     },
     {
       id: 'unieuro',
@@ -486,7 +486,7 @@ export const promozioniModule: ModuleData = {
     { name: 'Vendite & Cassa', slug: 'vendite-cassa' },
     { name: 'E-commerce', slug: 'ecommerce' },
     { name: 'Label', slug: 'fastlabel' },
-    { name: 'Statistiche & BI', slug: 'statistiche-bi' },
+    { name: 'Statistiche', slug: 'statistiche' },
   ],
 
   faq: [

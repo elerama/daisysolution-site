@@ -5,7 +5,7 @@ export const contabilitaModule: ModuleData = {
   slug: 'contabilita',
   name: 'Contabilita',
   tagline: 'Dalla Prima Nota al Bilancio con IVA, LIPE e registrazioni automatiche',
-  category: 'Compliance e Amministrazione',
+  category: 'Amministrazione',
   categoryColor: 'indigo',
   icon: '📒',
   tier: 2,
@@ -448,7 +448,7 @@ export const contabilitaModule: ModuleData = {
     },
     {
       id: 'statistiche',
-      name: 'Statistiche & BI',
+      name: 'Statistiche',
       description:
         'Analisi dati contabili per KPI finanziari e dashboard',
       benefits: [
@@ -458,7 +458,7 @@ export const contabilitaModule: ModuleData = {
       ],
       icon: '📈',
       iconName: 'PresentationChartLineIcon',
-      relatedModuleSlug: 'statistiche-bi',
+      relatedModuleSlug: 'statistiche',
     },
     {
       id: 'zucchetti',

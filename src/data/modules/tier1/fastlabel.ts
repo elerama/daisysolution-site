@@ -6,7 +6,7 @@ export const fastlabelModule: ModuleData = {
   name: 'Label',
   tagline:
     'Stampa cartelli e gestione etichette elettroniche ESL per prezzi sempre aggiornati',
-  category: 'Crescita e Sviluppo',
+  category: 'Crescita & Marketing',
   categoryColor: 'violet',
   icon: '🏷️',
   tier: 1,

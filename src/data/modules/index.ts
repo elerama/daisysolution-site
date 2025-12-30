@@ -42,8 +42,8 @@ export {
   promozioniModule,
   raeeModule,
   listeRegaloModule,
-  statisticheBiModule,
-  webserviceModule,
+  statisticheModule,
+  connessioneOmnicanaleModule,
 } from './tier1'
 
 export {

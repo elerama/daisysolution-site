@@ -5,7 +5,7 @@ export const planningModule: ModuleData = {
   slug: 'planning',
   name: 'Planning',
   tagline: 'Calendario operativo per consegne, appuntamenti e interventi',
-  category: 'Operazioni Base',
+  category: 'Gestione Negozio',
   categoryColor: 'emerald',
   icon: '📅',
   tier: 2,
@@ -420,7 +420,7 @@ export const planningModule: ModuleData = {
     },
     {
       id: 'statistiche',
-      name: 'Statistiche & BI',
+      name: 'Statistiche',
       description:
         'Metriche avanzate performance operatori e attivita',
       benefits: [
@@ -430,7 +430,7 @@ export const planningModule: ModuleData = {
       ],
       icon: '📈',
       iconName: 'PresentationChartLineIcon',
-      relatedModuleSlug: 'statistiche-bi',
+      relatedModuleSlug: 'statistiche',
     },
   ],
 

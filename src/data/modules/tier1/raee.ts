@@ -5,7 +5,7 @@ export const raeeModule: ModuleData = {
   slug: 'raee',
   name: 'RAEE',
   tagline: 'Gestione contributi ambientali con tracciabilita e reportistica CDC',
-  category: 'Compliance e Amministrazione',
+  category: 'Amministrazione',
   categoryColor: 'indigo',
   icon: '♻️',
   tier: 1,
