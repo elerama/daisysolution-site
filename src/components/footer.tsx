@@ -60,11 +60,10 @@ function Sitemap() {
       <div>
         <SitemapHeading>Prodotto</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/prodotto/punto-vendita">Punto Vendita</SitemapLink>
-          <SitemapLink href="/prodotto/magazzino">Magazzino</SitemapLink>
-          <SitemapLink href="/prodotto/e-commerce">E-commerce</SitemapLink>
-          <SitemapLink href="/prodotto/analytics">Analytics</SitemapLink>
-          <SitemapLink href="/prodotto/crm">CRM Clienti</SitemapLink>
+          <SitemapLink href="/funzionalita">Funzionalità & Moduli</SitemapLink>
+          <SitemapLink href="/prodotto/integrazioni">Integrazioni</SitemapLink>
+          <SitemapLink href="/perche-daisy">Perché Daisy</SitemapLink>
+          <SitemapLink href="/tecnologie">Tecnologie</SitemapLink>
         </SitemapLinks>
       </div>
 
@@ -73,9 +72,8 @@ function Sitemap() {
         <SitemapHeading>Settori</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/settori/negozi-singoli">Negozi Singoli</SitemapLink>
-          <SitemapLink href="/settori/catene">Catene & Affiliazioni</SitemapLink>
-          <SitemapLink href="/settori/distribuzione">Distribuzione Organizzata</SitemapLink>
-          <SitemapLink href="/settori/altri-settori">Altri Settori</SitemapLink>
+          <SitemapLink href="/settori/catene">Catene & Reti</SitemapLink>
+          <SitemapLink href="/customer-stories">Customer Stories</SitemapLink>
         </SitemapLinks>
       </div>
 
@@ -85,7 +83,7 @@ function Sitemap() {
         <SitemapLinks>
           <SitemapLink href="/chi-siamo">Chi Siamo</SitemapLink>
           <SitemapLink href="/blog">Blog</SitemapLink>
-          <SitemapLink href="/settori/customer-stories">Customer Stories</SitemapLink>
+          <SitemapLink href="/customer-stories">Customer Stories</SitemapLink>
           <SitemapLink href="/contatti">Contatti</SitemapLink>
         </SitemapLinks>
       </div>

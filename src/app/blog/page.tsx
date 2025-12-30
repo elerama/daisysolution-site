@@ -305,11 +305,11 @@ export default async function Blog({
         <Navbar />
         <Subheading className="mt-16">Blog</Subheading>
         <Heading as="h1" className="mt-2">
-          What’s happening at Radiant.
+          News e aggiornamenti dal mondo Daisy
         </Heading>
         <Lead className="mt-6 max-w-3xl">
-          Stay informed with product updates, company news, and insights on how
-          to sell smarter at your company.
+          Resta aggiornato su novità prodotto, guide pratiche per il retail e
+          best practice per la gestione del punto vendita.
         </Lead>
       </Container>
       {page === 1 && !category && <FeaturedPosts />}

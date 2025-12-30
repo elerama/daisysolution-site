@@ -15,6 +15,7 @@ import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
+import { Link } from '@/components/link'
 import { Navbar } from '@/components/navbar'
 import { Heading, Subheading } from '@/components/text'
 import {
@@ -160,8 +161,8 @@ function SplitFormSection() {
             Grazie per il tuo interesse. Il nostro team commerciale ti contatterà entro <strong>24 ore lavorative</strong>.
           </p>
           <p className="mt-6 text-base text-gray-600">
-            Nel frattempo puoi esplorare i nostri <a href="/prodotto" className="text-brand-primary underline">41 moduli</a> o
-            leggere le <a href="/settori/customer-stories" className="text-brand-primary underline">case study</a>.
+            Nel frattempo puoi esplorare le nostre <Link href="/funzionalita" className="text-brand-primary underline">funzionalità</Link> o
+            leggere le <Link href="/customer-stories" className="text-brand-primary underline">customer stories</Link>.
           </p>
           <Button href="/" className="mt-8">Torna alla Home</Button>
         </div>
