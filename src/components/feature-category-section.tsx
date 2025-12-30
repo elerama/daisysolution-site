@@ -50,11 +50,8 @@ export function FeatureCategorySection({ categories, className }: FeatureCategor
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               )}
             >
-              {/* Priorita: iconName (Heroicon) > icon (emoji) */}
-              {category.iconName ? (
+              {category.iconName && (
                 <HeroIcon name={category.iconName} className="w-5 h-5" />
-              ) : (
-                <span role="img" aria-hidden="true">{category.icon}</span>
               )}
               {category.name}
             </button>
@@ -96,15 +93,10 @@ export function FeatureCategorySection({ categories, className }: FeatureCategor
               aria-expanded={openAccordions.includes(category.id)}
             >
               <div className="flex items-center gap-3">
-                {/* Priorita: iconName (Heroicon) > icon (emoji) */}
-                {category.iconName ? (
+                {category.iconName && (
                   <div className="text-brand-primary">
                     <HeroIcon name={category.iconName} className="w-7 h-7" />
                   </div>
-                ) : (
-                  <span className="text-2xl" role="img" aria-hidden="true">
-                    {category.icon}
-                  </span>
                 )}
                 <span className="font-semibold text-gray-950">
                   {category.name}

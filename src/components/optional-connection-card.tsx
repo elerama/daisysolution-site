@@ -21,14 +21,9 @@ export function OptionalConnectionCard({ connection }: OptionalConnectionCardPro
       transition={{ duration: 0.2 }}
       className="flex flex-col h-full p-6 bg-white rounded-xl ring-1 ring-gray-950/5 hover:ring-brand-primary/30 hover:shadow-lg transition-shadow"
     >
-      {/* Icon - Priorita: iconName (Heroicon) > icon (emoji) */}
-      {connection.iconName ? (
+      {connection.iconName && (
         <div className="mb-4 text-brand-primary">
           <HeroIcon name={connection.iconName} className="w-10 h-10" />
-        </div>
-      ) : (
-        <div className="text-4xl mb-4" role="img" aria-hidden="true">
-          {connection.icon}
         </div>
       )}
 

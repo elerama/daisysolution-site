@@ -41,16 +41,11 @@ export function FeatureGrid({ features, columns = 3, className }: FeatureGridPro
 function FeatureCard({ feature }: { feature: FeatureGridItem }) {
   return (
     <div className="flex flex-col p-6 bg-white rounded-xl ring-1 ring-gray-950/5 hover:ring-brand-primary/20 hover:shadow-md transition-all">
-      {/* Priorita: iconName (Heroicon) > icon (emoji) */}
-      {feature.iconName ? (
+      {feature.iconName && (
         <div className="mb-4 text-brand-primary">
           <HeroIcon name={feature.iconName} className="w-10 h-10" />
         </div>
-      ) : feature.icon ? (
-        <div className="text-4xl mb-4" role="img" aria-hidden="true">
-          {feature.icon}
-        </div>
-      ) : null}
+      )}
       <h3 className="text-lg font-semibold text-gray-950">
         {feature.title}
       </h3>
