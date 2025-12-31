@@ -1,0 +1,30 @@
+{
+  "forceLoginMethod": "claudeai",
+  "model": "opus",
+  "includeCoAuthoredBy": false,
+  "alwaysThinkingEnabled": true,
+  "env": {
+    "MAX_MCP_OUTPUT_TOKENS": "60000",
+    "BASH_DEFAULT_TIMEOUT_MS": "300000",
+    "BASH_MAX_TIMEOUT_MS": "600000",
+    "MAX_THINKING_TOKENS": "20000",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "60000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": ["context7"],
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Read(./config/credentials.json)",
+      "Read(./build)"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "./.claude/statusline-command.sh"
+  }
+}
