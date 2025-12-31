@@ -107,6 +107,7 @@ export const statisticheModule: ModuleData = {
           description:
             'KPI aggiornati in tempo reale con refresh automatico',
           iconName: 'ArrowTrendingUpIcon',
+          highlighted: true,
         },
         {
           title: 'Widget configurabili',
@@ -119,6 +120,7 @@ export const statisticheModule: ModuleData = {
           description:
             'Dashboard diverse per CEO, direttori, buyer, venditori',
           iconName: 'UserGroupIcon',
+          highlighted: true,
         },
         {
           title: 'Grafici interattivi',
@@ -151,6 +153,7 @@ export const statisticheModule: ModuleData = {
           description:
             'Analisi vendite per articolo, cliente, operatore, negozio',
           iconName: 'DocumentChartBarIcon',
+          highlighted: true,
         },
         {
           title: 'Analisi margini',
@@ -195,6 +198,7 @@ export const statisticheModule: ModuleData = {
           description:
             'Articoli in classe A (80% valore), B (15%), C (5%)',
           iconName: 'ChartBarIcon',
+          highlighted: true,
         },
         {
           title: 'ABC per margine',
@@ -239,6 +243,7 @@ export const statisticheModule: ModuleData = {
           description:
             'Indici di rotazione per articolo e categoria',
           iconName: 'ArrowPathIcon',
+          highlighted: true,
         },
         {
           title: 'Giorni giacenza',
@@ -295,6 +300,7 @@ export const statisticheModule: ModuleData = {
           description:
             'Previsioni vendite basate su algoritmi predittivi',
           iconName: 'SparklesIcon',
+          highlighted: true,
         },
         {
           title: 'Budget vs actual',

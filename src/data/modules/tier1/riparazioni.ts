@@ -127,6 +127,7 @@ export const riparazioniModule: ModuleData = {
           description:
             'Registra riparazioni di articoli cliente con stampa ricevuta automatica',
           iconName: 'ClipboardDocumentCheckIcon',
+          highlighted: true,
         },
         {
           title: 'Accettazione merce propria',
@@ -145,6 +146,7 @@ export const riparazioniModule: ModuleData = {
           description:
             'Controllo immediato copertura garanzia convenzionale o estesa',
           iconName: 'ShieldCheckIcon',
+          highlighted: true,
         },
         {
           title: 'Collegamento cliente',
@@ -209,6 +211,7 @@ export const riparazioniModule: ModuleData = {
           description:
             'Genera documento di trasporto per spedizione a centro assistenza',
           iconName: 'DocumentArrowUpIcon',
+          highlighted: true,
         },
         {
           title: 'Tracking spedizione',
@@ -247,6 +250,7 @@ export const riparazioniModule: ModuleData = {
           description:
             'Genera preventivi dettagliati con ricambi, manodopera e tempi',
           iconName: 'DocumentTextIcon',
+          highlighted: true,
         },
         {
           title: 'Gestione accettazione',
@@ -291,6 +295,7 @@ export const riparazioniModule: ModuleData = {
           description:
             'Incasso riparazione direttamente dal modulo vendite',
           iconName: 'ComputerDesktopIcon',
+          highlighted: true,
         },
         {
           title: 'Ritiro a domicilio',
@@ -323,6 +328,7 @@ export const riparazioniModule: ModuleData = {
           description:
             'Programma interventi tecnici a domicilio con data e orario',
           iconName: 'CalendarDaysIcon',
+          highlighted: true,
         },
         {
           title: 'Calendario tecnici',

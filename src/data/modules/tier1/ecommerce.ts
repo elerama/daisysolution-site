@@ -134,6 +134,7 @@ export const ecommerceModule: ModuleData = {
           description:
             'E-commerce nativo Daisy con integrazione completa e zero configurazione',
           iconName: 'RocketLaunchIcon',
+          highlighted: true,
         },
         {
           title: 'Design responsive',
@@ -178,6 +179,7 @@ export const ecommerceModule: ModuleData = {
           description:
             'Integrazione completa Amazon con OAuth, feed JSON/XML automatici',
           iconName: 'GlobeAmericasIcon',
+          highlighted: true,
         },
         {
           title: 'eBay Sell Feed API',
@@ -266,6 +268,7 @@ export const ecommerceModule: ModuleData = {
           description:
             'Piu negozi online gestiti da unico pannello centralizzato',
           iconName: 'Squares2X2Icon',
+          highlighted: true,
         },
         {
           title: 'Configurazione per dominio',
@@ -284,6 +287,7 @@ export const ecommerceModule: ModuleData = {
           description:
             'Ordini evadibili da fornitore senza giacenza in magazzino',
           iconName: 'TruckIcon',
+          highlighted: true,
         },
         {
           title: 'Backorder automatico',
@@ -310,6 +314,7 @@ export const ecommerceModule: ModuleData = {
           description:
             'Prezzi differenziati per clienti privati e rivenditori',
           iconName: 'UserGroupIcon',
+          highlighted: true,
         },
         {
           title: 'Coefficienti ricarico',
@@ -360,6 +365,7 @@ export const ecommerceModule: ModuleData = {
           description:
             'Disponibilita aggiornata real-time su tutti i canali',
           iconName: 'ArrowPathIcon',
+          highlighted: true,
         },
         {
           title: 'Cronjob pianificati',

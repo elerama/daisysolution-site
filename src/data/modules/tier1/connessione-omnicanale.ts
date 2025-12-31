@@ -107,12 +107,14 @@ export const connessioneOmnicanaleModule: ModuleData = {
           description:
             'Pubblica articoli automaticamente su tutti i canali con attributi specifici per piattaforma',
           iconName: 'BookOpenIcon',
+          highlighted: true,
         },
         {
           title: 'Giacenze real-time',
           description:
             'Disponibilita aggiornata istantaneamente tra negozio, web e marketplace',
           iconName: 'CubeIcon',
+          highlighted: true,
         },
         {
           title: 'Prezzi sincronizzati',
@@ -151,6 +153,7 @@ export const connessioneOmnicanaleModule: ModuleData = {
           description:
             'Integrazione completa Amazon con catalogo, ordini e spedizioni',
           iconName: 'GlobeAmericasIcon',
+          highlighted: true,
         },
         {
           title: 'eBay Integration',
@@ -195,6 +198,7 @@ export const connessioneOmnicanaleModule: ModuleData = {
           description:
             'Login dedicato per rivenditori con catalogo e prezzi riservati',
           iconName: 'UserGroupIcon',
+          highlighted: true,
         },
         {
           title: 'Listini personalizzati',
@@ -251,6 +255,7 @@ export const connessioneOmnicanaleModule: ModuleData = {
           description:
             'Sincronizzazione con Unieuro, Domex, Gaer e altre centrali',
           iconName: 'BuildingOffice2Icon',
+          highlighted: true,
         },
         {
           title: 'Formati multipli',
@@ -283,6 +288,7 @@ export const connessioneOmnicanaleModule: ModuleData = {
           description:
             'Endpoint documentati per integrazioni custom',
           iconName: 'CodeBracketIcon',
+          highlighted: true,
         },
         {
           title: 'Autenticazione OAuth',

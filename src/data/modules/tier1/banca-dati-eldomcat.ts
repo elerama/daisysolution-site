@@ -140,6 +140,7 @@ export const bancaDatiEldomcatModule: ModuleData = {
           description:
             'Specifiche dettagliate con gruppi e sotto-specifiche gerarchiche',
           iconName: 'ListBulletIcon',
+          highlighted: true,
         },
         {
           title: 'Template personalizzabili',
@@ -178,6 +179,7 @@ export const bancaDatiEldomcatModule: ModuleData = {
           description:
             'Foto prodotto alta risoluzione con gallery ordinabile',
           iconName: 'PhotoIcon',
+          highlighted: true,
         },
         {
           title: 'Posizionamento gallery',
@@ -190,6 +192,7 @@ export const bancaDatiEldomcatModule: ModuleData = {
           description:
             'Etichette energetiche vecchio e nuovo formato europeo',
           iconName: 'BoltIcon',
+          highlighted: true,
         },
         {
           title: 'Ricerca senza immagine',
@@ -240,6 +243,7 @@ export const bancaDatiEldomcatModule: ModuleData = {
           description:
             'Testo ottimizzato per indicizzazione motori di ricerca',
           iconName: 'GlobeAltIcon',
+          highlighted: true,
         },
         {
           title: 'Cartelli prezzo',
@@ -266,6 +270,7 @@ export const bancaDatiEldomcatModule: ModuleData = {
           description:
             'Trova articoli per brand, codice modello o descrizione',
           iconName: 'MagnifyingGlassIcon',
+          highlighted: true,
         },
         {
           title: 'Filtro classificazione',
@@ -354,6 +359,7 @@ export const bancaDatiEldomcatModule: ModuleData = {
           description:
             'Aggiornamento automatico notturno da fonti certificate',
           iconName: 'ArrowPathIcon',
+          highlighted: true,
         },
         {
           title: 'Import produttori',

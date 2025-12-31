@@ -158,6 +158,7 @@ export const raeeModule: ModuleData = {
           description:
             'Import e gestione listini contributi ambientali per categoria',
           iconName: 'ArrowDownTrayIcon',
+          highlighted: true,
         },
       ],
     },
@@ -172,6 +173,7 @@ export const raeeModule: ModuleData = {
           description:
             'Registrazione automatica ritiro RAEE associato ad acquisto nuovo apparecchio',
           iconName: 'ShoppingCartIcon',
+          highlighted: true,
         },
         {
           title: 'Ritiro servizio clienti',
@@ -228,6 +230,7 @@ export const raeeModule: ModuleData = {
           description:
             'Generazione documento di trasporto per consegna a CDC',
           iconName: 'DocumentArrowUpIcon',
+          highlighted: true,
         },
         {
           title: 'Tracking consegna',
@@ -266,6 +269,7 @@ export const raeeModule: ModuleData = {
           description:
             'Gestione centri raccolta: Ecodom, Ecoped, Remedia, Ecolight, ERP',
           iconName: 'BuildingLibraryIcon',
+          highlighted: true,
         },
         {
           title: 'Contatti referenti',
@@ -298,12 +302,14 @@ export const raeeModule: ModuleData = {
           description:
             'Schedario RAEE con numerazione progressiva per ogni punto vendita',
           iconName: 'ClipboardDocumentListIcon',
+          highlighted: true,
         },
         {
           title: 'Dichiarazioni trimestrali',
           description:
             'Export dati aggregati nel formato richiesto dai consorzi',
           iconName: 'DocumentTextIcon',
+          highlighted: true,
         },
         {
           title: 'Alert scadenze',

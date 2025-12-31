@@ -118,12 +118,14 @@ export const acquistiModule: ModuleData = {
           description:
             'Crea ordini di acquisto con condizioni commerciali personalizzate per ogni fornitore',
           iconName: 'DocumentPlusIcon',
+          highlighted: true,
         },
         {
           title: 'Ordini a centrale acquisto',
           description:
             'Invio ordini automatico a centrali Unieuro, Expert, GRE, Domex e altre',
           iconName: 'BuildingOffice2Icon',
+          highlighted: true,
         },
         {
           title: 'Inserimento multi-account',
@@ -192,6 +194,7 @@ export const acquistiModule: ModuleData = {
           description:
             'Generazione automatica proposte ordini a fornitori con un click di conferma',
           iconName: 'SparklesIcon',
+          highlighted: true,
         },
       ],
     },
@@ -206,6 +209,7 @@ export const acquistiModule: ModuleData = {
           description:
             'Registrazione bolle di carico con controllo automatico su ordine originale',
           iconName: 'InboxArrowDownIcon',
+          highlighted: true,
         },
         {
           title: 'Fatture passive',
@@ -236,6 +240,7 @@ export const acquistiModule: ModuleData = {
           description:
             'Associazione e riconciliazione documenti acquisto a fatture/note credito/resi',
           iconName: 'CheckBadgeIcon',
+          highlighted: true,
         },
       ],
     },
@@ -276,6 +281,7 @@ export const acquistiModule: ModuleData = {
           description:
             'Integrazione nativa con Unieuro, Expert, GRE, Domex, Gaer e altre centrali',
           iconName: 'BuildingLibraryIcon',
+          highlighted: true,
         },
         {
           title: 'Ordini automatici',

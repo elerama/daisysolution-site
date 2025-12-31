@@ -152,6 +152,7 @@ export const planningModule: ModuleData = {
           description:
             'Calendari separati per tipologia: consegne, riparazioni, appuntamenti',
           iconName: 'Squares2X2Icon',
+          highlighted: true,
         },
         {
           title: 'Filtri avanzati',
@@ -184,6 +185,7 @@ export const planningModule: ModuleData = {
           description:
             'Calcola percorso ottimizzato e avvia navigazione con un click',
           iconName: 'MapPinIcon',
+          highlighted: true,
         },
         {
           title: 'Incasso saldo',
@@ -196,6 +198,7 @@ export const planningModule: ModuleData = {
           description:
             'Acquisisci firma del cliente su tablet o smartphone alla consegna',
           iconName: 'PencilSquareIcon',
+          highlighted: true,
         },
         {
           title: 'Posticipa appuntamento',
@@ -260,6 +263,7 @@ export const planningModule: ModuleData = {
           description:
             'Interfaccia ottimizzata per smartphone e tablet operatori',
           iconName: 'DevicePhoneMobileIcon',
+          highlighted: true,
         },
         {
           title: 'Geolocalizzazione',
@@ -290,6 +294,7 @@ export const planningModule: ModuleData = {
           description:
             'Lavora anche senza connessione con sincronizzazione automatica',
           iconName: 'SignalSlashIcon',
+          highlighted: true,
         },
       ],
     },
@@ -316,6 +321,7 @@ export const planningModule: ModuleData = {
           description:
             'Classifica operatori per numero attivita e tempi medi',
           iconName: 'TrophyIcon',
+          highlighted: true,
         },
         {
           title: 'Attivita per cliente',

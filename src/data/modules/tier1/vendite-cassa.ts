@@ -177,6 +177,7 @@ export const venditeCassaModule: ModuleData = {
           description:
             'Crea preventivi professionali e convertili in ordini con un click',
           iconName: 'ClipboardDocumentListIcon',
+          highlighted: true,
         },
         {
           title: 'Ordini clienti B2B/B2C',
@@ -200,6 +201,7 @@ export const venditeCassaModule: ModuleData = {
           description:
             'Emetti fatture immediate o differite con generazione automatica file XML',
           iconName: 'DocumentDuplicateIcon',
+          highlighted: true,
         },
         {
           title: 'Fatture di servizi',
@@ -212,6 +214,7 @@ export const venditeCassaModule: ModuleData = {
           description:
             'Emissione scontrini con registratore di cassa fiscale integrato e chiusura giornaliera',
           iconName: 'ReceiptPercentIcon',
+          highlighted: true,
         },
       ],
     },
@@ -226,6 +229,7 @@ export const venditeCassaModule: ModuleData = {
           description:
             'Contanti, POS, bonifici bancari, finanziamenti in un solo ordine',
           iconName: 'CurrencyEuroIcon',
+          highlighted: true,
         },
         {
           title: 'Gift card e buoni',
@@ -252,6 +256,7 @@ export const venditeCassaModule: ModuleData = {
           description:
             'Sistema punti fedelta per premiare clienti abituali con regole personalizzabili',
           iconName: 'IdentificationIcon',
+          highlighted: true,
         },
         {
           title: 'Gift card',
@@ -327,6 +332,7 @@ export const venditeCassaModule: ModuleData = {
           title: 'Scontrini offline',
           description: 'Emetti scontrini anche senza connessione Internet',
           iconName: 'SignalSlashIcon',
+          highlighted: true,
         },
         {
           title: 'Chiusura cassa offline',

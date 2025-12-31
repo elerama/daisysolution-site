@@ -10,7 +10,7 @@
   /* Typography - Inter primary (strategy v1.1 §4.2), Switzer fallback */
   --font-sans: Inter, Switzer, system-ui, sans-serif;
 
-  /* Radiant base radius (mantenere per componenti esistenti) */
+  /* Base radius (per componenti UI) */
   --radius-4xl: 2rem;
 
   /* Brand Colors Daisy Solution - Elettrorama Identity */

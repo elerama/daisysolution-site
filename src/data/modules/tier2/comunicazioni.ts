@@ -140,6 +140,7 @@ export const comunicazioniModule: ModuleData = {
           description:
             'Comunicazione tra aziende diverse nello stesso ambiente',
           iconName: 'BuildingOffice2Icon',
+          highlighted: true,
         },
         {
           title: 'Threading',
@@ -158,6 +159,7 @@ export const comunicazioniModule: ModuleData = {
           description:
             'Invia comunicazioni a tutti gli utenti con un solo click',
           iconName: 'MegaphoneIcon',
+          highlighted: true,
         },
         {
           title: 'Messaggi privati',
@@ -184,6 +186,7 @@ export const comunicazioniModule: ModuleData = {
           description:
             'Alert generati da eventi di sistema (ordini, scadenze, anomalie)',
           iconName: 'BellAlertIcon',
+          highlighted: true,
         },
         {
           title: 'Programmazione visibilita',
@@ -234,6 +237,7 @@ export const comunicazioniModule: ModuleData = {
           description:
             'Messaggi non ancora aperti raggruppati per priorita',
           iconName: 'EnvelopeIcon',
+          highlighted: true,
         },
         {
           title: 'Casella Cancellati',
@@ -284,6 +288,7 @@ export const comunicazioniModule: ModuleData = {
           description:
             'Raggruppa negozi per area geografica o tipologia',
           iconName: 'BuildingStorefrontIcon',
+          highlighted: true,
         },
         {
           title: 'Gruppi clienti',
@@ -360,6 +365,7 @@ export const comunicazioniModule: ModuleData = {
           description:
             'Trova messaggi per parole chiave, mittente o data',
           iconName: 'MagnifyingGlassIcon',
+          highlighted: true,
         },
         {
           title: 'Filtri categoria',

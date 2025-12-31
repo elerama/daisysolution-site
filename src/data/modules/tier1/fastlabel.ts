@@ -131,6 +131,7 @@ export const fastlabelModule: ModuleData = {
           description:
             'Template completamente personalizzabili con logo, colori, font e layout',
           iconName: 'PaintBrushIcon',
+          highlighted: true,
         },
         {
           title: 'Gestione slogan',
@@ -169,6 +170,7 @@ export const fastlabelModule: ModuleData = {
           description:
             'Stampa centinaia di cartelli per reparto o selezione in pochi minuti',
           iconName: 'PrinterIcon',
+          highlighted: true,
         },
         {
           title: 'Barcode e QR code',
@@ -219,12 +221,14 @@ export const fastlabelModule: ModuleData = {
           description:
             'Sincronizzazione automatica prezzi e promozioni con ESL',
           iconName: 'ArrowPathIcon',
+          highlighted: true,
         },
         {
           title: 'Provider SES Imagotag',
           description:
             'Integrazione certificata con SES Imagotag (Vusion) per reti Unieuro',
           iconName: 'BuildingStorefrontIcon',
+          highlighted: true,
         },
         {
           title: 'Provider Delphi',
@@ -257,6 +261,7 @@ export const fastlabelModule: ModuleData = {
           description:
             'Contenuti tecnici aggiornati automaticamente da banca dati Eldomcat',
           iconName: 'DocumentTextIcon',
+          highlighted: true,
         },
         {
           title: 'Disponibilita e promozioni',
@@ -295,6 +300,7 @@ export const fastlabelModule: ModuleData = {
           description:
             'Template conformi normativa etichettatura energetica UE',
           iconName: 'BoltIcon',
+          highlighted: true,
         },
         {
           title: 'RAEE compliance',

@@ -95,6 +95,7 @@ export const navigatorModule: ModuleData = {
           description:
             'Pagina iniziale con overview business del giorno',
           iconName: 'HomeIcon',
+          highlighted: true,
         },
         {
           title: 'KPI vendite',
@@ -145,6 +146,7 @@ export const navigatorModule: ModuleData = {
           description:
             'Sposta e riordina widgets con trascinamento',
           iconName: 'CursorArrowRaysIcon',
+          highlighted: true,
         },
         {
           title: 'Ridimensiona',
@@ -183,6 +185,7 @@ export const navigatorModule: ModuleData = {
           description:
             'Bottoni per azioni frequenti: nuova vendita, ordine, cliente',
           iconName: 'PlusCircleIcon',
+          highlighted: true,
         },
         {
           title: 'Funzioni recenti',
@@ -201,6 +204,7 @@ export const navigatorModule: ModuleData = {
           description:
             'Cerca qualsiasi cosa: clienti, prodotti, documenti',
           iconName: 'MagnifyingGlassIcon',
+          highlighted: true,
         },
         {
           title: 'Menu contestuale',
@@ -233,6 +237,7 @@ export const navigatorModule: ModuleData = {
           description:
             'Ctrl+K per aprire qualsiasi funzione digitando',
           iconName: 'MagnifyingGlassIcon',
+          highlighted: true,
         },
         {
           title: 'Hotkeys personalizzati',
@@ -271,6 +276,7 @@ export const navigatorModule: ModuleData = {
           description:
             'Alert istantanei per eventi importanti',
           iconName: 'BellAlertIcon',
+          highlighted: true,
         },
         {
           title: 'Centro notifiche',

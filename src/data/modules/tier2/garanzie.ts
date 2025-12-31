@@ -95,6 +95,7 @@ export const garanzieModule: ModuleData = {
           description:
             'Garanzia creata automaticamente alla vendita del prodotto',
           iconName: 'CheckCircleIcon',
+          highlighted: true,
         },
         {
           title: 'Durata configurabile',
@@ -139,6 +140,7 @@ export const garanzieModule: ModuleData = {
           description:
             'Genera certificato PDF personalizzato con logo negozio',
           iconName: 'DocumentTextIcon',
+          highlighted: true,
         },
         {
           title: 'Stampa diretta',
@@ -183,6 +185,7 @@ export const garanzieModule: ModuleData = {
           description:
             'Sistema suggerisce estensione garanzia al momento della vendita',
           iconName: 'SparklesIcon',
+          highlighted: true,
         },
         {
           title: 'Listino estensioni',
@@ -227,6 +230,7 @@ export const garanzieModule: ModuleData = {
           description:
             'Controllo automatico se prodotto è ancora in garanzia',
           iconName: 'ShieldCheckIcon',
+          highlighted: true,
         },
         {
           title: 'Apertura reso',
@@ -251,6 +255,7 @@ export const garanzieModule: ModuleData = {
           description:
             'Tutti gli interventi effettuati su un prodotto',
           iconName: 'ClockIcon',
+          highlighted: true,
         },
         {
           title: 'Collegamento riparazioni',
@@ -271,6 +276,7 @@ export const garanzieModule: ModuleData = {
           description:
             'Statistiche resi/difetti per brand, modello, categoria',
           iconName: 'ExclamationTriangleIcon',
+          highlighted: true,
         },
         {
           title: 'Tasso di reso',

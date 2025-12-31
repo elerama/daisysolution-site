@@ -7,12 +7,12 @@ export async function GET(req: Request) {
   let siteUrl = new URL(req.url).origin
 
   let feed = new Feed({
-    title: 'The Radiant Blog',
+    title: 'Daisy Solution Blog',
     description:
-      'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
+      'Novità, aggiornamenti e approfondimenti sul mondo del retail e della gestione aziendale.',
     author: {
-      name: 'Michael Foster',
-      email: 'michael.foster@example.com',
+      name: 'Daisy Solution',
+      email: 'info@daisysolution.it',
     },
     id: siteUrl,
     link: siteUrl,

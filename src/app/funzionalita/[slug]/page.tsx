@@ -14,7 +14,6 @@ import { JsonLd } from '@/components/json-ld'
 import { Link } from '@/components/link'
 import { Navbar } from '@/components/navbar'
 import { OptionalConnectionsGrid } from '@/components/optional-connection-card'
-import { ScreenshotGallery } from '@/components/screenshot-gallery'
 import { StickyCTAMobile } from '@/components/sticky-cta-mobile'
 import { Heading, Subheading } from '@/components/text'
 import {

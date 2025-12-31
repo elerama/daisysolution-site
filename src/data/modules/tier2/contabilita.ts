@@ -134,6 +134,7 @@ export const contabilitaModule: ModuleData = {
           description:
             'Contabilizzazione fatture passive con import da SDI automatico',
           iconName: 'DocumentArrowDownIcon',
+          highlighted: true,
         },
         {
           title: 'Fattura reverse charge',
@@ -228,12 +229,14 @@ export const contabilitaModule: ModuleData = {
           description:
             'Calcolo automatico liquidazione mensile o trimestrale',
           iconName: 'CalculatorIcon',
+          highlighted: true,
         },
         {
           title: 'LIPE',
           description:
             'Generazione file XML per comunicazione periodica Agenzia Entrate',
           iconName: 'DocumentArrowUpIcon',
+          highlighted: true,
         },
         {
           title: 'Competenza mese precedente',
@@ -284,6 +287,7 @@ export const contabilitaModule: ModuleData = {
           description:
             'Elenco scadenze attive con solleciti automatici',
           iconName: 'ClockIcon',
+          highlighted: true,
         },
         {
           title: 'Scadenzario fornitori',
@@ -334,6 +338,7 @@ export const contabilitaModule: ModuleData = {
           description:
             'Import movimenti e matching automatico con registrazioni',
           iconName: 'BuildingLibraryIcon',
+          highlighted: true,
         },
         {
           title: 'Crosscheck automatico',
@@ -360,6 +365,7 @@ export const contabilitaModule: ModuleData = {
           description:
             'Generazione scritture di chiusura conti economici',
           iconName: 'LockClosedIcon',
+          highlighted: true,
         },
         {
           title: 'Apertura nuovo esercizio',

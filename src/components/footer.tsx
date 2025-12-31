@@ -163,7 +163,7 @@ function SocialLinks() {
 function Copyright() {
   return (
     <div className="text-sm/6 text-slate-300 flex items-center gap-2">
-      <Logo variant="with-by" className="h-6" />
+      <Logo variant="with-by" className="h-6" color="white" />
       <span className="text-slate-600">|</span>
       <span>&copy; {new Date().getFullYear()} {COMPANY.parentCompany} - P.IVA {CONTACTS.vatNumber}</span>
     </div>
@@ -186,7 +186,7 @@ export function Footer() {
             <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
               <div className="col-span-2 flex">
                 <PlusGridItem className="pt-6 lg:pb-6">
-                  <Logo className="h-9" />
+                  <Logo className="h-9" color="white" />
                 </PlusGridItem>
               </div>
               <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">

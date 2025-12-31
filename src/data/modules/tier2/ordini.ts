@@ -93,6 +93,7 @@ export const ordiniModule: ModuleData = {
           description:
             'Crea ordini velocemente con barcode scanner',
           iconName: 'BoltIcon',
+          highlighted: true,
         },
         {
           title: 'Ricerca articoli',
@@ -137,6 +138,7 @@ export const ordiniModule: ModuleData = {
           description:
             'Clienti inseriscono ordini dal portale self-service',
           iconName: 'GlobeAltIcon',
+          highlighted: true,
         },
         {
           title: 'Import ordini',
@@ -181,6 +183,7 @@ export const ordiniModule: ModuleData = {
           description:
             'Workflow: bozza → confermato → preparazione → evaso → consegnato',
           iconName: 'ListBulletIcon',
+          highlighted: true,
         },
         {
           title: 'Kanban view',
@@ -225,6 +228,7 @@ export const ordiniModule: ModuleData = {
           description:
             'Evadi parte dell\'ordine, backorder automatico per resto',
           iconName: 'ScissorsIcon',
+          highlighted: true,
         },
         {
           title: 'Picking list',
@@ -243,6 +247,7 @@ export const ordiniModule: ModuleData = {
           description:
             'Genera lettera di vettura e tracking automatico',
           iconName: 'TruckIcon',
+          highlighted: true,
         },
         {
           title: 'Multi-spedizione',
@@ -281,6 +286,7 @@ export const ordiniModule: ModuleData = {
           description:
             'Richiedi acconto a conferma, traccia saldo',
           iconName: 'CurrencyEuroIcon',
+          highlighted: true,
         },
         {
           title: 'Riepilogo pagamenti',

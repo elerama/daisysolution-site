@@ -95,6 +95,7 @@ export const contrattiModule: ModuleData = {
           description:
             'Wizard guidato per creare contratti servizio, manutenzione, noleggio',
           iconName: 'PencilSquareIcon',
+          highlighted: true,
         },
         {
           title: 'Template personalizzabili',
@@ -139,6 +140,7 @@ export const contrattiModule: ModuleData = {
           description:
             'Tacito rinnovo con generazione automatica nuovo contratto',
           iconName: 'ArrowPathIcon',
+          highlighted: true,
         },
         {
           title: 'Rinnovo con conferma',
@@ -151,6 +153,7 @@ export const contrattiModule: ModuleData = {
           description:
             'Notifiche configurabili 30/15/7 giorni prima della scadenza',
           iconName: 'BellAlertIcon',
+          highlighted: true,
         },
         {
           title: 'Calendario scadenze',
@@ -189,6 +192,7 @@ export const contrattiModule: ModuleData = {
           description:
             'Fatture generate automaticamente alla scadenza periodo',
           iconName: 'DocumentTextIcon',
+          highlighted: true,
         },
         {
           title: 'Invio automatico',
@@ -233,6 +237,7 @@ export const contrattiModule: ModuleData = {
           description:
             'Tracciamento real-time rispetto degli SLA',
           iconName: 'ChartBarIcon',
+          highlighted: true,
         },
         {
           title: 'Alert SLA',
@@ -271,6 +276,7 @@ export const contrattiModule: ModuleData = {
           description:
             'Monthly Recurring Revenue con trend e previsioni',
           iconName: 'CurrencyEuroIcon',
+          highlighted: true,
         },
         {
           title: 'Redditività contratti',

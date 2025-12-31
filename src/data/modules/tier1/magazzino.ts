@@ -118,18 +118,21 @@ export const magazzinoModule: ModuleData = {
           description:
             'Gestisci giacenze di piu magazzini e punti vendita con visibilita unificata',
           iconName: 'BuildingStorefrontIcon',
+          highlighted: true,
         },
         {
           title: 'Giacenze in tempo reale',
           description:
             'Ricalcolo immediato delle disponibilita ad ogni movimento di magazzino',
           iconName: 'ArrowPathIcon',
+          highlighted: true,
         },
         {
           title: 'Avvisi scorte minime',
           description:
             'Alert automatici quando articoli critici scendono sotto la scorta configurata',
           iconName: 'BellAlertIcon',
+          highlighted: true,
         },
         {
           title: 'Sincronizzazione e-commerce',
@@ -212,6 +215,7 @@ export const magazzinoModule: ModuleData = {
           description:
             'Procedura guidata per spostare merce tra magazzini con un click',
           iconName: 'ArrowsRightLeftIcon',
+          highlighted: true,
         },
         {
           title: 'Tracking spedizioni',
@@ -270,6 +274,7 @@ export const magazzinoModule: ModuleData = {
           description:
             'Procedura semplificata per inventari parziali o completi di magazzino',
           iconName: 'ClipboardDocumentCheckIcon',
+          highlighted: true,
         },
         {
           title: 'App DaisyCheck',
@@ -282,6 +287,7 @@ export const magazzinoModule: ModuleData = {
           description:
             'Tracciamento numeri seriali in entrata e uscita per garanzie',
           iconName: 'QrCodeIcon',
+          highlighted: true,
         },
         {
           title: 'Riconciliazione automatica',

@@ -134,6 +134,7 @@ export const listeRegaloModule: ModuleData = {
           description:
             'Matrimonio, nascita, compleanno, battesimo, laurea, anniversario e personalizzati',
           iconName: 'SparklesIcon',
+          highlighted: true,
         },
         {
           title: 'Nome e data evento',
@@ -190,6 +191,7 @@ export const listeRegaloModule: ModuleData = {
           description:
             'Blocca prezzo per evitare variazioni durante evento',
           iconName: 'LockClosedIcon',
+          highlighted: true,
         },
         {
           title: 'Ordinamento articoli',
@@ -222,6 +224,7 @@ export const listeRegaloModule: ModuleData = {
           description:
             'Invitati versano importi parziali fino a copertura totale',
           iconName: 'ChartPieIcon',
+          highlighted: true,
         },
         {
           title: 'Importo coperto/residuo',
@@ -266,6 +269,7 @@ export const listeRegaloModule: ModuleData = {
           description:
             'Lista pubblicata su link dedicato accessibile agli invitati',
           iconName: 'CloudArrowUpIcon',
+          highlighted: true,
         },
         {
           title: 'Accesso web',
@@ -290,6 +294,7 @@ export const listeRegaloModule: ModuleData = {
           description:
             'PayPal, bonifico bancario o pagamento differito in negozio',
           iconName: 'CreditCardIcon',
+          highlighted: true,
         },
         {
           title: 'Conferma ordine',
@@ -348,6 +353,7 @@ export const listeRegaloModule: ModuleData = {
           description:
             'Totale incassato, quote pagate/pendenti, articoli completati',
           iconName: 'DocumentChartBarIcon',
+          highlighted: true,
         },
         {
           title: 'Dettaglio articoli',

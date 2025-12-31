@@ -134,6 +134,7 @@ export const promozioniModule: ModuleData = {
           description:
             'Definisci data inizio/fine con attivazione e disattivazione automatica',
           iconName: 'CalendarDaysIcon',
+          highlighted: true,
         },
         {
           title: 'Sospensione campagne',
@@ -178,6 +179,7 @@ export const promozioniModule: ModuleData = {
           description:
             'Applica sconti % su articoli, categorie o brand completi',
           iconName: 'ReceiptPercentIcon',
+          highlighted: true,
         },
         {
           title: 'Sconto a valore',
@@ -216,6 +218,7 @@ export const promozioniModule: ModuleData = {
           description:
             'Offerte prendi X paghi Y con calcolo automatico sconto',
           iconName: 'ShoppingBagIcon',
+          highlighted: true,
         },
         {
           title: 'Seconda merce scontata',
@@ -254,6 +257,7 @@ export const promozioniModule: ModuleData = {
           description:
             'Prezzi promozionali applicati in tempo reale alle casse',
           iconName: 'BuildingStorefrontIcon',
+          highlighted: true,
         },
         {
           title: 'Aggiornamento e-commerce',
@@ -266,6 +270,7 @@ export const promozioniModule: ModuleData = {
           description:
             'Cartelli Fastlabel e etichette ESL aggiornati automaticamente',
           iconName: 'TagIcon',
+          highlighted: true,
         },
         {
           title: 'Gestione volantini',
@@ -316,6 +321,7 @@ export const promozioniModule: ModuleData = {
           description:
             'Analisi vendite incrementali, margine e ritorno investimento',
           iconName: 'ChartBarIcon',
+          highlighted: true,
         },
       ],
     },
