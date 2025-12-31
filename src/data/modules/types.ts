@@ -109,6 +109,7 @@ export interface FeatureItem {
   description: string
   icon?: string // Emoji legacy (retrocompatibilita)
   iconName?: string // Nome Heroicon (es: 'ClipboardDocumentListIcon')
+  highlighted?: boolean // Feature "In evidenza" - mostrata nella prima tab
 }
 
 export interface FeatureCategory {

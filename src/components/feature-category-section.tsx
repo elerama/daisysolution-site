@@ -2,11 +2,13 @@
  * FeatureCategorySection - Tabs/Accordion per categorie di funzionalita
  * Desktop: tabs orizzontali con grid features
  * Mobile: accordion collassabile
+ *
+ * Include tab "In evidenza" automatica per feature con highlighted: true
  */
 
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import { clsx } from 'clsx'
@@ -20,10 +22,33 @@ interface FeatureCategorySectionProps {
 }
 
 export function FeatureCategorySection({ categories, className }: FeatureCategorySectionProps) {
-  const [activeCategory, setActiveCategory] = useState(categories[0]?.id || '')
-  const [openAccordions, setOpenAccordions] = useState<string[]>([categories[0]?.id || ''])
+  // Raccogli feature "In evidenza" da tutte le categorie
+  const allCategories = useMemo(() => {
+    const highlightedFeatures = categories
+      .flatMap(cat => cat.features)
+      .filter(f => f.highlighted)
 
-  if (categories.length === 0) return null
+    // Se ci sono feature highlighted, crea la categoria "In evidenza"
+    if (highlightedFeatures.length > 0) {
+      const inEvidenzaCategory: FeatureCategory = {
+        id: 'in-evidenza',
+        name: 'In evidenza',
+        icon: '⭐',
+        iconName: 'SparklesIcon',
+        features: highlightedFeatures,
+      }
+      return [inEvidenzaCategory, ...categories]
+    }
+
+    return categories
+  }, [categories])
+
+  // Default: "In evidenza" se esiste, altrimenti prima categoria
+  const defaultCategory = allCategories[0]?.id || ''
+  const [activeCategory, setActiveCategory] = useState(defaultCategory)
+  const [openAccordions, setOpenAccordions] = useState<string[]>([defaultCategory])
+
+  if (allCategories.length === 0) return null
 
   const toggleAccordion = (categoryId: string) => {
     setOpenAccordions((prev) =>
@@ -39,7 +64,7 @@ export function FeatureCategorySection({ categories, className }: FeatureCategor
       <div className="hidden lg:block">
         {/* Tab buttons */}
         <div className="flex flex-wrap gap-2 justify-center mb-12">
-          {categories.map((category) => (
+          {allCategories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
@@ -60,7 +85,7 @@ export function FeatureCategorySection({ categories, className }: FeatureCategor
 
         {/* Tab content */}
         <AnimatePresence mode="wait">
-          {categories.map((category) => (
+          {allCategories.map((category) => (
             activeCategory === category.id && (
               <motion.div
                 key={category.id}
@@ -81,7 +106,7 @@ export function FeatureCategorySection({ categories, className }: FeatureCategor
 
       {/* Mobile: Accordion */}
       <div className="lg:hidden space-y-3">
-        {categories.map((category) => (
+        {allCategories.map((category) => (
           <div
             key={category.id}
             className="bg-white rounded-xl ring-1 ring-gray-950/5 overflow-hidden"
