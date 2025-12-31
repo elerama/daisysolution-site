@@ -439,20 +439,6 @@ export const bancaDatiEldomcatModule: ModuleData = {
       relatedModuleSlug: 'vendite-cassa',
     },
     {
-      id: 'acquisti',
-      name: 'Modulo Acquisti',
-      description:
-        'Schede tecniche su ordini fornitori e documenti di acquisto',
-      benefits: [
-        'Specifiche in ordini',
-        'Verifica articoli ricevuti',
-        'Confronto caratteristiche',
-      ],
-      icon: '📦',
-      iconName: 'TruckIcon',
-      relatedModuleSlug: 'acquisti',
-    },
-    {
       id: 'import-export',
       name: 'Import/Export',
       description:
@@ -546,7 +532,6 @@ export const bancaDatiEldomcatModule: ModuleData = {
     { name: 'E-commerce', slug: 'ecommerce' },
     { name: 'Label', slug: 'label' },
     { name: 'Vendite', slug: 'vendite-cassa' },
-    { name: 'Acquisti', slug: 'acquisti' },
   ],
 
   faq: [
