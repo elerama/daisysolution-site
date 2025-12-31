@@ -317,7 +317,7 @@ export default async function ModulePage({ params }: PageProps) {
                     </div>
                 )}
 
-                {/* Screenshot Gallery (v2) */}
+                {/* HIDDEN: Screenshot Gallery - Fase sperimentale
                 {moduleData.screenshots && moduleData.screenshots.length > 0 && (
                     <div className="py-16">
                         <Container>
@@ -329,6 +329,7 @@ export default async function ModulePage({ params }: PageProps) {
                         <ScreenshotGallery screenshots={moduleData.screenshots} />
                     </div>
                 )}
+                */}
 
                 {/* Features Section */}
                 {/* v2: FeatureCategories with tabs/accordion */}
@@ -378,7 +379,7 @@ export default async function ModulePage({ params }: PageProps) {
                     </Container>
                 )}
 
-                {/* Screenshot Hero (legacy - shown only if no gallery) */}
+                {/* HIDDEN: Screenshot Hero Legacy - Fase sperimentale
                 {(!moduleData.screenshots || moduleData.screenshots.length === 0) && (
                     <Container className="py-24">
                         <div className="flex justify-center">
@@ -399,11 +400,12 @@ export default async function ModulePage({ params }: PageProps) {
                         </p>
                     </Container>
                 )}
+                */}
 
                 {/* Benefits Section - RIMOSSA (Fase 4: informazioni ridondanti con mainBenefits nell'Hero)
                    Il campo benefits[] rimane nei dati per retrocompatibilita con altri moduli */}
 
-                {/* Integrations Section */}
+                {/* HIDDEN: Integrations Section - Fase sperimentale
                 {moduleData.integrations && moduleData.integrations.length > 0 && (
                     <Container className="py-24" id="integrazioni">
                         <Subheading className="text-center">Integrazioni native</Subheading>
@@ -427,7 +429,6 @@ export default async function ModulePage({ params }: PageProps) {
                             ))}
                         </div>
 
-                        {/* Back to modules link */}
                         <div className="mt-12 text-center">
                             <Link
                                 href="/funzionalita"
@@ -438,6 +439,7 @@ export default async function ModulePage({ params }: PageProps) {
                         </div>
                     </Container>
                 )}
+                */}
 
                 {/* FAQ Section - Split Layout */}
                 {moduleData.faq && moduleData.faq.length > 0 && (
